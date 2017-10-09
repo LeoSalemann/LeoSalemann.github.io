@@ -28,13 +28,12 @@ a:hover{
   background: khaki;
 }
 
-/*
-th,
-tr {
-    text-align: left;
-}
-*/
 
+li
+{
+	margin: 6px;
+	padding: 0px;
+}
 /*
 source: https://www.smashingmagazine.com/2008/08/top-10-css-table-designs/#1-horizontal-minimalist
 */
