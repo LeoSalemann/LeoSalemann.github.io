@@ -7,7 +7,7 @@
 h1,
 h2{
 	font-family: arial;
-	color:red;
+	color:purple;
 	text-align: center;
 }
 #tagline { 
@@ -20,10 +20,56 @@ h2{
 }
 
 body {
-	font-family: "Times New Roman", Georgia, Serif;
+	font-family: arial;
 	background: cornsilk;
 	color: #555555;
 }
 a:hover{
   background: khaki;
 }
+
+/*
+th,
+tr {
+    text-align: left;
+}
+*/
+
+/*
+source: https://www.smashingmagazine.com/2008/08/top-10-css-table-designs/#1-horizontal-minimalist
+*/
+
+#ver-minimalist th, td
+{
+	/*
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	*/
+	font-weight: normal;
+	/*
+	margin: 45px;
+	width: 480px;
+	*/
+	text-align: left;
+	border-collapse: collapse;
+}
+/*
+#ver-minimalist th
+{
+	padding: 8px 2px;
+	font-weight: normal;
+	font-size: 14px;
+	border-bottom: 2px solid #6678b1;
+	border-right: 30px solid #fff;
+	border-left: 30px solid #fff;
+	color: #039;
+}
+#ver-minimalist td
+{
+	padding: 12px 2px 0px 2px;
+	border-right: 30px solid #fff;
+	border-left: 30px solid #fff;
+	color: #669;
+}
+*/
+
