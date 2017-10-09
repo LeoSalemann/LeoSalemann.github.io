@@ -25,7 +25,7 @@ body {
 	color: #555555;
 }
 a:hover{
-  background: khaki;
+	background: khaki;
 }
 
 
@@ -34,9 +34,26 @@ li
 	margin: 6px;
 	padding: 0px;
 }
+
+
+
 /*
 source: https://www.smashingmagazine.com/2008/08/top-10-css-table-designs/#1-horizontal-minimalist
 */
+#lhs-column td
+{
+	text-align: left;
+}
+
+#middle-column td
+{
+	text-align: center;
+}
+
+#rhs-column td
+{
+	text-align: right;
+}
 
 #ver-minimalist th, td
 {
@@ -71,4 +88,7 @@ source: https://www.smashingmagazine.com/2008/08/top-10-css-table-designs/#1-hor
 	color: #669;
 }
 */
+
+
+
 
