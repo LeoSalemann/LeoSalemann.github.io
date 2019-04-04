@@ -1,2 +1,1 @@
-# [LeoSalemann.github.io](https://leosalemann.github.io/)
-My Portfolio Site, with links to projects, papers, and resumes.
+HCDE 598 Special Topics Digital Fabrication
