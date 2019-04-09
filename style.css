@@ -26,6 +26,9 @@ a {
   font-size: 50px;
   }
 
+.assignments {
+  padding: 30px;
+}
 .assignment {
   font-size: 12px;
   line-height: 24px;
