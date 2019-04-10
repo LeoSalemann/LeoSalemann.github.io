@@ -7,13 +7,29 @@ html, body {
 
 h1,h2,h3,h4 {
   font-family: 'helvetica', 'arial', 'sans';
-  }
+}
 
 
 a {
   color: #000;
 }
 
+img {
+  padding-top: 15px;
+}
+
+.imgWireFrame {
+  display: block;
+  color: #fff;
+  border-color: #000;
+  border-width: medium;
+  background-color: #999;
+  width: 350px;
+  /* height: 250px;
+  line-height: 250px; */
+  padding: 60px 15px;
+  text-align: center;
+}
 .header {
   background: #fff;
   color: #000;
@@ -24,8 +40,11 @@ a {
 
 .header h1 {
   font-size: 50px;
-  }
+}
 
+.assignments {
+  padding: 30px;
+}
 .assignment {
   font-size: 12px;
   line-height: 24px;
@@ -37,8 +56,8 @@ a {
 }
 
 .assignment a {
-    color: #000;
-    text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
 
 .assignment a:hover {
@@ -49,14 +68,14 @@ a {
 
 
 .footer {
-    width: 1100px;
-    float: left;
-    padding: 300px 0px 30px 30px;
+  width: 1100px;
+  float: left;
+  padding: 300px 0px 30px 30px;
 }
 
 .widebody {
-    width: 800px;
-    padding: 0px 30px 30px 30px;
+  width: 600px;
+  padding: 0px 30px 30px 30px;
 }
 
 .widebody a {
@@ -67,4 +86,3 @@ a {
   color: #FFF;
   text-decoration: none;
 }
-
