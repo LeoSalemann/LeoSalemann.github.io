@@ -12,7 +12,7 @@
 <body>
 
 	<div class="header">
-		<h1>Leo's Assignment 1: Laser Cut Cardboard Consturction Kit!</h1>
+		<h1>Leo's Assignment 1: Laser-Cut Construction Kit!</h1>
 
 		<p>
 			<img src ="img/hcde598-hw01-pic34-finished-wing.png" width=400>
@@ -26,22 +26,22 @@
 		<!-- ***** TL; DR ***** -->
 		<h2>TL;DR:</h2>
 
-		<p>Started by building a test guage line-by-line. That was painful.</p>
+		<p>Started by building a test gauge line-by-line. That was painful.</p>
 
 		<figure>
 			<img src="img/hcde598-hw01-pic03-gauge.png" width=400>
 			<figcaption>There's gotta be an easier way.</figcaption>
 		</figure>
 
-		<p>Figured out I could overlap separate shapes for cutouts. That was eaiser.</p>
+		<p>Figured out I could overlap separate shapes for cutouts. That was easier.</p>
 
 		<figure>
 			<img src ="img/hcde598-hw01-pic09-sketch01.png" width=400>
-			<figcaption>Okay, this isn't so bad.</figcaption>
+			<figcaption>Hope this works.</figcaption>
 		</figure>
 
 		<p>Figured out how to export actual <a href="https://en.wikipedia.org/wiki/NACA_airfoil" >NACA Airfoils</a>
-			as SVG from <a href ="http://airfoiltools.com/airfoil/naca4digit"> arfoiltools.com</a>,, then imort into Adobe Illustrator. 
+			as SVG from <a href ="http://airfoiltools.com/airfoil/naca4digit"> arfoiltools.com</a>, then import into Adobe Illustrator.
 		</p>
 
 		<figure>
@@ -55,394 +55,434 @@
 		</figure>
 
 		<figure>
-			<img src ="img/hcde598-hw01-pic14-airfoil-NACA-0018-assembled.png"" width=400>
+			<img src ="img/hcde598-hw01-pic14-airfoil-NACA-0018-assembled.png" width=400>
 			<figcaption>To this!</figcaption>
 		</figure>
 
 		<p>Also learned the importance of using layers cut the small inner parts <em>before</em> the
-		large outer ones</p>
-
-		<figure>
-			<img src ="img/hcde598-hw01-pic18-3rib-scalloping.jpg" width=400>
-			<figcaption>Oh crap, it's scalloping!</figcaption>
-		</figure>
-
-		<p>Having figured all that out, I could make a three-foot wing with nine ribs, three spars, and a "hoop frame" holding them all together</p>
-
-		<figure>
-			<img src ="img/hcde598-hw01-pic28-all-layers.png" width=800>
-			<figcaption>Big Giant Illutrator Drawing</figcaption>
-		</figure>
-
-		<figure>
-			<img src ="img/hcde598-hw01-pic32-cutout-pats.png" width=400>
-			<figcaption>Big Giant Print (Three passes for three layers).</figcaption>
-		</figure>	
-
-		<figure>
-			<img src ="img/hcde598-hw01-pic34-finished-wing.png" width=400>
-			<figcaption>Big Giant Finished Product.</figcaption>
-		</figure>
-
-		<P>Super Mega Epiphanies</P>
-		<ol>
-			<li>Putting a notch at the top of my guage, so I knew which end had the narrower slot.</li>
-			<li>Uing the Adobe Illustrator Shape tool for size control below a tenth of an inch.</li>
-			<li>Using overlapping rectangles to cut out notches, triangles for camphers.</li>
-			<li>Using Layers and mutiple print passes to control which parts get printed when.</li>
-		</ol>	
-
-		<h2>Source Files</h2>
-		<p> Available on github.com at <a href= "https://github.com/LeoSalemann/LeoSalemann.github.io/tree/master/hcde598/hw01">https://github.com/LeoSalemann/LeoSalemann.github.io/tree/master/hcde598/hw01 </a>
-
-		<h2>Machine Settings (Epilog Laser Fustion M2 62 watt)</h2>
-		<ul>
-			<li>Power: 65 (should have used 100)</li>
-			<li>Fequency: 100</li>
-			<li>Speed: 25</li>
-			<li>Job Type: Vector</li>
-			<li>Stroke (in Adobe Illustrator): 0.001 inch</li>
-		</ul>	
-
-		<h2>Special Thanks to ....</h2>
-		<ul>
-			<li>HCDE 598 Student <em>Ping Lai</em> For help with Adobe Illustrator document sizing. </li>
-			<li>MILL Staffer <em>Shiraz</em> for reminding me about proper power/frequency/speed settings.</li>
-		</ul>
-		
-		<!-- ***** DETAILS ***** -->
-		<h2>The DEETS (sooooo many deets)</h2>
-		<h2>Building the Test Gauge</h2>
-
-		<h3>Planning an Approach</h3>
-		<p>
-			First thing I gotta do is make a "gauge" with different slot thicknesses.
-			My calipers give me a thickness of 0.1580 in. Adobe Illustrator seems to
-			stop at 0.01 inch increments. Okay, we'll make slots at 0.16, 0.17, 0.18
-			0.2.
-		</p>
-
-		<h3>Drawing the Gauge </h3>
-		<p>
-			I was hoping I could draw a rectangle, add some points, and cut things out.
-			Adobe Illustrator doesn't seem to let me do that (not without a fight,
-			anyway), so I'll go line by line instead.  Not has hard as I thought, once
-			you start copy/pasting the repetitive lines.
-		</p>
-
-		<figure>
-			<img src="img/hcde598-hw01-pic01-gauge.png" width=400>
-			<figcaption>First few lines in Adobe Illustrator</figcaption>
-		</figure>
-
-		<p>
-			Heh. Here's an idea. Imma put a notch at the top of my guage, so I know
-			which end is which -- 0.016 will start at the notch
-		</p>
-
-		<figure>
-			<img src="img/hcde598-hw01-pic02-gauge.png" width=400>
-			<figcaption>Super-mega epiphany #1: THE NOTCH.</figcaption>
-		</figure>
-
-		<p>
-			Now I gotta figure out how to make the camphers. Gonna need to chop
-			off my "end lines" ....
-		</P>
-
-		<figure>
-			<img src="img/hcde598-hw01-pic03-gauge.png" width=400>
-			<figcaption>This is getting tedious.</figcaption>
-		</figure>
-
-		<p>
-			Add some angled campheres (thank you copy/paste/flip-vertical)...
-		</p>
-
-		<figure>
-			<img src="img/hcde598-hw01-pic04-gauge.png" width=400><
-			<figcaption>Okay maybe not as bad as I thought.</figcaption>
-		</figure>
-
-		<p>
-			And reconnect the ends!
-		</p>
-
-		<figure>
-			<img src="img/hcde598-hw01-pic05-gauge.png" width=400>
-			<figcaption>Okay maybe not as bad as I thought.</figcaption>
-		</figure>
-
-		<p>Okay, one more copy/paste so I have a pair, and it's off to the
-		lasercutter!</p>
-
-		<p>
-			Well, crap.  Even my tightest slot is too loose.  Need to figure out how
-			to see sub-tenth line lenghts.  Aha! clicking <em>Shape</em> gets you a
-			form with exactl lenth and angle.  Going to change up my slots to be
-			0.146 0.148 0.150 0.152 0.154.
-		</p>
-
-		<figure>
-			<img src="img/hcde598-hw01-pic06-print1.png" width=400>
-			<figcaption>Might look okay, but it's actually really loose.</figcaption>
-		</figure>
-
-		<p>
-			Aha!  Adobe Illustrator provides a <em>Shape</em> toolbar item that gives you full control over line length!
-		</p>
-
-		<figure>
-			<img src="img/hcde598-hw01-pic07-ai-shape-tool.png" width=400>
-			<figcaption>Super-mega epiphany #2: THE SHAPE TOOL.</figcaption>
-		</figure>
-
-		<p>
-			Success! ...just barely. The tighest slots (0.146 in) fit great. Tempted
-			to make that my new midpoint and try for even tighter, but it's getting
-			late and I need my beauty sleep.
-		</p>
-
-		<figure>
-			<img src="img/hcde598-hw01-pic08-print2.png" width=400>
-			<figcaption>Good enough for tonight.</figcaption>
-		</figure>
-
-
-		<h2>Building the Actual Kit</h2>
-
-		<p>
-			Okay, it's been a couple days since the gauge build. Imma build a frame for a wing.  Grab a legit <a href="https://en.wikipedia.org/wiki/NACA_airfoil" >NACA Airfoil</a>, cut some notches in it, replicate, and include some more parts for the wing outline & a spart or two. I need 12 parts, so ... a wing outline, a spar, ten airofils. Maybe a few more spars and less foils.
-		</p>
-		<p>
-			<em>I've had another epiphany!</em> I shouldn't need to do a bunch of line-by-line
-			tedium like I did for the guage.  A simple overlapping rectangle should do just fine! Add a triangle, and I can get a campher!. Don't know what I'm talking about? Here's a sketch:
-		</p>
-
-		<figure>
-			<img src ="img/hcde598-hw01-pic09-sketch01.png"  width=400>
-			<figcaption>Super-mega epiphany #3: OVERLAPPING SHAPES.</figcaption>
-		</figure>
-
-		<p>
-			Okay so let's try this. I'm gonna find a symmetrical airfiol, and make a
-			little "3D teardrop" like this:
-		</p>
-
-		<figure>
-			<img src ="img/hcde598-hw01-pic10-sketch02.png"  width=400>
-			<figcaption>I think this will work ... </figcaption>
-		</figure>
-
-		<p>
-			First-off, let's find an arfoil on
-			<a href ="http://airfoiltools.com/airfoil/naca4digit"> arfoiltools.com</a>,
-			download as SVG, then import into  Adobe Illutrator.
-			This one looks promising.
-		</p>
-
-		<figure>
-			<img src ="img/hcde598-hw01-pic11-airfoil-NACA-0018.png"  width=400>
-			<figcaption>NACA Airfoil 0018. Thick & symmetrical.</figcaption>
-		</figure>
-
-		<p>
-			The SVG loaded into Adobe Illustrator okay, but it inlcuded all the gridlines
-			and titles and junk with it.  After learning a bit more mouseology, I could
-			isolate the airfoil. Add soome rectangles for slots, triangle for camphers,
-			and we're ready to print.
-		</p>
-		<figure>
-			<img src ="img/hcde598-hw01-pic12-airfoil-NACA-0018-in-adobe-ai.png" width=400>
-			<figcaption>Hope this works.</figcaption>
-		</figure>
-
-		<p>
-			Not bad.  Used a lower power setting so some of the cuts didn't go all the way through. Had to do a bit of touch-up with an Exacto, but they came out.
-		</p>
-
-		<figure>
-			<img src ="img/hcde598-hw01-pic13-airfoil-NACA-0018-printed.png" width=400>
-			<figcaption>Printed parts</figcaption>
-		</figure>
-
-		<p>
-			Pretty happy with how things assembled. Nice flush fit with between the circle and the two airofils. Need to make the parts larger next time, and aovid long thing tapers.  Also keep up with those triangle camphers.
-		</p>
-
-		<figure>
-			<img src ="img/hcde598-hw01-pic14-airfoil-NACA-0018-assembled.png" width=400>
-			<figcaption>Assembled parts</figcaption>
-		</figure>
-
-		<h2>Scaling Up</h2>
-		<p>
-			Right, then; our little "drop tank" test proves this will work, let's make a wing!  Back to the sketch book.  We'll want a "rectangular hoop" for the basic wing frame. Then a bunch of airfoil ribs, and three spars.   So to meet requirements, we need at least eight ribs for a total of 12 parts.
-		</p>
-
-		<figure>
-			<img src ="img/hcde598-hw01-pic15-sketch03.png" width=400>
-			<figcaption>Wing Sketch</figcaption>
-		</figure>
-
-		<p>
-			Well, that was a headache. LOTS of little elements to line up. Had to draw a bunch of guidelines. Which I ALMOST FORGOT to delete before printing.
-		</p>
-
-		<figure>
-			<img src ="img/hcde598-hw01-pic16-3rib-prototype.png" width=400>
-			<figcaption>Yeah, it would have been bad to try printing this.</figcaption>
-		</figure>
-
-		<figure>
-			<img src ="img/hcde598-hw01-pic17-3rib-prototype-cleaned.png" width=400>
-			<figcaption>This one's printable (I think).</figcaption>
-		</figure>
-
-
-		<p>
-			Headache #2. I had my airfoil set up as a library element, so I lost it when I copied my ai doc over to thumbrdive to print from one of the UW MILL machines.  Now let's try printing ....
-		</p>
-
-		<h3>Uh-Oh</h3>
-		<p>
-			I've learned a valuable lesson about print order. Pretty terifying to watch some parts "scallop up" before the print's done. Everything came out okay, though.
-		</p>
-
-		<figure>
-			<img src ="img/hcde598-hw01-pic18-3rib-scalloping.jpg" width=400>
-			<figcaption>Please don't screw up. Please don't screw up.</figcaption>
-		</figure>
-
-		<figure>
-			<img src ="img/hcde598-hw01-pic19-3rib-parts-layout.png" width=400>
-			<figcaption>Whew! Got some parts without burnind down the MILL.</figcaption>
-		</figure>
-
-		<p>
-			Headache #3. I discovered I forgot some of the rectangular cutouts. Had to improvise with a utility
-			knife, but built myself a mini wing.
-		</p>
-
-		<figure>
-			<img src ="img/hcde598-hw01-pic20-3rib-assembled.png" width=400>
-			<figcaption>Okay, I can make a wing; now I need one with more parts.</figcaption>
-		</figure>
-
-		<h2> Day Three. I should really finish this</h2>
-		<p>Added camphers</p>
-		<p>Looks like I can separate by art boards. Try that.</p>
-		<figure>
-			<img src ="img/hcde598-hw01-pic21-print-by-artboard-or-layers.png" width=400>
-			<figcaption>Either artboards or layering ... one of them's gotta work (I hope).</figcaption>
-		</figure>
-
-		<p> Need a layering system like this:</p>
-		<ol>
-			<li>Tiny triangles</li>
-			<li>Small rectangles</li>
-			<li>wing profiles</li>
-			<li>big parts</li>
-			<li>guide lines</li>
-		</ol>
-
-		<p>I don't think artboards are going to work, I'll try layers instead</p>
-		<figure>
-			<img src ="img/hcde598-hw01-pic22-ai-layers.png" width=400>
-			<figcaption>Now I think I'm onto something.</figcaption>
-		</figure>
-		<p>
-			Printing by layers was highly successful for the second "mini wing." Confident and ready to move on to main wing.  Also, two mini wings are 14 parts total, so I kinda met the requirements already.
-		</p>
-
-		<figure>
-			<img src ="img/hcde598-hw01-pic23-successful-layered-print.png" width=400>
-			<figcaption>Super-mega epiphany #4: LAYERS.</figcaption>
-		</figure>
-
-		<p>
-			Okay, time to set up the layers for the main Big Wing.
-		</p>
-
-		<figure>
-			<img src ="img/hcde598-hw01-pic24-layer1-guidelines.png" width=800>
-			<figcaption>Layer 1: Guidelines. These won't actually be printed.</figcaption>
-		</figure>
-
-		<figure>
-			<img src ="img/hcde598-hw01-pic25-layer2-tiny-parts.png" width=800>
-			<figcaption>Layer 2: Tiny Parts (rectangular cutouts and camphers). These will be printed first.</figcaption>
-		</figure>
-
-		<figure>
-			<img src ="img/hcde598-hw01-pic26-layer3-medium-parts.png" width=800>
-			<figcaption>Layer 3: Medium Parts (airfoils). These will be printed next.</figcaption>
-		</figure>
-
-		<figure>
-			<img src ="img/hcde598-hw01-pic27-layer4-huge-parts.png" width=800>
-			<figcaption>Layer 4: Huge Parts (wing frame and spars). These are last to print.</figcaption>
-		</figure>
-
-		<p>  
-			Putting all the layers together, you can see how the guidelines help to keep all 
-			recuagular cutouts lined up. You can also see how it would utterly destroy the 
-			ouptut if we actually printed them.
-		</p>
-
-		<figure>
-			<img src ="img/hcde598-hw01-pic28-all-layers.png" width=800>
-			<figcaption>Altogether now!</figcaption>
-		</figure>
-
-		<h3>Okay, Let's Start Printing(Finally)!</h3>
-		<p>
-			Printing by layers was pretty easy.  Just selectively turn one layer on and all the others off, and make sure "Print Visible Layers" is enabled.
-		</p>
-
-		<figure>
-			<img src ="img/hcde598-hw01-pic29-print-layer2.png" width=400>
-			<figcaption>Print the small cutouts first.</figcaption>
-		</figure>
-
-
-		<figure>
-			<img src ="img/hcde598-hw01-pic30-print-layer3.png" width=400>
-			<figcaption>Then print the airofils.</figcaption>
-		</figure>
-
-		<figure>
-			<img src ="img/hcde598-hw01-pic31-print-layer4.png" width=400>
-			<figcaption>Print the large parts last.</figcaption>
-		</figure>
-
-		<p>
-			Crap. A lot of the small parts didn't cut all the way through. Forgot to set my power at 100.  Time for the exacto knife again.
-		</p>
-
-		<figure>
-			<img src ="img/hcde598-hw01-pic32-cutout-pats.png" width=400>
-			<figcaption>After 30 minutes of Exacto-Therapy.</figcaption>
-		</figure>
-
-		<p>On the plus side, the build went pretty easy</p>
-		<figure>
-			<img src ="img/hcde598-hw01-pic33-build-step1.png" width=400>
-			<figcaption>Using the wing spar to align the airfoils.</figcaption>
-		</figure>
-
-		<h2>Finished Product!</h2>
-
-		<p>
-			Not bad. Pretty happy with the way the wing spars meshed into the airfoils. Too bad the front edge of the frame juts beyond the arfoils. Looks like I didn't have
-			the airofil & cutouts properly aligned.  Good enough, though for a proof of concept.
-		</p>
-
-		<figure>
-			<img src ="img/hcde598-hw01-pic34-finished-wing.png" width=400>
-			<figcaption>Feeling cute. Might make an airplane this quarter, IDK :)</figcaption>
-		</figure>
-
-	</div> <!-- class widebody -->
-</body>
-</html>
+			large outer ones.</p>
+
+			<figure>
+				<img src ="img/hcde598-hw01-pic18-3rib-scalloping.jpg" width=400>
+				<figcaption>Oh crap, it's scalloping!</figcaption>
+			</figure>
+
+			<p>Having figured all that out, I could make a three-foot wing with nine ribs, three spars, and a "hoop frame" holding them all together.</p>
+
+			<figure>
+				<img src ="img/hcde598-hw01-pic28-all-layers.png" width=800>
+				<figcaption>Big Giant Illustrator Drawing</figcaption>
+			</figure>
+
+			<figure>
+				<img src ="img/hcde598-hw01-pic32-cutout-pats.png" width=400>
+				<figcaption>Big Giant Print (Three passes for three layers).</figcaption>
+			</figure>
+
+			<figure>
+				<img src ="img/hcde598-hw01-pic34-finished-wing.png" width=400>
+				<figcaption>Big Giant Finished Product.</figcaption>
+			</figure>
+
+			<P>Super Mega Epiphanies</P>
+			<ol>
+				<li>Putting a notch at the top of my gauge, so I knew which end had the narrower slot.</li>
+				<li>Uing the Adobe Illustrator Shape tool for size control below a tenth of an inch.</li>
+				<li>Using overlapping rectangles to cut out notches, triangles for chamfers.</li>
+				<li>Using Layers and mutiple print passes to control which parts get printed when.</li>
+			</ol>
+
+			<h2>Source Files</h2>
+			<p> Available on github.com at <a href= "https://github.com/LeoSalemann/LeoSalemann.github.io/tree/master/hcde598/hw01">https://github.com/LeoSalemann/LeoSalemann.github.io/tree/master/hcde598/hw01 </a></p>
+
+			<h2>Machine Settings (Epilog Laser Fustion M2 60 watt)</h2>
+			<ul>
+				<li>Power: 100 (Seemed scary-smoky. Tried 65; didn't cut all the way through.)</li>
+				<li>Fequency: 100</li>
+				<li>Speed: 25</li>
+				<li>Job Type: Vector</li>
+			</ul>
+			<h2>Adobe Illustrator Settings</h2>
+			<ul>
+				<li>Stroke: 0.001 inch</li>
+				<li>Print Vislible Layers: ON</li>
+				<li>Print Layers: Vislible & Printable Layers</li>
+			</ul>
+
+			<h2>Special Thanks to ....</h2>
+			<ul>
+				<li>HCDE 598 Student <em>Ping Lai</em> For help with Adobe Illustrator document sizing. </li>
+				<li>MILL Staffer <em>Shiraz</em> for reminding me about proper power/frequency/speed settings.</li>
+			</ul>
+
+			<!-- ***** DETAILS ***** -->
+			<h2>The DEETS (sooooo many deets)</h2>
+			<h2>Building the Test Gauge</h2>
+
+			<h3>Planning an Approach</h3>
+			<p>
+				First thing I gotta do is make a "gauge" with different slot thicknesses.
+				My calipers give me a thickness of 0.1580 in. Adobe Illustrator seems to
+				stop at 0.01 inch increments. Okay, we'll make slots at 0.16, 0.17, 0.18
+				0.2.
+			</p>
+
+			<h3>Drawing the Gauge </h3>
+			<p>
+				I was hoping I could draw a rectangle, add some points, and cut things out.
+				Adobe Illustrator doesn't seem to let me do that (not without a fight,
+				anyway), so I'll go line by line instead.  Not has hard as I thought, once
+				you start copy/pasting the repetitive lines.
+			</p>
+
+			<figure>
+				<img src="img/hcde598-hw01-pic01-gauge.png" width=400>
+				<figcaption>First few lines in Adobe Illustrator</figcaption>
+			</figure>
+
+			<p>
+				Heh. Here's an idea. Imma put a notch at the top of my gauge, so I know
+				which end is which -- 0.016 will start at the notch.
+			</p>
+
+			<figure>
+				<img src="img/hcde598-hw01-pic02-gauge.png" width=400>
+				<figcaption>Super-mega epiphany #1: THE NOTCH.</figcaption>
+			</figure>
+
+			<p>
+				Now I gotta figure out how to make the chamfers. Gonna need to chop
+				off my "end lines" ....
+			</P>
+
+			<figure>
+				<img src="img/hcde598-hw01-pic03-gauge.png" width=400>
+				<figcaption>This is getting tedious.</figcaption>
+			</figure>
+
+			<p>
+				Add some angled chamfers (thank you copy/paste/flip-vertical)...
+			</p>
+
+			<figure>
+				<img src="img/hcde598-hw01-pic04-gauge.png" width=400><
+				<figcaption>Okay maybe not as bad as I thought.</figcaption>
+			</figure>
+
+			<p>
+				And reconnect the ends!
+			</p>
+
+			<figure>
+				<img src="img/hcde598-hw01-pic05-gauge.png" width=400>
+				<figcaption>There, that wasn't so bad.</figcaption>
+			</figure>
+
+			<p>Okay, one more copy/paste so I have a pair, and it's off to the
+				lasercutter!</p>
+
+				<p>
+					Well, crap.  Even my tightest slot is too loose.  Need to figure out how
+					to see sub-tenth line lengths.  Aha! clicking <em>Shape</em> gets you a
+					form that lets you set exact length and angle.  Going to change up my slots to be
+					0.146 0.148 0.150 0.152 0.154.
+				</p>
+
+				<figure>
+					<img src="img/hcde598-hw01-pic06-print1.png" width=400>
+					<figcaption>Might look okay, but it's actually really loose.</figcaption>
+				</figure>
+
+				<p>
+					Aha!  Adobe Illustrator provides a <em>Shape</em> toolbar item that gives
+					you full control over line length!
+				</p>
+
+				<figure>
+					<img src="img/hcde598-hw01-pic07-ai-shape-tool.png" width=400>
+					<figcaption>Super-mega epiphany #2: THE SHAPE TOOL.</figcaption>
+				</figure>
+
+				<p>
+					Success! ...just barely. The tighest slots (0.146 in) fit great. Tempted
+					to make that my new midpoint and try for even tighter, but it's getting
+					late and I need my beauty sleep.
+				</p>
+
+				<figure>
+					<img src="img/hcde598-hw01-pic08-print2.png" width=400>
+					<figcaption>Good enough for tonight.</figcaption>
+				</figure>
+
+
+				<!-- DAY TWO: MINIT KIT BUILD -->
+				<h2>Day Two: Building the Actual Kit</h2>
+
+				<p>
+					Okay, it's been a couple days since the gauge build. Imma build a frame
+					for a wing.  Grab a legit <a href="https://en.wikipedia.org/wiki/NACA_airfoil">
+						NACA Airfoil</a>, cut some notches in it, replicate, and include some more
+						parts for the wing outline and a spar or two. I need 12 parts, so ... a
+						wing outline, a spar, ten airfoils. Maybe a few more spars and less foils.
+					</p>
+					<p>
+						<em>I've had another epiphany!</em> I shouldn't need to do a bunch of
+						line-by-line tedium like I did for the gauge.  A simple overlapping rectangle
+						should do just fine! Add a triangle, and I can get a chamfer! Don't know
+						what I'm talking about? Here's a sketch:
+					</p>
+
+					<figure>
+						<img src ="img/hcde598-hw01-pic09-sketch01.png"  width=400>
+						<figcaption>Super-mega epiphany #3: OVERLAPPING SHAPES.</figcaption>
+					</figure>
+
+					<p>
+						Okay so let's try this. I'm gonna find a symmetrical airfoil, and make a
+						little "3D teardrop" like this:
+					</p>
+
+					<figure>
+						<img src ="img/hcde598-hw01-pic10-sketch02.png"  width=400>
+						<figcaption>I think this will work ... </figcaption>
+					</figure>
+
+					<p>
+						First-off, let's find an arfoil on
+						<a href ="http://airfoiltools.com/airfoil/naca4digit"> arfoiltools.com</a>,
+						download as SVG, then import into  Adobe Illutrator.
+						This one looks promising.
+					</p>
+
+					<figure>
+						<img src ="img/hcde598-hw01-pic11-airfoil-NACA-0018.png"  width=400>
+						<figcaption>NACA Airfoil 0018. Thick & symmetrical.</figcaption>
+					</figure>
+
+					<p>
+						The SVG loaded into Adobe Illustrator okay, but it inlcuded all the gridlines
+						and titles and junk with it.  After learning a bit more mouseology, I could
+						isolate the airfoil. Add some rectangles for slots, triangles for chamfers,
+						and we're ready to print.
+					</p>
+					<figure>
+						<img src ="img/hcde598-hw01-pic12-airfoil-NACA-0018-in-adobe-ai.png" width=400>
+						<figcaption>Hope this works.</figcaption>
+					</figure>
+
+					<p>
+						Not bad.  Used a lower power setting so some of the cuts didn't go all the
+						way through. Had to do a bit of touch-up with an x-acto, but they came out.
+					</p>
+
+					<figure>
+						<img src ="img/hcde598-hw01-pic13-airfoil-NACA-0018-printed.png" width=400>
+						<figcaption>Printed parts</figcaption>
+					</figure>
+
+					<p>
+						Pretty happy with how things assembled. Nice flush fit between the circle
+						and the two airofils. Need to make the parts larger next time, and avoid
+						ong thin tapers.  Also keep up with those triangle chamfers.
+					</p>
+
+					<figure>
+						<img src ="img/hcde598-hw01-pic14-airfoil-NACA-0018-assembled.png" width=400>
+						<figcaption>Assembled parts</figcaption>
+					</figure>
+
+					<h2>Scaling Up</h2>
+					<p>
+						Right, then. Our little "drop tank" test proves this will work; let's make
+						a wing!  Back to the sketch book.  We'll want a "rectangular hoop" for the
+						basic wing frame. Then a bunch of airfoil ribs, and three spars.   So to
+						meet requirements, we need at least eight ribs for a total of 12 parts.
+					</p>
+
+					<figure>
+						<img src ="img/hcde598-hw01-pic15-sketch03.png" width=400>
+						<figcaption>Wing Sketch</figcaption>
+					</figure>
+
+					<p>
+						Well, that was a headache. LOTS of little elements to line up. Had to draw
+						a bunch of guidelines. Which I ALMOST FORGOT to delete before printing.
+					</p>
+
+					<figure>
+						<img src ="img/hcde598-hw01-pic16-3rib-prototype.png" width=400>
+						<figcaption>Yeah, it would have been bad to try printing this.</figcaption>
+					</figure>
+
+					<figure>
+						<img src ="img/hcde598-hw01-pic17-3rib-prototype-cleaned.png" width=400>
+						<figcaption>This one's printable (I think).</figcaption>
+					</figure>
+
+
+					<p>
+						Headache #2. I had my airfoil set up as a library element, so I lost it
+						when I copied my ai doc over to thumb drive to print from one of the UW
+						MILL machines.  Now let's try printing ....
+					</p>
+
+					<h3>Uh-Oh</h3>
+					<p>
+						I've learned a valuable lesson about print order. Pretty terrifying to
+						watch some parts "scallop up" before the print's done. Everything came
+						out okay, though.
+					</p>
+
+					<figure>
+						<img src ="img/hcde598-hw01-pic18-3rib-scalloping.jpg" width=400>
+						<figcaption>Please don't screw up. Please don't screw up.</figcaption>
+					</figure>
+
+					<figure>
+						<img src ="img/hcde598-hw01-pic19-3rib-parts-layout.png" width=400>
+						<figcaption>Whew! Got some parts without burning down the MILL.</figcaption>
+					</figure>
+
+					<p>
+						Headache #3. I discovered I forgot some of the rectangular cutouts. Had to
+						improvise with a utility
+						knife, but built myself a mini wing.
+					</p>
+
+					<figure>
+						<img src ="img/hcde598-hw01-pic20-3rib-assembled.png" width=400>
+						<figcaption>Okay, I can make a wing; now I need one with more parts.</figcaption>
+					</figure>
+
+					<!-- DAY THREE: FINISH IT ALREADY -->
+					<h2> Day Three. I Should Really Finish This</h2>
+					<p>Last night, I drew out my big giant wing, but didn't have time to print it.
+						This morning, I added chamfers. Before I print anything, I need to find a
+						way to control which parts get printed in what order.
+					</p>
+
+					<p> Need a layering system like this:</p>
+					<ol>
+						<li>Tiny triangles</li>
+						<li>Small rectangles</li>
+						<li>wing profiles</li>
+						<li>big parts</li>
+						<li>guide lines</li>
+					</ol>
+
+					<p>Looks like I can separate by art boards. Try that.</p>
+					<figure>
+						<img src ="img/hcde598-hw01-pic21-print-by-artboard-or-layers.png" width=600>
+						<figcaption>Either artboards or layering ... one of them's gotta work (I hope).</figcaption>
+					</figure>
+
+					<p>I don't think artboards are going to work, they just make separate pages
+						next to each other. I'll try layers instead
+					</p>
+
+					<figure>
+						<img src ="img/hcde598-hw01-pic22-ai-layers.png" width=800>
+						<figcaption>Now I think I'm onto something.</figcaption>
+					</figure>
+					<p>
+						Printing by layers was highly successful for the second "mini wing."
+						Confident and ready to move on to main wing.  Also, two mini wings are 14
+						parts total, so I kinda met the requirements already.
+					</p>
+
+					<figure>
+						<img src ="img/hcde598-hw01-pic23-successful-layered-print.png" width=400>
+						<figcaption>Super-mega epiphany #4: LAYERS.</figcaption>
+					</figure>
+
+					<p>
+						Okay, time to set up the layers for the main Big Wing.
+					</p>
+
+					<figure>
+						<img src ="img/hcde598-hw01-pic24-layer1-guidelines.png" width=800>
+						<figcaption>Layer 1: Guidelines. These won't actually be printed.</figcaption>
+					</figure>
+
+					<figure>
+						<img src ="img/hcde598-hw01-pic25-layer2-tiny-parts.png" width=800>
+						<figcaption>Layer 2: Tiny Parts (rectangular cutouts and chamfers). These will be printed first.</figcaption>
+					</figure>
+
+					<figure>
+						<img src ="img/hcde598-hw01-pic26-layer3-medium-parts.png" width=800>
+						<figcaption>Layer 3: Medium Parts (airfoils). These will be printed next.</figcaption>
+					</figure>
+
+					<figure>
+						<img src ="img/hcde598-hw01-pic27-layer4-huge-parts.png" width=800>
+						<figcaption>Layer 4: Huge Parts (wing frame and spars). These are last to	print.</figcaption>
+					</figure>
+
+					<p>
+						Putting all the layers together, you can see how the guidelines help to keep all
+						recuagular cutouts lined up. You can also see how it would utterly destroy the
+						ouptut if we actually printed them.
+					</p>
+
+					<figure>
+						<img src ="img/hcde598-hw01-pic28-all-layers.png" width=800>
+						<figcaption>Altogether now!</figcaption>
+					</figure>
+
+					<h3>Okay, Let's (Finally) Start Printing!</h3>
+					<p>
+						Printing by layers was pretty easy.  Just selectively turn one
+						layer on and all the others off, and make sure print mode is set
+						to "Visible and Printable Layers" <em>not</em> "All Layers."
+					</p>
+
+					<figure>
+						<img src ="img/hcde598-hw01-pic29-print-layer2.png" width=400>
+						<figcaption>Print the small cutouts first.</figcaption>
+					</figure>
+
+
+					<figure>
+						<img src ="img/hcde598-hw01-pic30-print-layer3.png" width=400>
+						<figcaption>Then print the airfoils.</figcaption>
+					</figure>
+
+					<figure>
+						<img src ="img/hcde598-hw01-pic31-print-layer4.png" width=400>
+						<figcaption>Print the large parts last.</figcaption>
+					</figure>
+
+					<p>
+						Crap. A lot of the small parts didn't cut all the way through. Forgot
+						 to set my power at 100.  Time for the x-acto knife again.
+					</p>
+
+					<figure>
+						<img src ="img/hcde598-hw01-pic32-cutout-pats.png" width=400>
+						<figcaption>After 30 minutes of x-acto therapy.</figcaption>
+					</figure>
+
+					<p>On the plus side, the build went pretty easy.</p>
+					<figure>
+						<img src ="img/hcde598-hw01-pic33-build-step1.png" width=400>
+						<figcaption>Using the wing spar to align the airfoils.</figcaption>
+					</figure>
+
+					<h2>Finished Product!</h2>
+
+					<p>
+						Not bad. Pretty happy with the way the wing spars meshed into the
+						airfoils; too bad the front edge of the frame juts beyond them.
+						Looks like I didn't have the airfoil & cutouts properly aligned.  Good
+						enough, though for a proof of concept.
+					</p>
+
+					<figure>
+						<img src ="img/hcde598-hw01-pic34-finished-wing.png" width=400>
+						<figcaption>Feeling cute. Might make an airplane this quarter, IDK :)</figcaption>
+					</figure>
+
+				</div> <!-- class widebody -->
+			</body>
+			</html>
