@@ -1,48 +1,129 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
 
-        <title>Leo Salemanns's HCDE 598 Digital Fabrication Page!/title>
+  <title>Leo Salemanns's HCDE 598 Digital Fabrication Page!</title>
 
-        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
 
-    </head>
-    <body>
+</head>
+<body>
 
-        <div class="header">
-            <h1>Leo's Assignment 2: Parametric Wrhino Wing!</h1>
-            <p>
-            <img src="red-panda.jpg" width=400></a>
-            </p>
-            <p>
-            Here is all the documentation for assignment 2!
-            </p>
-        </div>
+  <div class="header">
+    <h1>Leo's Assignment 2: Parametric Rhino Wing!</h1>
+    <p>
+      <img src="red-panda.jpg" width=400></a>
+    </p>
+    <p>
+      Here is all the documentation for assignment 2!
+    </p>
+  </div>
 
-        <div class="widebody">
-          <h2>Fixin' To Get Ready</h2>
-          <p>
-            Right, then.  We're supposed to re-create homework 1 parametrically,
-            in <a href ="https://www.rhino3d.com/download">Rhino</a> with
-            <a href ="https://www.rhino3d.com/6/new/grasshopper">Grasshopper</a>.
-            The basic idea is to parametrically handle arbitrary thicknesses, and
-            to use two thicknesses in the actual build. I think Imma have to:
-            <ol>
-              <li>Draw some sketches.</li>
-              <li>Watch some Grasshopper tutorials.</li>
-              <li>CAD some stuff.</li>
-              <li>Print some stuff.</li>
-            </ol>
-          </p>
+  <div class="widebody">
+    <h2>Fixin' To Get Ready</h2>
+    <p>
+      Right, then.  We're supposed to re-create homework 1 parametrically,
+      in <a href ="https://www.rhino3d.com/download">Rhino</a> with
+      <a href ="https://www.rhino3d.com/6/new/grasshopper">Grasshopper</a>.
+      The basic idea is to parametrically handle arbitrary thicknesses, and
+      to use two thicknesses in the actual build. I think Imma have to:
+      <ol>
+        <li>Draw some sketches.</li>
+        <li>Watch some Grasshopper tutorials.</li>
+        <li>CAD some stuff.</li>
+        <li>Print some stuff.</li>
+      </ol>
+    </p>
 
-          <h2>Sketching</h2>
-          <h2>Tutorials.</h2>
-          <p>
-            TBD - include links to what I whatched, and what I thought of them.
-          </p>
-        </div> <!--widebody-->
+    <h2>Sketching</h2>
+    <figure>
+      <img src ="img/hcde598-hw02-pic01-sketch1.png" width=400>
+      <figcaption>Parts, Thicknesses, and Parameters</figcaption>
+    </figure>
 
-    </body>
+    <p>
+      Okay, so if I go with the original design, I have three parametric
+      thicknesses at least:
+      <ol>
+        <li>Airfoil Thickness (T1)</li>
+        <li>"Main Hoop" Thickness (T2)</li>
+        <li>Spar Thickness (T3)</li>
+      </ol>
+
+      In reality, T1 will probably be pretty small, T3 will be bigger,
+      and T2 will be huge. If I wanna go crazy, Each spar could be a
+      unique thickness, so there'd be T1, T2, T3a, T3b, T3c.  It'd
+      be a pain to gather so many material thicknesses, so I probalby
+      won't actually go that far.
+    </p>
+    <p>
+      Another thing I could do is ditch the hoop entirely, and just go
+      with notched beams at the leading and (maybe) trailind edges. It'd
+      be interesting to see what it's like to assemble that way, and home
+      strong the finished product is, so I'll probalby do that.
+    </p>
+
+    <p>
+      So anyway, based on what little I know of Rhino Grasshopper, my
+      visual programming diagram thingy would look somehting like this
+      (below). To make things easier (and lighter!)  I've removed the
+      "hoop frame" so I'm only dealing with spars and airfoils.
+      Consequently, I no longer have to worry about T2 from the prior
+      sketch, and can concentrate on T1 and T3.
+    </p>
+    <figure>
+      <img src ="img/hcde598-hw02-pic02-sketch2.png" width=400>
+      <figcaption>Sketching for Grasshopper.</figcaption>
+    </figure>
+
+    <p>
+      I've also added d1 and d3 so the cutout rectangles can have
+      lengths to go width their widths. Rectangle A (for the spar)
+      is d1 x T1; Rectangle B (for the airfoil a.k.a. rib) is d3 x T3.
+      Spar height and airfoil height (I'll reserve "thickness" to
+      describe material thickness" will both be d1+d3. When I work up
+      spars for the other slot locations on the airfoil, the airfoil
+      slots will always be d3 x T3, but the d1 used on the spars
+      will vary.
+    </p>
+
+    <p>
+      A quick rework of my 3-rib prototype suggests it'll still be
+      plenty strong.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw02-pic03-3rib-no-hoop.png" width=400>
+      <figcaption>Look Ma, no hoop! Just ribs and beams.</figcaption>
+    </figure>
+
+    <p>
+      The tricky part in all this will be getting grasshopper to "read"
+      my custom airfoil shape, cut notches in it, and replicate it. So
+      having done this sketching, thinking, writing exercise, I know that
+      I need tutorials covering:
+      <ul>
+        <li>Recangular Arrays</li>
+        <li>Trimming</li>
+        <li>Importing or referencing cusotom geometry</li>
+      </ul>
+
+      Spoiler alert: I already figured out how to import my SVG airfoil
+      into Rhino!
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw02-pic04-naca-2415-in-rhino.png" width=400>
+      <figcaption>I might-just be able to pull this off..</figcaption>
+    </figure>
+
+    <h2>Tutorials.</h2>
+    <p>
+      TBD - include links to what I whatched, and what I thought of them.
+    </p>
+  </div> <!--widebody-->
+
+</body>
 </html>
