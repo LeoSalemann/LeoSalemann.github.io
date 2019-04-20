@@ -11,6 +11,7 @@
 </head>
 <body>
 
+  <!-- HEADER -->
   <div class="header">
     <h1>Leo's Assignment 2: Parametric Rhino Wing!</h1>
     <p>
@@ -21,8 +22,50 @@
     </p>
   </div>
 
+  <!-- WIDEBODY -->
   <div class="widebody">
-    <h2>Fixin' To Get Ready</h2>
+
+    <!-- TL;DR, SOURCE, ACKNOWLEDGMENTS -->
+    <h2>TL;DR</h2>
+    <p>
+      I still need to write this part.
+    </p>
+
+    <h2>Source Files</h2>
+    <p>
+      Available on github.com at
+      <a href= "https://github.com/LeoSalemann/LeoSalemann.github.io/tree/master/hcde598/hw02">
+        https://github.com/LeoSalemann/LeoSalemann.github.io/tree/master/hcde598/hw02
+      </a>
+    </p>
+
+    <h2>Special Thanks to ....</h2>
+    <ul>
+      <li>
+        HCDE 598 Student <em>Kimberly Dziubinski</em> For the link to the
+        <a href ="https://blog.ramboll.com/rcd/tutorials/a-beginners-guide-to-visual-scripting-with-grasshopper.html">
+          Ramboll Blog Grashopper Tutorial
+        </a>
+      </li>
+
+      <li>
+        Freelance Designer
+        <em>
+          <a href ="https://www.grasshopper3d.com/profile/GarethPaterson">Dr. Gareth Paterson </a>
+        </em>
+        for his super-awesome
+        <a href ="https://www.grasshopper3d.com/profiles/blogs/naca-series-4-aerofoil-generator">
+          Grashopper defintion that generates NACA series 4 airfoils
+        </a>
+      </li>
+
+
+    </ul>
+
+    <!-- DEETS -->
+    <h2>Waaayyyyy Too Many DEETS</h2>
+    <!-- DAY ONE -->
+    <h2>Day One: Fixin' To Get Ready</h2>
     <p>
       Right, then.  We're supposed to re-create homework 1 parametrically,
       in <a href ="https://www.rhino3d.com/download">Rhino</a> with
@@ -119,10 +162,150 @@
       <figcaption>I might-just be able to pull this off..</figcaption>
     </figure>
 
-    <h2>Tutorials.</h2>
+    <!-- DAY TWO -->
+    <h2>Day Two, What to Do?</h2>
     <p>
-      TBD - include links to what I whatched, and what I thought of them.
+      Okay last night was about thinking and sketching; tonight is tutorial time!
+      But first .... we've got an actual assignment description now.  I need:
+      <ul>
+        <li><strong>3 shapes, two thicknesses</strong> My simple 3-rib mini wing would be meet the minimum bar.</li>
+        <li><strong>Provide a link to source files.</strong> Been there, done that.</li>
+        <li>
+          <strong>I can use plugins if I attribute them.</strong> OMG OMG OMG I found a
+          <a href="https://www.grasshopper3d.com/profiles/blogs/naca-series-4-aerofoil-generator">
+            Grashopper plugin to generate NACA Airfoils!
+          </a>
+        </li>
+      </ul>
     </p>
+
+    <h2>Tutorials</h2>
+    <h3><a href="https://www.modelab.is/grasshopper-primer/">
+      ModelLab Grasshopper Primer</a></h3>
+
+      <p>
+        Pretty slow and wordy; got a few nuggets out of it though.
+        <ul>
+          <li>
+            The <strong>Divide Component</strong>could be handy for dividing
+            my spar into equal sections for the airfoils(ribs).
+          </li>
+          <li>I can use <strong>Panels</strong> for comments.</li>
+        </ul>
+
+        All in all, thought I  found the ModelLab primer slow and wordy. The
+        little mini tutorials that come up when you first start Grasshoper
+        look good and succinct, though.
+      </p>
+
+      <!-- DAY THREE -->
+      <h2> Day Three, Oh My Oh Me</h2>
+      <p>
+        I didn't get through nearly enough tutorials the other night, but at
+        least I have some leads. Gonna do those ones from the Grashopper
+        start page, as well as the
+        <a href ="https://blog.ramboll.com/rcd/tutorials/a-beginners-guide-to-visual-scripting-with-grasshopper.html">
+          Ramboll Blog Grashopper Tutorial
+        </a>
+        suggested by Kimberly Dzuibinski.
+      </p>
+      <h2>More Tutorials</h2>
+      <h3>Grashopper Embedded Tutorials</h3>
+      <p>Let's start with the tutirials Grashopper shows at startup time.
+        Same ones you can get to from Help > Tutorial Files.
+      </p>
+
+      <p>
+        <strong>01 Simple Input and Maths</strong>
+        This is more like it.  Really digging the open-ended exploratory feel
+        of these. Got a good grip on how to use panels for comments, and the
+        sprectrum of input types avaialble to me.
+      </p>
+
+      <p>
+        <strong>02 Interpolating Values</strong>
+        This on3 helped me wrap my head around how to connect geometry from Rhino
+        (Pt) to Grasshopper. Playing with colors was way too fun.
+      </p>
+
+      <p>
+        <strong>03 Wires & Conversions</strong>
+
+        Moving right along. The "Hold down shift" trick will come in handy when
+        connecting multiple wires, the XYZ to Point conversin might come in
+        handy too.
+      </p>
+
+      <p>
+        <strong>04 Polynomial Grpahing with Derivatives</strong>
+        Okay, this one's funky. Probably won't go this hardcore unless I
+        start defining NACA airfoils from their base equations.  Might come
+        back to this one to help read & understand
+        <a href ="https://www.grasshopper3d.com/profile/GarethPaterson">
+          Dr. Gareth Paterson's
+        </a>
+        <a href ="https://www.grasshopper3d.com/profiles/blogs/naca-series-4-aerofoil-generator">
+          NACA Series 4 Airfoil generators
+        </a>
+      </p>
+
+      <p>
+        <strong>05 Measure and Display Values</strong>
+        I like the title of this one. A little hard to grock, but I <em>think</em>
+        I'll be able to use some of this when I want to measure positions off my
+        airofoils, like d3 and d1 below.
+
+        <figure>
+          <img src ="img/hcde598-hw02-pic05-airfoil-measurments.png" width=400>
+          <figcaption>Imma need to measure d1 and d3 eventually.</figcaption>
+        </figure>
+
+      </p>
+
+      <p>
+        <strong>06 Adaptive Pattern within Shape</strong>
+        Thought this would be out of my league at first glance, but I can kinda
+        see how <em>Join, InCurve,</em> and <em>Cull</em> could be used to
+        create my rectangular "slots" and clip them into my airfoils.
+      </p>
+
+      <p>
+        <strong>07 Column Arcade</strong>
+        Oooh ... repeating patterns! Hmm... I dunno.  There's a lot of fuky stuff
+        going on in this one, and the simple "replicate this shape in XY for N
+        times" isn't jumping out at me.  probalby need to look elsewhere for that.
+      </p>
+
+      <h3>
+        <a href ="https://blog.ramboll.com/rcd/tutorials/a-beginners-guide-to-visual-scripting-with-grasshopper.html">
+          A beginner’s guide to visual scripting with Grasshopper
+        </a>
+      </h3>
+      <p>
+        Right, then.  Feeling a bit less noobish, but still wanna look at the
+        <a href ="https://blog.ramboll.com/rcd/tutorials/a-beginners-guide-to-visual-scripting-with-grasshopper.html">
+          Ramboll Blog Grashopper Tutorial
+        </a>
+        that Kimberly Dziubinski found.  Skimmed the first page or tow, but found
+        some good nuggets starting right before section 3.
+
+        <ul>
+          <li>
+            <strong>View > Obscure Components</strong> So I can actually
+            see what-all elements are avaialable.
+          </li>
+          <strong>Display > Draw Icons</strong> I probably wasn't ready
+          for this sooner, but I feel ready now.
+          <strong></strong>
+        </li>
+      </ul>
+
+
+
+
+    </p>
+
+
   </div> <!--widebody-->
 
 </body>
