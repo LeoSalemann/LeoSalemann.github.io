@@ -53,418 +53,429 @@
       <li>
         HCDE 598 Student <em>Gabi Duncome</em> For the tip on using <em>Merge</em>
         prior to <em>Region Difference.</em>
-        </a>
-      </li>
-      <li>
-        Freelance Designer
-        <em>
-          <a href ="https://www.grasshopper3d.com/profile/GarethPaterson">Dr. Gareth Paterson </a>
-        </em>
-        for his super-awesome
-        <a href ="https://www.grasshopper3d.com/profiles/blogs/naca-series-4-aerofoil-generator">
-          Grashopper defintion that generates NACA series 4 airfoils
-        </a>
-      </li>
+      </a>
+    </li>
+    <li>
+      Freelance Designer
+      <em>
+        <a href ="https://www.grasshopper3d.com/profile/GarethPaterson">Dr. Gareth Paterson </a>
+      </em>
+      for his super-awesome
+      <a href ="https://www.grasshopper3d.com/profiles/blogs/naca-series-4-aerofoil-generator">
+        Grashopper defintion that generates NACA series 4 airfoils
+      </a>
+    </li>
 
 
+  </ul>
+
+  <!-- DEETS -->
+  <h2>Waaayyyyy Too Many DEETS</h2>
+  <!-- DAY ONE -->
+  <h2>Day One: Fixin' To Get Ready</h2>
+  <p>
+    Right, then.  We're supposed to re-create homework 1 parametrically,
+    in <a href ="https://www.rhino3d.com/download">Rhino</a> with
+    <a href ="https://www.rhino3d.com/6/new/grasshopper">Grasshopper</a>.
+    The basic idea is to parametrically handle arbitrary thicknesses, and
+    to use two thicknesses in the actual build. I think Imma have to:
+    <ol>
+      <li>Draw some sketches.</li>
+      <li>Watch some Grasshopper tutorials.</li>
+      <li>CAD some stuff.</li>
+      <li>Print some stuff.</li>
+    </ol>
+  </p>
+
+  <h2>Sketching</h2>
+  <figure>
+    <img src ="img/hcde598-hw02-pic01-sketch1.png" width=400>
+    <figcaption>Parts, Thicknesses, and Parameters</figcaption>
+  </figure>
+
+  <p>
+    Okay, so if I go with the original design, I have three parametric
+    thicknesses at least:
+    <ol>
+      <li>Airfoil Thickness (T1)</li>
+      <li>"Main Hoop" Thickness (T2)</li>
+      <li>Spar Thickness (T3)</li>
+    </ol>
+
+    In reality, T1 will probably be pretty small, T3 will be bigger,
+    and T2 will be huge. If I wanna go crazy, Each spar could be a
+    unique thickness, so there'd be T1, T2, T3a, T3b, T3c.  It'd
+    be a pain to gather so many material thicknesses, so I probalby
+    won't actually go that far.
+  </p>
+  <p>
+    Another thing I could do is ditch the hoop entirely, and just go
+    with notched beams at the leading and (maybe) trailind edges. It'd
+    be interesting to see what it's like to assemble that way, and home
+    strong the finished product is, so I'll probalby do that.
+  </p>
+
+  <p>
+    So anyway, based on what little I know of Rhino Grasshopper, my
+    visual programming diagram thingy would look somehting like this
+    (below). To make things easier (and lighter!)  I've removed the
+    "hoop frame" so I'm only dealing with spars and airfoils.
+    Consequently, I no longer have to worry about T2 from the prior
+    sketch, and can concentrate on T1 and T3.
+  </p>
+  <figure>
+    <img src ="img/hcde598-hw02-pic02-sketch2.png" width=400>
+    <figcaption>Sketching for Grasshopper.</figcaption>
+  </figure>
+
+  <p>
+    I've also added d1 and d3 so the cutout rectangles can have
+    lengths to go width their widths. Rectangle A (for the spar)
+    is d1 x T1; Rectangle B (for the airfoil a.k.a. rib) is d3 x T3.
+    Spar height and airfoil height (I'll reserve "thickness" to
+    describe material thickness" will both be d1+d3. When I work up
+    spars for the other slot locations on the airfoil, the airfoil
+    slots will always be d3 x T3, but the d1 used on the spars
+    will vary.
+  </p>
+
+  <p>
+    A quick rework of my 3-rib prototype suggests it'll still be
+    plenty strong.
+  </p>
+
+  <figure>
+    <img src ="img/hcde598-hw02-pic03-3rib-no-hoop.png" width=400>
+    <figcaption>Look Ma, no hoop! Just ribs and beams.</figcaption>
+  </figure>
+
+  <p>
+    The tricky part in all this will be getting grasshopper to "read"
+    my custom airfoil shape, cut notches in it, and replicate it. So
+    having done this sketching, thinking, writing exercise, I know that
+    I need tutorials covering:
+    <ul>
+      <li>Recangular Arrays</li>
+      <li>Trimming</li>
+      <li>Importing or referencing cusotom geometry</li>
     </ul>
 
-    <!-- DEETS -->
-    <h2>Waaayyyyy Too Many DEETS</h2>
-    <!-- DAY ONE -->
-    <h2>Day One: Fixin' To Get Ready</h2>
-    <p>
-      Right, then.  We're supposed to re-create homework 1 parametrically,
-      in <a href ="https://www.rhino3d.com/download">Rhino</a> with
-      <a href ="https://www.rhino3d.com/6/new/grasshopper">Grasshopper</a>.
-      The basic idea is to parametrically handle arbitrary thicknesses, and
-      to use two thicknesses in the actual build. I think Imma have to:
-      <ol>
-        <li>Draw some sketches.</li>
-        <li>Watch some Grasshopper tutorials.</li>
-        <li>CAD some stuff.</li>
-        <li>Print some stuff.</li>
-      </ol>
-    </p>
+    Spoiler alert: I already figured out how to import my SVG airfoil
+    into Rhino!
+  </p>
 
-    <h2>Sketching</h2>
-    <figure>
-      <img src ="img/hcde598-hw02-pic01-sketch1.png" width=400>
-      <figcaption>Parts, Thicknesses, and Parameters</figcaption>
-    </figure>
+  <figure>
+    <img src ="img/hcde598-hw02-pic04-naca-2415-in-rhino.png" width=400>
+    <figcaption>I might-just be able to pull this off..</figcaption>
+  </figure>
 
-    <p>
-      Okay, so if I go with the original design, I have three parametric
-      thicknesses at least:
-      <ol>
-        <li>Airfoil Thickness (T1)</li>
-        <li>"Main Hoop" Thickness (T2)</li>
-        <li>Spar Thickness (T3)</li>
-      </ol>
+  <!-- DAY TWO -->
+  <h2>Day Two, What to Do?</h2>
+  <p>
+    Okay last night was about thinking and sketching; tonight is tutorial time!
+    But first .... we've got an actual assignment description now.  I need:
+    <ul>
+      <li><strong>3 shapes, two thicknesses</strong> My simple 3-rib mini wing would be meet the minimum bar.</li>
+      <li><strong>Provide a link to source files.</strong> Been there, done that.</li>
+      <li>
+        <strong>I can use plugins if I attribute them.</strong> OMG OMG OMG I found a
+        <a href="https://www.grasshopper3d.com/profiles/blogs/naca-series-4-aerofoil-generator">
+          Grashopper plugin to generate NACA Airfoils!
+        </a>
+      </li>
+    </ul>
+  </p>
 
-      In reality, T1 will probably be pretty small, T3 will be bigger,
-      and T2 will be huge. If I wanna go crazy, Each spar could be a
-      unique thickness, so there'd be T1, T2, T3a, T3b, T3c.  It'd
-      be a pain to gather so many material thicknesses, so I probalby
-      won't actually go that far.
-    </p>
-    <p>
-      Another thing I could do is ditch the hoop entirely, and just go
-      with notched beams at the leading and (maybe) trailind edges. It'd
-      be interesting to see what it's like to assemble that way, and home
-      strong the finished product is, so I'll probalby do that.
-    </p>
+  <h2>Tutorials</h2>
+  <h3><a href="https://www.modelab.is/grasshopper-primer/">
+    ModelLab Grasshopper Primer</a></h3>
 
     <p>
-      So anyway, based on what little I know of Rhino Grasshopper, my
-      visual programming diagram thingy would look somehting like this
-      (below). To make things easier (and lighter!)  I've removed the
-      "hoop frame" so I'm only dealing with spars and airfoils.
-      Consequently, I no longer have to worry about T2 from the prior
-      sketch, and can concentrate on T1 and T3.
-    </p>
-    <figure>
-      <img src ="img/hcde598-hw02-pic02-sketch2.png" width=400>
-      <figcaption>Sketching for Grasshopper.</figcaption>
-    </figure>
-
-    <p>
-      I've also added d1 and d3 so the cutout rectangles can have
-      lengths to go width their widths. Rectangle A (for the spar)
-      is d1 x T1; Rectangle B (for the airfoil a.k.a. rib) is d3 x T3.
-      Spar height and airfoil height (I'll reserve "thickness" to
-      describe material thickness" will both be d1+d3. When I work up
-      spars for the other slot locations on the airfoil, the airfoil
-      slots will always be d3 x T3, but the d1 used on the spars
-      will vary.
-    </p>
-
-    <p>
-      A quick rework of my 3-rib prototype suggests it'll still be
-      plenty strong.
-    </p>
-
-    <figure>
-      <img src ="img/hcde598-hw02-pic03-3rib-no-hoop.png" width=400>
-      <figcaption>Look Ma, no hoop! Just ribs and beams.</figcaption>
-    </figure>
-
-    <p>
-      The tricky part in all this will be getting grasshopper to "read"
-      my custom airfoil shape, cut notches in it, and replicate it. So
-      having done this sketching, thinking, writing exercise, I know that
-      I need tutorials covering:
+      Pretty slow and wordy; got a few nuggets out of it though.
       <ul>
-        <li>Recangular Arrays</li>
-        <li>Trimming</li>
-        <li>Importing or referencing cusotom geometry</li>
-      </ul>
-
-      Spoiler alert: I already figured out how to import my SVG airfoil
-      into Rhino!
-    </p>
-
-    <figure>
-      <img src ="img/hcde598-hw02-pic04-naca-2415-in-rhino.png" width=400>
-      <figcaption>I might-just be able to pull this off..</figcaption>
-    </figure>
-
-    <!-- DAY TWO -->
-    <h2>Day Two, What to Do?</h2>
-    <p>
-      Okay last night was about thinking and sketching; tonight is tutorial time!
-      But first .... we've got an actual assignment description now.  I need:
-      <ul>
-        <li><strong>3 shapes, two thicknesses</strong> My simple 3-rib mini wing would be meet the minimum bar.</li>
-        <li><strong>Provide a link to source files.</strong> Been there, done that.</li>
         <li>
-          <strong>I can use plugins if I attribute them.</strong> OMG OMG OMG I found a
-          <a href="https://www.grasshopper3d.com/profiles/blogs/naca-series-4-aerofoil-generator">
-            Grashopper plugin to generate NACA Airfoils!
-          </a>
+          The <strong>Divide Component</strong>could be handy for dividing
+          my spar into equal sections for the airfoils(ribs).
         </li>
-      </ul>
-    </p>
-
-    <h2>Tutorials</h2>
-    <h3><a href="https://www.modelab.is/grasshopper-primer/">
-      ModelLab Grasshopper Primer</a></h3>
-
-      <p>
-        Pretty slow and wordy; got a few nuggets out of it though.
-        <ul>
-          <li>
-            The <strong>Divide Component</strong>could be handy for dividing
-            my spar into equal sections for the airfoils(ribs).
-          </li>
-          <li>I can use <strong>Panels</strong> for comments.</li>
-        </ul>
-
-        All in all, thought I  found the ModelLab primer slow and wordy. The
-        little mini tutorials that come up when you first start Grasshoper
-        look good and succinct, though.
-      </p>
-
-      <!-- DAY THREE -->
-      <h2> Day Three, Oh My Oh Me</h2>
-      <p>
-        I didn't get through nearly enough tutorials the other night, but at
-        least I have some leads. Gonna do those ones from the Grashopper
-        start page, as well as the
-        <a href ="https://blog.ramboll.com/rcd/tutorials/a-beginners-guide-to-visual-scripting-with-grasshopper.html">
-          Ramboll Blog Grashopper Tutorial
-        </a>
-        suggested by Kimberly Dzuibinski.
-      </p>
-      <h2>More Tutorials</h2>
-      <h3>Grashopper Embedded Tutorials</h3>
-      <p>Let's start with the tutirials Grashopper shows at startup time.
-        Same ones you can get to from Help > Tutorial Files.
-      </p>
-
-      <p>
-        <strong>01 Simple Input and Maths</strong>
-        This is more like it.  Really digging the open-ended exploratory feel
-        of these. Got a good grip on how to use panels for comments, and the
-        sprectrum of input types avaialble to me.
-      </p>
-
-      <p>
-        <strong>02 Interpolating Values</strong>
-        This on3 helped me wrap my head around how to connect geometry from Rhino
-        (Pt) to Grasshopper. Playing with colors was way too fun.
-      </p>
-
-      <p>
-        <strong>03 Wires & Conversions</strong>
-
-        Moving right along. The "Hold down shift" trick will come in handy when
-        connecting multiple wires, the XYZ to Point conversin might come in
-        handy too.
-      </p>
-
-      <p>
-        <strong>04 Polynomial Grpahing with Derivatives</strong>
-        Okay, this one's funky. Probably won't go this hardcore unless I
-        start defining NACA airfoils from their base equations.  Might come
-        back to this one to help read & understand
-        <a href ="https://www.grasshopper3d.com/profile/GarethPaterson">
-          Dr. Gareth Paterson's
-        </a>
-        <a href ="https://www.grasshopper3d.com/profiles/blogs/naca-series-4-aerofoil-generator">
-          NACA Series 4 Airfoil generators
-        </a>
-      </p>
-
-      <p>
-        <strong>05 Measure and Display Values</strong>
-        I like the title of this one. A little hard to grock, but I <em>think</em>
-        I'll be able to use some of this when I want to measure positions off my
-        airofoils, like d3 and d1 below.
-
-        <figure>
-          <img src ="img/hcde598-hw02-pic05-airfoil-measurments.png" width=400>
-          <figcaption>Imma need to measure d1 and d3 eventually.</figcaption>
-        </figure>
-
-      </p>
-
-      <p>
-        <strong>06 Adaptive Pattern within Shape</strong>
-        Thought this would be out of my league at first glance, but I can kinda
-        see how <em>Join, InCurve,</em> and <em>Cull</em> could be used to
-        create my rectangular "slots" and clip them into my airfoils.
-      </p>
-
-      <p>
-        <strong>07 Column Arcade</strong>
-        Oooh ... repeating patterns! Hmm... I dunno.  There's a lot of fuky stuff
-        going on in this one, and the simple "replicate this shape in XY for N
-        times" isn't jumping out at me.  probalby need to look elsewhere for that.
-      </p>
-
-      <h3>
-        <a href ="https://blog.ramboll.com/rcd/tutorials/a-beginners-guide-to-visual-scripting-with-grasshopper.html">
-          A beginner’s guide to visual scripting with Grasshopper
-        </a>
-      </h3>
-      <p>
-        Right, then.  Feeling a bit less noobish, but still wanna look at the
-        <a href ="https://blog.ramboll.com/rcd/tutorials/a-beginners-guide-to-visual-scripting-with-grasshopper.html">
-          Ramboll Blog Grashopper Tutorial
-        </a>
-        that Kimberly Dziubinski found.  Skimmed the first page or tow, but found
-        some good nuggets starting right before section 3.
-
-        <ul>
-          <li>
-            <strong>View > Obscure Components</strong> So I can actually
-            see what-all elements are avaialable.
-          </li>
-          <strong>Display > Draw Icons</strong> I probably wasn't ready
-          for this sooner, but I feel ready now.
-          <strong></strong>
-        </li>
+        <li>I can use <strong>Panels</strong> for comments.</li>
       </ul>
 
-      Okay, the big reaveal for me is how to use tabs other than <em>Params</em>
-      and <em>Components</em>. The Ramboll Blog Tutorial got me into the
-      <em>Curve</em> tab.  I'm normally very GUI-oriented, but getting more and
-      more drawn to the "double-click and type" textual method.
+      All in all, thought I  found the ModelLab primer slow and wordy. The
+      little mini tutorials that come up when you first start Grasshoper
+      look good and succinct, though.
     </p>
-
-    <h2>Right Then, Let's Build Something!</h2>
-    <p>
-      I'll start with a gauge. It'll be nice have a middle slot that matches my
-      caliper reading, and the rest auto-calculate like this:
-    </p>
-
-    <figure>
-      <img src ="img/hcde598-hw02-pic06-gauge-sketch.png" width=400>
-      <figcaption>My first rectangle</figcaption>
-    </figure>
-
-    <p>
-      Okay, let's go into Grashopper for real this time.  A couple number sliders
-      a <em>Rectangle</em> component and ...
-    </p>
-
-    <figure>
-      <img src ="img/hcde598-hw02-pic07-gauge-in-grasshopper.png" width=400>
-      <figcaption>My first rectangle</figcaption>
-    </figure>
-
-    <p>
-      Now let's see if I can re-create ... THE NOTCH. Last time it was about
-      0.3 inches. Use hard-coded number param, grab the rectangle dimentions,
-      a bit of math, and ... I don't know why that was so hard. The bloody
-      <em>Move</em> wouldn't work -- kept saying "this component is currently
-      inactive." Finally I just went back to my in-class document, rejiggered
-      it, and did a save as/overwrite of my original guage doc.  Whatever, it's
-      working now.
-    </p>
-
-    <figure>
-      <img src ="img/hcde598-hw02-pic08-gauge-add-notch.png" width=400>
-      <figcaption>Adding THE NOTCH</figcaption>
-    </figure>
-
-    <p>
-      Okay, on to the main event, let's make the actual "gauge slots ..." well
-      that was more complicated than I thought. Good thing I found the
-      <em>Group</em> function or I'd be going nuts about now.
-    </p>
-
-    <figure>
-      <img src ="img/hcde598-hw02-pic09-gauge-add-caliper-slot.png" width=400>
-      <figcaption>Adding the Caliper slot</figcaption>
-    </figure>
-
-    <p>
-      Now let's get those other slots.  We want three above the middle "caliper
-      slot", each of which 0.002 in. smaller than the previous.  Same thing below
-      the middle one, but 0.002 larger.  Getting pretty hard to avoid a rats'
-      nest ...
-    </p>
-
-    <figure>
-      <img src ="img/hcde598-hw02-pic10-gauge-add-caliper-3slot.png" width=400>
-      <figcaption>Hard to keep the wiring neat.</figcaption>
-    </figure>
-
-    <p>...but it works!</p>
-
-    <figure>
-      <img src ="img/hcde598-hw02-pic11-gauge-add-caliper-3slot-rhino.png" width=400>
-      <figcaption>Got three slots though.</figcaption>
-    </figure>
-
-    <p>
-      Okay, three slots left ... we can do this.  Turned out to be ugly as hell ...
-    </p>
-
-    <figure>
-      <img src ="img/hcde598-hw02-pic12-gauge-all-slots-grashopper.png" width=400>
-      <figcaption>This is really gross.</figcaption>
-    </figure>
-
-    <p>Still works, though.</p>
-
-    <figure>
-      <img src ="img/hcde598-hw02-pic13-gauge-all-slots-rhino.png" width=400>
-      <figcaption>Not quite as ugly.</figcaption>
-    </figure>
-
-    <p>
-      I thnk I figured out how to make it less crappy.  I used relays & <em>Scribbles</em>
-      To label my inputs for the bottomost slot.
-    </p>
-
-    <figure>
-      <img src ="img/hcde598-hw02-pic14-gauge-bottom-slot-grasshopper.png" width=400>
-      <figcaption>Perhaps there is hope.</figcaption>
-    </figure>
 
     <!-- DAY THREE -->
-    <h2> Day Four, I Should Really Print Someting</h2>
+    <h2> Day Three, Oh My Oh Me</h2>
     <p>
-      So, all of last night in the
-      <a href="https://reg.hfs.uw.edu/Program/GetProducts?productTypeCV=00000000-0000-0000-0000-000000003502&classification=3e2e1a82-4f98-473b-b791-30ab7fe14c4c">
-        UW MILL</a>
-        ended up being a massaive Grashopper CAD-fest.  Didn't print a darn thing.
-        Ended up with a functional Guage, but the wiring was a complete and total
-        rat's nest.  So how did I decide to start Day Four?  Plowing ahead with
-        fillets and printing?  Oh no, I just had to fix those wires.  Pretty
-        happy with the results, thought.
-      </p>
+      I didn't get through nearly enough tutorials the other night, but at
+      least I have some leads. Gonna do those ones from the Grashopper
+      start page, as well as the
+      <a href ="https://blog.ramboll.com/rcd/tutorials/a-beginners-guide-to-visual-scripting-with-grasshopper.html">
+        Ramboll Blog Grashopper Tutorial
+      </a>
+      suggested by Kimberly Dzuibinski.
+    </p>
+    <h2>More Tutorials</h2>
+    <h3>Grashopper Embedded Tutorials</h3>
+    <p>Let's start with the tutirials Grashopper shows at startup time.
+      Same ones you can get to from Help > Tutorial Files.
+    </p>
+
+    <p>
+      <strong>01 Simple Input and Maths</strong>
+      This is more like it.  Really digging the open-ended exploratory feel
+      of these. Got a good grip on how to use panels for comments, and the
+      sprectrum of input types avaialble to me.
+    </p>
+
+    <p>
+      <strong>02 Interpolating Values</strong>
+      This on3 helped me wrap my head around how to connect geometry from Rhino
+      (Pt) to Grasshopper. Playing with colors was way too fun.
+    </p>
+
+    <p>
+      <strong>03 Wires & Conversions</strong>
+
+      Moving right along. The "Hold down shift" trick will come in handy when
+      connecting multiple wires, the XYZ to Point conversin might come in
+      handy too.
+    </p>
+
+    <p>
+      <strong>04 Polynomial Grpahing with Derivatives</strong>
+      Okay, this one's funky. Probably won't go this hardcore unless I
+      start defining NACA airfoils from their base equations.  Might come
+      back to this one to help read & understand
+      <a href ="https://www.grasshopper3d.com/profile/GarethPaterson">
+        Dr. Gareth Paterson's
+      </a>
+      <a href ="https://www.grasshopper3d.com/profiles/blogs/naca-series-4-aerofoil-generator">
+        NACA Series 4 Airfoil generators
+      </a>
+    </p>
+
+    <p>
+      <strong>05 Measure and Display Values</strong>
+      I like the title of this one. A little hard to grock, but I <em>think</em>
+      I'll be able to use some of this when I want to measure positions off my
+      airofoils, like d3 and d1 below.
 
       <figure>
-        <img src ="img/hcde598-hw02-pic15-gauge-grasshopper-clean-wiring.png" width=1024>
-        <figcaption>Semi-decipherable wiring .. good enough!</figcaption>
+        <img src ="img/hcde598-hw02-pic05-airfoil-measurments.png" width=400>
+        <figcaption>Imma need to measure d1 and d3 eventually.</figcaption>
       </figure>
 
-      <p>
-        Grouping and labelling really helped. Each group is like its own little "chip"
-        with specific inputs and outputs.
-      </p>
+    </p>
 
-      <figure>
-        <img src ="img/hcde598-hw02-pic16-gauge-grasshopper-group-zoom-in1.png" width=1024>
-        <figcaption>Groups.</figcaption>
-      </figure>
+    <p>
+      <strong>06 Adaptive Pattern within Shape</strong>
+      Thought this would be out of my league at first glance, but I can kinda
+      see how <em>Join, InCurve,</em> and <em>Cull</em> could be used to
+      create my rectangular "slots" and clip them into my airfoils.
+    </p>
 
-      <p>
-        Relays helped, too. Easiest way was to (gasp!) unwire eveyrhting, then redo
-        wires with relays, and little "label groups" that helped me keep my
-        <em>Slot Depth, Caliper Slot Thickness, Slot Position Delta, Slot Size Delta</em>
-        all straight.
-      </p>
+    <p>
+      <strong>07 Column Arcade</strong>
+      Oooh ... repeating patterns! Hmm... I dunno.  There's a lot of fuky stuff
+      going on in this one, and the simple "replicate this shape in XY for N
+      times" isn't jumping out at me.  probalby need to look elsewhere for that.
+    </p>
 
-      <figure>
-        <img src ="img/hcde598-hw02-pic17-gauge-grasshopper-group-zoom-in2.png" width=1024>
-        <figcaption>Groups and Relays.</figcaption>
-      </figure>
+    <h3>
+      <a href ="https://blog.ramboll.com/rcd/tutorials/a-beginners-guide-to-visual-scripting-with-grasshopper.html">
+        A beginner’s guide to visual scripting with Grasshopper
+      </a>
+    </h3>
+    <p>
+      Right, then.  Feeling a bit less noobish, but still wanna look at the
+      <a href ="https://blog.ramboll.com/rcd/tutorials/a-beginners-guide-to-visual-scripting-with-grasshopper.html">
+        Ramboll Blog Grashopper Tutorial
+      </a>
+      that Kimberly Dziubinski found.  Skimmed the first page or tow, but found
+      some good nuggets starting right before section 3.
 
-      <h2>Good Wires, Good Rechangles, Time to Cut and Fillet</h2>
-      <p>Let's try Gabi Duncome's advicd of Merging THE NOTCH and all the slots
-        into one thing, then use Region Difference once.  Turns out I need to
-        use Grashopper's funky <em>Zoomable User Interface (ZUI)</em> to add
-        enough inputs. In my case, I need six.
-      </p>
+      <ul>
+        <li>
+          <strong>View > Obscure Components</strong> So I can actually
+          see what-all elements are avaialable.
+        </li>
+        <strong>Display > Draw Icons</strong> I probably wasn't ready
+        for this sooner, but I feel ready now.
+        <strong></strong>
+      </li>
+    </ul>
 
-      <p>
-        Finally, something was almost ... easy. My <em>Relay</em> game's solid
-        enough that I could wire this up without rat-nesting again. Then I had
-        to disable <em>Preview</em> on the intermediate shapes and ...
-      </p>
+    Okay, the big reaveal for me is how to use tabs other than <em>Params</em>
+    and <em>Components</em>. The Ramboll Blog Tutorial got me into the
+    <em>Curve</em> tab.  I'm normally very GUI-oriented, but getting more and
+    more drawn to the "double-click and type" textual method.
+  </p>
 
-      <figure>
-        <img src ="img/hcde598-hw02-pic18-gauge-rhino-region-difference.png" width=400>
-        <figcaption>OMG, it Worked!  All that's left is to round some corners.</figcaption>
-      </figure>
+  <h2>Right Then, Let's Build Something!</h2>
+  <p>
+    I'll start with a gauge. It'll be nice have a middle slot that matches my
+    caliper reading, and the rest auto-calculate like this:
+  </p>
 
+  <figure>
+    <img src ="img/hcde598-hw02-pic06-gauge-sketch.png" width=400>
+    <figcaption>My first rectangle</figcaption>
+  </figure>
 
-    </div> <!--widebody-->
+  <p>
+    Okay, let's go into Grashopper for real this time.  A couple number sliders
+    a <em>Rectangle</em> component and ...
+  </p>
 
-  </body>
-  </html>
+  <figure>
+    <img src ="img/hcde598-hw02-pic07-gauge-in-grasshopper.png" width=400>
+    <figcaption>My first rectangle</figcaption>
+  </figure>
+
+  <p>
+    Now let's see if I can re-create ... THE NOTCH. Last time it was about
+    0.3 inches. Use hard-coded number param, grab the rectangle dimentions,
+    a bit of math, and ... I don't know why that was so hard. The bloody
+    <em>Move</em> wouldn't work -- kept saying "this component is currently
+    inactive." Finally I just went back to my in-class document, rejiggered
+    it, and did a save as/overwrite of my original guage doc.  Whatever, it's
+    working now.
+  </p>
+
+  <figure>
+    <img src ="img/hcde598-hw02-pic08-gauge-add-notch.png" width=400>
+    <figcaption>Adding THE NOTCH</figcaption>
+  </figure>
+
+  <p>
+    Okay, on to the main event, let's make the actual "gauge slots ..." well
+    that was more complicated than I thought. Good thing I found the
+    <em>Group</em> function or I'd be going nuts about now.
+  </p>
+
+  <figure>
+    <img src ="img/hcde598-hw02-pic09-gauge-add-caliper-slot.png" width=400>
+    <figcaption>Adding the Caliper slot</figcaption>
+  </figure>
+
+  <p>
+    Now let's get those other slots.  We want three above the middle "caliper
+    slot", each of which 0.002 in. smaller than the previous.  Same thing below
+    the middle one, but 0.002 larger.  Getting pretty hard to avoid a rats'
+    nest ...
+  </p>
+
+  <figure>
+    <img src ="img/hcde598-hw02-pic10-gauge-add-caliper-3slot.png" width=400>
+    <figcaption>Hard to keep the wiring neat.</figcaption>
+  </figure>
+
+  <p>...but it works!</p>
+
+  <figure>
+    <img src ="img/hcde598-hw02-pic11-gauge-add-caliper-3slot-rhino.png" width=400>
+    <figcaption>Got three slots though.</figcaption>
+  </figure>
+
+  <p>
+    Okay, three slots left ... we can do this.  Turned out to be ugly as hell ...
+  </p>
+
+  <figure>
+    <img src ="img/hcde598-hw02-pic12-gauge-all-slots-grashopper.png" width=400>
+    <figcaption>This is really gross.</figcaption>
+  </figure>
+
+  <p>Still works, though.</p>
+
+  <figure>
+    <img src ="img/hcde598-hw02-pic13-gauge-all-slots-rhino.png" width=400>
+    <figcaption>Not quite as ugly.</figcaption>
+  </figure>
+
+  <p>
+    I thnk I figured out how to make it less crappy.  I used relays & <em>Scribbles</em>
+    To label my inputs for the bottomost slot.
+  </p>
+
+  <figure>
+    <img src ="img/hcde598-hw02-pic14-gauge-bottom-slot-grasshopper.png" width=400>
+    <figcaption>Perhaps there is hope.</figcaption>
+  </figure>
+
+  <!-- DAY THREE -->
+  <h2> Day Four, I Should Really Print Someting</h2>
+  <p>
+    So, all of last night in the
+    <a href="https://reg.hfs.uw.edu/Program/GetProducts?productTypeCV=00000000-0000-0000-0000-000000003502&classification=3e2e1a82-4f98-473b-b791-30ab7fe14c4c">
+      UW MILL</a>
+      ended up being a massaive Grashopper CAD-fest.  Didn't print a darn thing.
+      Ended up with a functional Guage, but the wiring was a complete and total
+      rat's nest.  So how did I decide to start Day Four?  Plowing ahead with
+      fillets and printing?  Oh no, I just had to fix those wires.  Pretty
+      happy with the results, thought.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw02-pic15-gauge-grasshopper-clean-wiring.png" width=1024>
+      <figcaption>Semi-decipherable wiring .. good enough!</figcaption>
+    </figure>
+
+    <p>
+      Grouping and labelling really helped. Each group is like its own little "chip"
+      with specific inputs and outputs.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw02-pic16-gauge-grasshopper-group-zoom-in1.png" width=1024>
+      <figcaption>Groups.</figcaption>
+    </figure>
+
+    <p>
+      Relays helped, too. Easiest way was to (gasp!) unwire eveyrhting, then redo
+      wires with relays, and little "label groups" that helped me keep my
+      <em>Slot Depth, Caliper Slot Thickness, Slot Position Delta, Slot Size Delta</em>
+      all straight.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw02-pic17-gauge-grasshopper-group-zoom-in2.png" width=1024>
+      <figcaption>Groups and Relays.</figcaption>
+    </figure>
+
+    <h2>Good Wires, Good Rechangles, Time to Cut and Fillet</h2>
+    <p>Let's try Gabi Duncome's advicd of Merging THE NOTCH and all the slots
+      into one thing, then use Region Difference once.  Turns out I need to
+      use Grashopper's funky <em>Zoomable User Interface (ZUI)</em> to add
+      enough inputs. In my case, I need six.
+    </p>
+
+    <p>
+      Huh, something was almost ... easy. My <em>Relay</em> game's solid
+      enough that I could wire this up without rat-nesting again. Then I had
+      to disable <em>Preview</em> on the intermediate shapes and ...
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw02-pic18-gauge-rhino-region-difference.png" width=400>
+      <figcaption>OMG, it Worked!  All that's left is to round some corners.</figcaption>
+    </figure>
+
+    <p>
+      Finally, figured out how to <em>Fillet.</em> S'pose I could have gotten real
+      fancy and only fillet the outer corners of the caliper slots, but I've had
+      enough masochism on this assingment so I'm just going to fillet everytning
+      and call it good.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw02-pic19-gauge-final-fillet.png" width=800>
+      <figcaption>Fully-filleted, finally finished.</figcaption>
+    </figure>
+
+  </div> <!--widebody-->
+
+</body>
+</html>
