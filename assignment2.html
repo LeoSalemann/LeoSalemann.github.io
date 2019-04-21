@@ -310,18 +310,24 @@
     <p>
       I'll start with a gauge. It'll be nice have a middle slot that matches my
       caliper reading, and the rest auto-calculate like this:
-      <figure>
-        <img src ="img/hcde598-hw02-pic06-gauge-sketch.png" width=400>
-        <figcaption>My first rectangle</figcaption>
-      </figure>
+    </p>
 
+    <figure>
+      <img src ="img/hcde598-hw02-pic06-gauge-sketch.png" width=400>
+      <figcaption>My first rectangle</figcaption>
+    </figure>
+
+    <p>
       Okay, let's go into Grashopper for real this time.  A couple number sliders
-      a <em>Rectangle</em> component and ..
-      <figure>
-        <img src ="img/hcde598-hw02-pic07-gauge-in-grasshopper.png" width=400>
-        <figcaption>My first rectangle</figcaption>
-      </figure>
+      a <em>Rectangle</em> component and ...
+    </p>
 
+    <figure>
+      <img src ="img/hcde598-hw02-pic07-gauge-in-grasshopper.png" width=400>
+      <figcaption>My first rectangle</figcaption>
+    </figure>
+
+    <p>
       Now let's see if I can re-create ... THE NOTCH. Last time it was about
       0.3 inches. Use hard-coded number param, grab the rectangle dimentions,
       a bit of math, and ... I don't know why that was so hard. The bloody
@@ -329,24 +335,68 @@
       inactive." Finally I just went back to my in-class document, rejiggered
       it, and did a save as/overwrite of my original guage doc.  Whatever, it's
       working now.
+    </p>
 
-      <figure>
-        <img src ="img/hcde598-hw02-pic08-gauge-add-notch.png" width=400>
-        <figcaption>Adding THE NOTCH</figcaption>
-      </figure>
+    <figure>
+      <img src ="img/hcde598-hw02-pic08-gauge-add-notch.png" width=400>
+      <figcaption>Adding THE NOTCH</figcaption>
+    </figure>
 
+    <p>
       Okay, on to the main event, let's make the actual "gauge slots ..." well
       that was more complicated than I thought. Good thing I found the
       <em>Group</em> function or I'd be going nuts about now.
-
-      <figure>
-        <img src ="img/hcde598-hw02-pic09-gauge-add-caliper-slot.png" width=400>
-        <figcaption>Adding the Caliper slot</figcaption>
-      </figure>
-
-
     </p>
 
+    <figure>
+      <img src ="img/hcde598-hw02-pic09-gauge-add-caliper-slot.png" width=400>
+      <figcaption>Adding the Caliper slot</figcaption>
+    </figure>
+
+    <p>
+      Now let's get those other slots.  We want three above the middle "caliper
+      slot", each of which 0.002 in. smaller than the previous.  Same thing below
+      the middle one, but 0.002 larger.  Getting pretty hard to avoid a rats'
+      nest ...
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw02-pic10-gauge-add-caliper-3slot.png" width=400>
+      <figcaption>Hard to keep the wiring neat.</figcaption>
+    </figure>
+
+    <p>...but it works!</p>
+
+    <figure>
+      <img src ="img/hcde598-hw02-pic11-gauge-add-caliper-3slot-rhino.png" width=400>
+      <figcaption>Got three slots though.</figcaption>
+    </figure>
+
+    <p>
+      Okay, three slots left ... we can do this.  Turned out to be ugly as hell ...
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw02-pic12-gauge-all-slots-grashopper.png" width=400>
+      <figcaption>This is really gross.</figcaption>
+    </figure>
+
+    <p>Still works, though.</p>
+
+    <figure>
+      <img src ="img/hcde598-hw02-pic13-gauge-all-slots-rhino.png" width=400>
+      <figcaption>Not quite as ugly.</figcaption>
+    </figure>
+
+    <p>
+      I thnk I figured out how to make it less crappy.  I used relays & <em>Scribbles</em>
+      To label my inputs for the bottomost slot.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw02-pic14-gauge-bottom-slot-grasshopper.png" width=400>
+      <figcaption>Perhaps there is hope.</figcaption>
+    </figure>
 
   </div> <!--widebody-->
 
