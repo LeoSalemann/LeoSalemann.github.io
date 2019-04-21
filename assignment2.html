@@ -483,6 +483,56 @@
       laser-cutter.
     </p>
 
+    <div id="groups-and-relays">
+      <p>
+        First-off, let's dupe the gauge. This is actualy a good time to document
+        the "Groups and Relays" technique I've developed to avoid rat-nesting. In
+        this case, my goal is to have two copies, side-by side.  I know I'm going
+        to need a <em>Linear Array</em> component and an <em>Unit X Vetor</em>. To
+        avoid overlap, I need to use the width of the "Main Rectangle" I used when
+        starting the guage. There' also going to be some multiplication involved,
+        and ... I may as well ad control for the number of copies to make. Using
+        <em>Relays</em>,  <em>Scribbles</em> the other elementes mentioned above,
+        I can lay out the basic parts and group them.
+      </P>
+
+      <figure>
+        <img src ="img/hcde598-hw02-pic20-gauge-duper-step01.png" width=400>
+        <figcaption>Starting things the right way for once.</figcaption>
+      </figure>
+
+      <p>
+        Now I can wire up the internals, re-arranging elements if I need to.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw02-pic21-gauge-duper-step02.png" width=400>
+        <figcaption>Wiring Up the internals.</figcaption>
+      </figure>
+
+      <p>
+        Yup, a lot of shuffling occurred already. With the internals squared away,
+        <em>now</em> I can wire up the externals for the "Main Recangle width" and
+        the "Finished Guage Geometry."
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw02-pic21-gauge-duper-step03.png" width=1024>
+        <figcaption>There, that wasn't so bad. Far less rat-nesting.</figcaption>
+      </figure>
+
+      <p>
+        And whattaya know? It worked on the first try.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw02-pic21-gauge-duper-step04.png" width=400>
+        <figcaption>
+          Okay that felt wierd.  I'm used to having to suffer for a
+          few hours before getting what I want.
+        </figcaption>
+      </figure>
+    </div> <!-- groups and relays -->
   </div> <!--widebody-->
 
 </body>
