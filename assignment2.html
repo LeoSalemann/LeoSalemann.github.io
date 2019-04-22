@@ -87,7 +87,7 @@
     </ol>
   </p>
 
-  <h2>Sketching</h2>
+  <h3>Sketching</h3>
   <figure>
     <img src ="img/hcde598-hw02-pic01-sketch1.png" width=400>
     <figcaption>Parts, Thicknesses, and Parameters</figcaption>
@@ -186,7 +186,6 @@
     </ul>
   </p>
 
-  <h2>Tutorials</h2>
   <h3><a href="https://www.modelab.is/grasshopper-primer/">
     ModelLab Grasshopper Primer</a></h3>
 
@@ -216,7 +215,6 @@
       </a>
       suggested by Kimberly Dzuibinski.
     </p>
-    <h2>More Tutorials</h2>
     <h3>Grashopper Embedded Tutorials</h3>
     <p>Let's start with the tutirials Grashopper shows at startup time.
       Same ones you can get to from Help > Tutorial Files.
@@ -313,7 +311,7 @@
     more drawn to the "double-click and type" textual method.
   </p>
 
-  <h2>Right Then, Let's Build Something!</h2>
+  <h3>Right Then, Let's Build Something!</h3>
   <p>
     I'll start with a gauge. It'll be nice have a middle slot that matches my
     caliper reading, and the rest auto-calculate like this:
@@ -405,7 +403,7 @@
     <figcaption>Perhaps there is hope.</figcaption>
   </figure>
 
-  <!-- DAY THREE -->
+  <!-- DAY FOUR -->
   <h2> Day Four, I Should Really Print Someting</h2>
   <p>
     So, all of last night in the
@@ -445,7 +443,7 @@
       <figcaption>Groups and Relays.</figcaption>
     </figure>
 
-    <h2>Good Wires, Good Rechangles, Time to Cut and Fillet</h2>
+    <h3>Good Wires, Good Rectangles, Time to Cut and Fillet</h3>
     <p>Let's try Gabi Duncome's advicd of Merging THE NOTCH and all the slots
       into one thing, then use Region Difference once.  Turns out I need to
       use Grashopper's funky <em>Zoomable User Interface (ZUI)</em> to add
@@ -533,51 +531,138 @@
         </figcaption>
       </figure>
 
+      <h3>Get some Actual Measurements</h3>
+
       <p>
-        Next-up, time to bake, export, and pull into Adobe Illustrator.
-        Baking was uneventful, just a simple right-click. For export, I <head>
-          better luck going straight to Adobe Illustrator rather than through
-          dxf. Only trick was to select 1 mm = 1 inch in ....
-        </p>
+        Between my garage, the MILL, and (ahem) the Post Office, I've been able
+        to scrounge up a healthy assortment of cardboard thicknesses and sizes.
+      </p>
 
-        <figure>
-          <img src ="img/hcde598-hw02-pic22-export-dialog.png" width=800>
-          <figcaption>Export straight to AI, 1 mm = 1 inch.</figcaption>
-        </figure>
+      <ul>
+        <li>
+          <strong>Science Fair Tri-Fold</strong> Good spar material. A full
+          <strong>36 inches</strong> wide and <strong>0.1465 inches</strong> thick.
+        </li>
 
-        <p>
-          All I had to do in Adobe Illustrator was to move the gemeetry from
-          bottom-left corner of the doc to upper-left.  Seem reasonable, especially
-          since I'll be resizing the AI doc for specific cardboard size, not to
-          mention compensating for holes and other odd cardboard shapes.
+        <li>
+          <strong>Hunk of TV box </strong> Very strong, but not much left.
+          <strong>25 x 13 inches</strong> area and a whopping
+          <strong>.02725 inches</strong> thick.  Could make very strong but
+          heavy airfoils. Curious to see how the laser cutter would handle this stuff.
+        </li>
 
-        </form>
+        <li>
+          <strong>USPS Priority Mail Medium Flat Rate Box </strong> Appearently
+          these are free if you visit your local post office after hours.
+          <strong>20x15 inches</strong> overall, a mere <strong>0.0835 inches</strong>
+          thick. Surprisingly stiff, could make good airfoils. Would push the
+          limit of my gauge & slot cutting.
+        </li>
+
+        <li>
+          <strong>Joe Average Cardboard </strong> Plain, basic,
+          <strong>31x18 inches</strong> overall, <strong>0.1590 inches</strong>
+          thick.  Good backup matrial. Just-long enough to be a spar; stiff
+          enough to be airfoils.
+        </li>
+
+        <li>
+          <strong>Thin Costco Cardboard </strong> Came "for free" with a few
+          large flower pots my wife and I bought off a pallet.
+          <strong>31x22 inches</strong> overall, <strong>0.1220 inches</strong>
+          thick.
+        </li>
+      </ul>
+
+      <p>
+        Okay, so given these choices, my order of preference is ...
+        <ol>
+          <li>
+            <strong>0.1466 in.</strong> spar with
+            <strong>0.0835 in.</strong> airfoil.
+          </li>
+
+          <li>
+            <strong>0.1466 in.</strong> spar with
+            <strong>0.2725 in.</strong> airfoil.
+          </li>
+        </ol>
+      </p>
+
+      <p>
+        So I need to generate three pairs of gauges for the three thicknesses.
+      </p>
+      <h3>Bake, Export, Print</h3>
+
+      <p>
+        Pull up my Grashooper doc, set the <strong>Caliper Slot</strong> to
+        <strong>0.1466 in.</strong>
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw02-pic22-caliper-1466.png" width=800>
+        <figcaption>First real caliper measurement , set for 0.1466 in.</figcaption>
+      </figure>
+
+      <p>
+        After baking, I grab the "fresh" geomety, move it in X then
+        set a new caliper thickness and rebake. Repeat until I have three
+        gauge pairs.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw02-pic23-all-3-gauge-pairs.png" width=800>
+        <figcaption>Three pairs for three caliper measurments.</figcaption>
+      </figure>
+
+      <p>
+        For export, I had better luck going straight to Adobe Illustrator
+        rather than through dxf. Only trick was to select 1 mm = 1 inch.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw02-pic24-export-dialog.png" width=800>
+        <figcaption>Export straight to AI, 1 mm = 1 inch.</figcaption>
+      </figure>
+
+      <p>
+        Once in Adobe Illustrator a had to move the geometry from the
+        bottom-left corner of the doc to upper-left, then resize the artboard
+        to match my cardboard size, and set the stroke width to 0.001 in.
+        Seem reasonable, especially  since I'll be resizing the AI doc for
+        specific cardboard size, not to mention compensating for holes and other
+         odd cardboard shapes.
+      </p>
+
+      <p>
+        Okay, off to the laser cutter! First-up, Imma try my super thick TV
+        box carboard.
       </p>
     </div> <!-- groups and relays -->
     <div id="wing">
-      <h2>Let's Make a Wing already!</h2>
+      <h3>Let's Make a Wing already!</h3>
       <p>
         All that work and I don't have a wing yet. Hope I can use that NACA
         generator, but I may need to punt and use the airfoil from assingment 1.
         Let's start with a spar.  I'll need a wingspan, spar thickness, airfoil
         cardboard thickness, and slot depth. Same <em>Merge, Region Difference,
           and Fillet</em> as I did for the gauge.
-      </p>
+        </p>
 
-      <figure>
-        <img src ="hcde598-hw02-pic23-wind-spar1.png" width=800>
-        <figcaption>That was quick, I even got rounded ends!</figcaption>
-      </figure>
+        <figure>
+          <img src ="img/hcde598-hw02-pic25-wing-spar1.png" width=800>
+          <figcaption>That was quick, I even got rounded ends!</figcaption>
+        </figure>
 
-      <p>
-        Now the slots. Need to make the basic rectangle (airfoil-thickness x
-        slot-depth), space them evenly across the spar.
-      </p>
+        <p>
+          Now the slots. Need to make the basic rectangle (airfoil-thickness x
+          slot-depth), space them evenly across the spar.
+        </p>
 
 
 
-    </div> <!-- wing -->
-  </div> <!--widebody-->
+      </div> <!-- wing -->
+    </div> <!--widebody-->
 
-</body>
-</html>
+  </body>
+  </html>
