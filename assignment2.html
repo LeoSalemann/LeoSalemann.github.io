@@ -488,7 +488,7 @@
       <h2>Oh Yeah, Printing ...</h2>
       <p>
         Got so excited seeing my complete geomety that I forgot there's even more
-        to do before I can prnt.  Gotta dupe it so I have two, bake it, then do
+        to do before I can print.  Gotta dupe it so I have two, bake it, then do
         whatever else is needed to get the final rhino file ready for the
         laser-cutter.
       </p>
@@ -543,7 +543,43 @@
           </figcaption>
         </figure>
 
-        <h3>Get some Actual Measurements</h3>
+        <div id="wing">
+          <h3>A brief Diversion into Wing-Making</h3>
+          <p>
+            I got some time to kill at home before heading to the MILL later tonight,
+            so I'll keep cadding.
+          </p>
+
+          <p>
+            All that work and I don't have a wing yet. Hope I can use that NACA
+            generator, but I may need to punt and use the airfoil from assingment 1.
+            Let's start with a spar.  I'll need a wingspan, spar thickness, airfoil
+            cardboard thickness, and slot depth. Same
+            <em>
+              Merge, Region Difference, and Fillet
+            </em>
+            as I did for the gauge.
+          </p>
+
+          <figure>
+            <img src ="img/hcde598-hw02-pic22-wing-spar1.png" width=800>
+            <figcaption>That was quick, I even got rounded ends!</figcaption>
+          </figure>
+
+          <p>
+            Now the slots. Need to make the basic rectangle (airfoil-thickness x
+            slot-depth), space them evenly across the spar.
+
+            TBD discuss the success at putting slots at the two ACKNOWLEDGMENTS
+
+            <figure>
+              <img src ="img/hcde598-hw02-pic23-wing-spar2.png" width=800>
+              <figcaption>TBD capture the spar with the end slots</figcaption>
+            </figure>
+          </p>
+        </div> <!-- wing -->
+
+        <h3>Finally at the MILL,  Actual Measurements</h3>
 
         <p>
           Between my garage, the MILL, and (ahem) the Post Office, I've been able
@@ -612,7 +648,7 @@
         </p>
 
         <figure>
-          <img src ="img/hcde598-hw02-pic22-caliper-1466.png" width=800>
+          <img src ="img/hcde598-hw02-pic24-caliper-1466.png" width=800>
           <figcaption>First real caliper measurement , set for 0.1466 in.</figcaption>
         </figure>
 
@@ -623,7 +659,7 @@
         </p>
 
         <figure>
-          <img src ="img/hcde598-hw02-pic23-all-3-gauge-pairs.png" width=800>
+          <img src ="img/hcde598-hw02-pic25-all-3-gauge-pairs.png" width=800>
           <figcaption>Three pairs for three caliper measurments.</figcaption>
         </figure>
 
@@ -633,7 +669,7 @@
         </p>
 
         <figure>
-          <img src ="img/hcde598-hw02-pic24-export-dialog.png" width=800>
+          <img src ="img/hcde598-hw02-pic26-export-dialog.png" width=800>
           <figcaption>Export straight to AI, 1 mm = 1 inch.</figcaption>
         </figure>
 
@@ -648,35 +684,49 @@
 
         <p>
           Okay, off to the laser cutter! First-up, Imma try my super thick TV
-          box carboard.
+          box cardboard. Get the placment n the upper-left corner.
         </p>
 
         <figure>
-          <img src ="img/tbd.png" width=800>
-          <figcaption>Settings one</figcaption>
+          <img src ="img/hcde598-hw02-pic27-ai-print-settings.png" width=800>
+          <figcaption>Adobe Settings, first pass.</figcaption>
         </figure>
 
+        <p>Next up, epilog. </p>
+        <ul>
+          <li>Job Type: <strong>Vector</strong></li>
+          <li>Horizontal: <strong>20</strong> (match my cardboard)</li>
+          <li>Vertical: <strong>5</strong> (match my cardboard)</li>
+          <li>Speed: <strong>26%</strong></li>
+          <li>Power: <strong>100%</strong></li>
+          <li>Freq: <strong>100%</strong></li>
+        </ul>
 
         <figure>
-          <img src ="img/tbd.png" width=800>
-          <figcaption>Settings two</figcaption>
+          <img src ="img/hcde598-hw02-pic28-epilog-settings.png" width=800>
+          <figcaption>Epilog Settings</figcaption>
         </figure>
 
+        <p>
+          Back to Adobe Illustrator settings. Some how my
+          <strong>Orientation</strong> was messed up so I hdat to set it to
+          portrait. Now the preview looks good, and I'm ready to print.
+        </p>
 
         <figure>
-          <img src ="img/tbd.png" width=800>
+          <img src ="img/hcde598-hw02-pic29-ai-print-settings-revisited.png" width=800>
           <figcaption>Settings three</figcaption>
         </figure>
 
         <p>
           Hm. even at full power, it didn't cut thru the tv box,
-          stopping at the last layer. Looking at the dot pattern on the other
+          stopping at the last layer. Looking at the dot pattern on the back
           side, I think I need to slow down the speed.
         </p>
 
         <figure>
-          <img src ="img/tbd.png" width=800>
-          <figcaption>TBD Failed cut-though.</figcaption>
+          <img src ="img/hcde598-hw02-pic30-thick-cardboard-failed-cut-thru.png" width=400>
+          <figcaption>Failed to cut though. White side was facing torward the bottom.</figcaption>
         </figure>
 
         <p>
@@ -685,8 +735,8 @@
         </p>
 
         <figure>
-          <img src ="img/tbd.png" width=800>
-          <figcaption>TBD Postal Board cuts.</figcaption>
+          <img src ="img/hcde598-hw02-pic31-usps-cardboard.png" width=400>
+          <figcaption>Postal Board cuts.</figcaption>
         </figure>
 
         <p>
@@ -697,73 +747,54 @@
         </p>
 
         <figure>
-          <img src ="img/tbd.png" width=800>
+          <img src ="img/hcde598-hw02-pic32-costco-board.png" width=400>
           <figcaption>TBD Costco cuts.</figcaption>
         </figure>
 
         <p>
-          TBD Talk about how loose it is, and that you need to recut
+          Well, crap.  Almost all my gauge slots are too loose for everything.
+          The only one that worked was for the regular science fair trifold
+          cardboard.  Even then, it wasn't the middle slot that matched the
+          calliper -- it was the smallest notch -- that was two "deltas"
+          smaller.
         </p>
 
         <figure>
-          <img src ="img/tbd.png" width=800>
-          <figcaption>TBD Loosey Goosey pics</figcaption>
+          <img src ="img/hcde598-hw02-pic33-only-good-fit.png" width=400>
+          <figcaption>Smallest slot on medium cardboard -- the only slot that works.</figcaption>
         </figure>
-
       </div> <!-- groups and relays -->
-      <div id="wing">
-        <h3>Let's Make a Wing already!</h3>
-        <p>
-          All that work and I don't have a wing yet. Hope I can use that NACA
-          generator, but I may need to punt and use the airfoil from assingment 1.
-          Let's start with a spar.  I'll need a wingspan, spar thickness, airfoil
-          cardboard thickness, and slot depth. Same <em>Merge, Region Difference,
-            and Fillet</em> as I did for the gauge.
-          </p>
 
-          <figure>
-            <img src ="img/hcde598-hw02-pic25-wing-spar1.png" width=800>
-            <figcaption>That was quick, I even got rounded ends!</figcaption>
-          </figure>
+    </div> <!-- day 4 -->
+    <div id="day-5">
+      <h2> DAY FIVE: OMG This is taking so long </h2>
+      <p>
+        So ... yeah, almost all my guage slots from yesterday are too big.
 
-          <p>
-            Now the slots. Need to make the basic rectangle (airfoil-thickness x
-            slot-depth), space them evenly across the spar.
-          </p>
+        <ul>
+          <li><strong>Thin USPS Box</strong> All slots too big.</li>
+          <li><strong>Thick TV Box</strong> All slots too big.</li>
+          <li>
+            <strong>Medium SciFair TriFold</strong>
+            The smallest slot just-barely fits.
+          </li>
+        </ul>
 
+        So at a bare minimum, I need to re-do the thin and thick gauges,
+        choosing a caliper slot that's smaller than my smallest one. I Should
+        propsaly re-do the one for medium cardboard, just to  slots
+        that are actually too small.
+      </p>
 
+      <p>Okay, here we go ...</p>
 
-        </div> <!-- wing -->
-      </div> <!-- day 4 -->
-      <div id="day-5">
-        <h2> DAY FIVE: OMG This is taking so long </h2>
-        <p>
-          So ... yeah, almost all my guage slots from yesterday are too big.
+      <p>
+        My grashopper file was last used for the TV Box cardboard, so I'll
+        start with that one. Caliper slot still says 0.2725, let's measure
+        the what actually got cut.
+      </p>
+    </div> <!-- day 5 -->
+  </div> <!--widebody-->
 
-          <ul>
-            <li><strong>Thin USPS Box</strong> All slots too big.</li>
-            <li><strong>Thick TV Box</strong> All slots too big.</li>
-            <li>
-              <strong>Medium SciFair TriFold</strong>
-              The smallest slot just-barely fits.
-            </li>
-          </ul>
-
-          So at a bare minimum, I need to re-do the thin and thick gauges,
-          choosing a caliper slot that's smaller than my smallest one. I Should
-          propsaly re-do the one for medium cardboard, just to get some slots
-          that are actually too small.
-        </p>
-
-        <p>Okay, here we go ...</p>
-
-        <p>
-          My grashopper file was last used for the TV Box cardboad, so I'll
-          start with that one. Caliper slot still says 0.2725, let's measure
-          the what actually got cut.
-        </p>
-      </div> <!-- day 5 -->
-    </div> <!--widebody-->
-
-  </body>
-  </html>
+</body>
+</html>
