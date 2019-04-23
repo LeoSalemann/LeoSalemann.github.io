@@ -770,138 +770,78 @@
       <h2> DAY FIVE: OMG This is taking so long </h2>
       <p>
         So ... yeah, almost all my guage slots from yesterday are too big.
+        Let's measure the actual gap size with calipers, and compare to what
+        we see in Grasshopper.
       </p>
-      <ul>
-        <li><strong>Thin USPS Box</strong> All slots too big.</li>
-        <li><strong>Thick TV Box</strong> All slots too big.</li>
-        <li>
-          <strong>Medium SciFair TriFold</strong>
-          The smallest slot just-barely fits.
-        </li>
-      </ul>
-
-      <table>
-        <tr>
-          <th>Slot</th>
-          <th>Caliper Measurement</th>
-          <th>Grasshopper Measurement</th>
-        </tr>
-        <tr>
-          <td>1 (top)</td>
-          <td>0.2750</td>
-          <td>tbd</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>0.2795</td>
-          <td>tbd</td>
-        </tr>
-        <tr>
-          <td>3(caliper)</td>
-          <td>0.2980</td>
-          <td>tbd</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>0.3040</td>
-          <td>tbd</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>0.3015</td>
-          <td>tbd</td>
-        </tr>
-      </table>
-      <caption>TV Box Gauge Measurements</caption>
-      
-\      <p>
-        Okay, that's weird. The slots don't even increass properly. At a bare
-        minimum, I need a larger size delta in my Grashopper doc. Also, thin
-        gauges are harder to measure accurately.
-      </p>
-
-      <table>
-        <tr>
-          <th>Slot</th>
-          <th>Caliper Measurement</th>
-          <th>Grasshopper Measurement</th>
-        </tr>
-        <tr>
-          <td>1 (top)</td>
-          <td>tbd</td>
-          <td>tbd</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>tbd</td>
-          <td>tbd</td>
-        </tr>
-        <tr>
-          <td>3(caliper)</td>
-          <td>tbd</td>
-          <td>tbd</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>tbd</td>
-          <td>tbd</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>tbd</td>
-          <td>tbd</td>
-        </tr>
-      </table>
-      <caption>Trifold Gauge Measurements</caption>
-
-      <table>
-        <tr>
-          <th>Slot</th>
-          <th>Caliper Measurement</th>
-          <th>Grasshopper Measurement</th>
-        </tr>
-        <tr>
-          <td>1 (top)</td>
-          <td>tbd</td>
-          <td>tbd</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>tbd</td>
-          <td>tbd</td>
-        </tr>
-        <tr>
-          <td>3(caliper)</td>
-          <td>tbd</td>
-          <td>tbd</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>tbd</td>
-          <td>tbd</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>tbd</td>
-          <td>tbd</td>
-        </tr>
-      </table>
-      <caption>USPS Gauge Measurements</caption>
-
-      <p>
-        So at a bare minimum, I need to re-do the thin and thick gauges,
-        choosing a caliper slot that's smaller than my smallest one. I Should
-        propsaly re-do the one for medium cardboard, just to  slots
-        that are actually too small.
-      </p>
-
-      <p>Okay, here we go ...</p>
 
       <p>
         My grashopper file was last used for the TV Box cardboard, so I'll
         start with that one. Caliper slot still says 0.2725, let's measure
         the what actually got cut.
       </p>
+
+      <table>
+        <tr>
+          <th>Slot</th><th>Caliper Measurement</th><th>Grasshopper Measurement</th>
+        </tr>
+        <tr>
+          <td>1 (top)</td><td>0.2750</td><td>0.2625</td>
+        </tr>
+        <tr>
+          <td>2</td><td>0.2795</td><td>0.2675</td>
+        </tr>
+        <tr>
+          <td>3(caliper)</td><td>0.2980</td><td>0.2725</td>
+        </tr>
+        <tr>
+          <td>4</td><td>0.3040</td><td>0.2775</td>
+        </tr>
+        <tr>
+          <td>5</td><td>0.3015</td><td>0.28.25</td>
+        </tr>
+      </table>
+      <caption>TV Box Gauge Measurements</caption>
+
+      <p>
+        Well, no wonder -- I had my slot size delta set to a mere five one
+        thousandth's of an inch! That's why they're so similar I can barely
+        see a difference in the calipers.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw02-pic34-tiny-delta.png" width=400>
+        <figcaption>Only five-thousandth delta? So that's why id didn't work.</figcaption>
+      </figure>
+
+      <p>
+        Now, about that one anomalous case that actually worked.  Yesterday,
+        I had set the caliper measurement to 0.1465 which means the smallest
+        measurement would have been 0.1365. In other words, I had to reduce my
+        caliper measurment by 0.01 for a just-barely tight enough fit.
+      </p>
+
+      <p>
+        <strong>New Plan</strong> I'm going to use a delta of 0.02. Idealy,
+        the smallest slot will be too small, and the middle or one the one
+        just above or just below will fit. Also, re-measure the cardbaord.
+      </p>
+
+      <table>
+        <tr><th>Cardboard</th><th>Today's Measurment</th><th>Yesterday's Measurment</th></tr>
+        <tr><td>TV Box</td>  <td>tbd</td> <td>tbd</td></tr>
+        <tr><td>Trifold</td> <td>tbd</td> <td>tbd</td></tr>
+        <tr><td>USPS</td>    <td>tbd</td> <td>tbd</td></tr>
+      </table>
+      
+
+
+
+
+
+
+      <p>Okay, here we go ...</p>
+
+
     </div> <!-- day 5 -->
   </div> <!--widebody-->
 
