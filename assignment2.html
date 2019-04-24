@@ -998,8 +998,130 @@
         to the airfoil.
       </p>
 
-    </div> <!-- day 6 -->
-  </div> <!--widebody-->
+      <p>
+        This is where I got quick, dirty, and way less parameterized. I had to
+        abandon Dr. Peterson's NAC Airfoil Generator and import my own from
+        Homework 1's Adobe Illustrator file. I tweaked around some of my
+        Grashopper inputs to set the spar slot depth to just be one half
+        of spar height.  Also added a Spar Cardboard thickness input. Now I can
+        key in the thicknesses I gleaned from the Guage-Making Death March that
+        consumed my whole week.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw02-pic45-new-grasshopper-inputs.png" width=800>
+        <figcaption>Input Mods</figcaption>
+      </figure>
+
+      <p>
+        I also added a module to generate the rectangluar slot that needs to be
+        cut into the airfoils. To summarize:
+      </p>
+      <ul>
+        <li>
+          Spars will be cut from thick material. They will have narrow
+          slots to accomodate the thin airfoils.
+        </li>
+        <li>
+          Airfoils will be cut from thin material. They will have wide slots
+          to accomodate the spars.
+        </li>
+      </ul>
+
+      <p>
+        So with that said, I basically just needed a rectangle component
+        wired to the right inputs. I tried to get fancy connect it direclty
+        to the airfoil geometry from Rhino, but couldn't get it to happen in
+        time so I just went with the output of the Rectangle.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw02-pic46-airfoil-slot-generator.png" width=1024>
+        <figcaption>Airfoil slot generator.</figcaption>
+      </figure>
+
+      <h3>Running Out of Time ...</h3>
+      <p>
+        Uh-oh. It's past 10:30. No time to do all the auto-repliaction I did
+        for the gauge. Just going to bake, replicate, and bake again like this:
+      </p>
+
+      <ol>
+        <li>
+          Start Rhino, import my NACA 2415 from Adobe Illustrator. When the AI
+          Import options come up, <em>Preserve units</em> so 1 inch = 1 Rhino
+          unit.
+
+          <figure>
+            <img src ="img/hcde598-hw02-pic47-airfoil-in-rhino.png" width=400>
+            <figcaption>Airfoil slot generator.</figcaption>
+          </figure>
+        </li>
+        <li>From Rhino, start Grashopper and load the hw02-wing01 file.</li>
+        <figure>
+          <img src ="img/hcde598-hw02-pic48-airfoil-plus-spar.png" width=400>
+          <figcaption>Airfoil slot generator.</figcaption>
+        </figure>
+      </li>
+      <li>
+        Scale the airfoil in Rhino and the spar height in Grashopper.
+        Keep adjusting things until the proporation look about right.
+        Airfoil a about 1 1/3 as thick as the spar.
+
+        <figure>
+          <img src ="img/hcde598-hw02-pic49-scaled-airfoil.png" width=400>
+          <figcaption>Scaled Airfoil.</figcaption>
+        </figure>
+      </li>
+      <li>
+        Go to Grashopper, right-click the output of the spar generator
+        and select Bake.
+
+        <figure>
+          <img src ="img/hcde598-hw02-pic50-baking-spars.png" width=400>
+          <figcaption>Baking the Spar output.</figcaption>
+        </figure>
+      </li>
+      <li>Go to Rhino, move the spart to make room for the next one</li>
+      <li>
+        Repeat the bake & move for a total of three spars
+        <figure>
+          <img src ="img/hcde598-hw02-pic51-three-baked-spars.png" width=400>
+          <figcaption>Three baked spars.</figcaption>
+        </figure>
+      </li>
+      <li>
+        Back to Grasshopper; but this time, bake the Airfoil slot (The
+        rectangle not the failed attempt to region difference)
+
+
+        <figure>
+          <img src ="img/hcde598-hw02-pic52-baking-airfoil-slot.png" width=400>
+          <figcaption>Baking the airfoil slot </figcaption>
+        </figure>
+      </li>
+      <li>
+        Now we get busy in Rhino.  Bake-and-move the airfoil slot thee more
+        times for a total of for. Reposition the slots and the aorfiol.
+        Rotate the slots around and line them up with the airfoil edge like
+        this:
+
+
+        <figure>
+          <img src ="img/hcde598-hw02-pic53-airfoil-with-slots.png" width=400>
+          <figcaption>Airfoil with slots.</figcaption>
+        </figure>
+      </li>
+      <li>
+        At this point I would split trim, and fillet. But it's the eleventh
+        hour (literally) and I'm having trouble remembering/finding the
+        commands. Y'know what? I'll bet these notches will cut out just fine.
+      </li>
+    </ol>
+
+
+  </div> <!-- day 6 -->
+</div> <!--widebody-->
 
 </body>
 </html>
