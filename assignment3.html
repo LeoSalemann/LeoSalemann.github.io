@@ -61,11 +61,10 @@
       <h2>Machine Settings</h2>
       <h3>Dremel 3D45 Ideamaker (PLA Filament)</h3>
       <ul>
-        <li>Setting: Value</li>
-        <li>Setting: Value</li>
-        <li>Setting: Value</li>
+        <li>Filament Type: PLA</li>
+        <li>Nozzle Temp.: 230 C</li>
+        <li>Format: gcode</li>
       </ul>
-
       <h3>Epilog 60W Laser Cutter (USPS Priority Mail Box)</h3>
       <ul>
         <li>Power: 100</li>
@@ -448,7 +447,9 @@
 
     <p>
       Clicking <strong>Build</strong> now. Can't find where to transfer files from
-      USB onto printer.  Found an option to pre-heat .... aaaaand. now I'm stuck
+      USB onto printer.  Check the <strong>Tools</strong> page. Found an option to
+      <strong>Pre-Heat.</strong> Seems like a good thing to kick off while I
+      continue figuring out how to copy form USB.... aaaaand ..  now I'm stuck
       until pre-heat finishes.
     </p>
 
@@ -457,17 +458,8 @@
       <figcaption>Uh-oh</figcaption>
     </figure>
 
-    <h1> RESUME HERE </h1>
-
-    <h3>Dremel 3D45 Ideamaker (PLA Filament)</h3>
-    <ul>
-      <li>Filament Type: PLA</li>
-      <li>Nozzle Temp.: 230 C</li>
-      <li>Setting: Value</li>
-    </ul>
-
     <p>
-      Gotta apply glue, hope the bed istn't too hot.  Nope, we're good.
+      Also gotta apply glue, hope the bed istn't too hot.  Nope, we're good.
     </p>
 
     <p>
@@ -476,9 +468,8 @@
     </p>
 
     <p>
-      Exited (i.e. genterl Rage-Quit) out of the pre-heat.  Started an actual
-      print ... nothing. Wrong file format? Object too small?  Back to DigiLab
-      software.
+      Exit (i.e. gentle rage-quit) out of pre-heat, start an actual print ...
+      nothing. Wrong file format? Object too small?  Back to DigiLab software.
     </p>
 
     <p>
@@ -488,16 +479,16 @@
     </p>
 
     <figure>
-      <img src ="img/hcde598-hw03-pic19-digilab-printer-config.png" width=400>
+      <img src ="img/hcde598-hw03-pic20-digilab-printer-config.png" width=400>
       <figcaption>Digilab Configurtion Hack</figcaption>
     </figure>
 
     <h3>Now What?</h3>
     <p>
-      Nothing seem to be coming out, nozzle temperature was too low, so I stopped
+      Nothing seem to be coming out. Nozzle temperature was too low, so I stopped
       the build. Went back to <strong>Filament</strong> on the touch screen,
       then <strong>View Filament Settings.</strong> Nozzle says 230 like I wanted.
-      Try 235; till forbidden.
+      Try 235; still forbidden.
     </p>
 
     <p>
@@ -509,41 +500,46 @@
     </p>
 
     <figure>
-      <img src ="img/hcde598-hw03-pic20-3Dgauge-start.png" width=400>
+      <img src ="img/hcde598-hw03-pic21-3Dgauge-start.png" width=400>
       <figcaption>This looks encouraging</figcaption>
     </figure>
 
-    <em>
-      <h3>Hasty  Notes</h3>
 
+    <h3>SUCCESS!! I HAVE A 3D GAUGE!</h3>
 
-      <h3>SUCCESS!! I HAVE A 3D GAUGE!</h3>
+    <p>
+      The printer threated it would take 29 hours, but finished in about 45 min.
+    </p>
 
-      <p>
-        The printer threated it would take 29 hours, but finished in about 45 min.
-      </p>
+    <figure>
+      <img src ="img/hcde598-hw03-pic22-3Dgauge-complete.png" width=400>
+      <figcaption>I got a Guage!</figcaption>
+    </figure>
 
-      <figure>
-        <img src ="img/hcde598-hw03-pic21-3Dgauge-complete.png" width=400>
-        <figcaption>I got a Guage!</figcaption>
-      </figure>
+    <h3>Laser Cut a Cardboard Vesion</h3>
+    <p>
+      Routine and uneventful (for a change). Used 25 speed, hundred power, hundred
+      frequency. Also set document size to 21 x 15.5
+    </p>
 
-      <!-- RESUME HERE -->
+    <figure>
+      <img src ="img/hcde598-hw03-pic23-3Dgauge-and-2Dgauge.png" width=400>
+      <figcaption>3D Print vs. Lasercut Cardboard</figcaption>
+    </figure>
 
-      <h3>Laser Cut a Cardboard Vesion</h3>
-      <p>
-        Used 25 speed, hundred power, hundred frequencyAlso set document size to 21 x 15.5
-      </p>
+    <p>
+      Like the 3D printed one, the tightest slot is the only one that works.  The
+      differences is, the lascercut slot is noticably looser than the 3d-printed -
+      it just barely holds. Tempted to do another round, taking the tightest slot
+      and making it my new middle.
+    </p>
 
-      <p>
-        Like the 3D printed one, the tightest slot is the only one that works.  The
-        differences is, the lascercut slot is noticably looser than the 3d-printed -
-        it just barely holds. Temted to do another round, taking the tightest slot and
-        making it my new middle.
-      </p>
-
-
-    </em>
+    <figure>
+      <img src ="img/hcde598-hw03-pic24-slot-comparison.png" width=400>
+      <figcaption>
+        3D Print vs. lasercut cardboard. Why does the middle one look so angry?
+      </figcaption>
+    </figure>
   </div> <!-- day 4 -->
 
   <!-- ***************  DAY FIVE  *************** -->
@@ -553,29 +549,101 @@
     <h3>Where I'm at; What's Next?</h3>
     <p>Okay ... </p>
     <ul>
-      <li>I know the <option value=""></option>mal slot-width for 3d prints.</li>
-      <li>I need a better slotwith for laser cuts.</li>
+      <li>I know the optimal slot width for 3d prints.</li>
+      <li>I need a better slot width for laser cuts.</li>
       <li>I need some lamp braketry</li>
       <li>I need more spart slots, and airfoils with lamp cut-outs</li>
     </ul>
 
-    <p>So the Plan of the Day (POTD) is ... </p>
-    <ol>
-      <li>Lasercut a new gauge with new/smaller slot width</li>
-      <li>
-        <strong>CAD up a Lamp Braket. </strong> Lasercut first, then 3D print.
-        Plan for loose tolerances on the lasercut, which will firm up in the
-        3D print.
-      </li>
-      <li>
-        <strong>More Spar Slots.</strong> A bit of Grashopper work, can be done
-        while the lamp braketery are 3d printing.
-      </li>
-      <li>
-        <strong>Airfoils with Lamp Cutouts</strong> Best to do after I have 3D
-        printed bracketry.
-      </li>
-    </ol>
+    <h3>Gearing Up For The Next 3D Print.</h3>
+    <p>
+      I know the slot thickness I need for 3d printing. I need to measure the
+      lamp guts and make the actual bracketry. Forgot my sketch book at home, so
+      we're back to post-its.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw03-pic25-sketch09.png" width=400>
+      <figcaption>Lamp Guts Dimensions.</figcaption>
+    </figure>
+
+    <p>
+      Okay, now with these dimensions, I can go into Rhino and draw up a couple
+      rectangles - one for the main bounding box of the lamp guts, another for
+      the rounded "cut-out" in the upper-right corner.   Now is a good time to
+      try out
+
+      <a href ="https://www.grasshopper3d.com/profile/GarethPaterson">Dr. Gareth Paterson's </a>
+
+      <a href ="https://www.grasshopper3d.com/profiles/blogs/naca-series-4-aerofoil-generator">
+        Grashopper NACA airfoil generator.
+      </a>
+    </p>
+
+    <h3>Converting to Milimeters</h3>
+    <p>
+      Hmm ... Dr. Paterson's Airfoil generator requires it. So, re-doing the
+      lamp-guts dimensions in mm, I have 30.76 x 16.4.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw03-pic26-sketch10.png" width=400>
+      <figcaption>Re-measured, in mm. Don't check my math, it's really sloppy.</figcaption>
+    </figure>
+
+    <p>
+      Using the <strong>Rectangle</strong> comand at the Rhino prompt, I can make
+      a rectangle in the exact size I want.  On the Grashopper side, I can fille
+      with the NACA inputs to get compatible airfoil shape.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw03-pic27-airfoil-with-lamp-cutout.png" width=1024>
+      <figcaption>First-cut Airfoil</figcaption>
+    </figure>
+
+    <p>
+      Looks kind of dull, also not sure how the curve of that airofil is really
+      going to line up with my lamp guts.  Add another rectangle, tune the NACA
+      inputs and ...
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw03-pic28-airfoil-with-lamp-cutout2.png" width=1024>
+      <figcaption>This one's worth printing</figcaption>
+    </figure>
+
+    <em>
+    <h1> RESUME HERE </h1>
+
+    <p>
+      Let's print this and try it out.  This time 1mm = <strong>1mm</strong>
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw03-pic24-airfoil-export-mm.png" width=400>
+      <figcaption>Keep it in mm (hope this works)</figcaption>
+    </figure>
+
+    <figure>
+      <img src ="img/hcde598-hw03-pic25-airfoil-in-illustrator-mm.png" width=400>
+      <figcaption>Looks good in Adobe Illustrator</figcaption>
+    </figure>
+
+    <figure>
+      <img src ="img/hcde598-hw03-pic26-airfoil-with-lamp.png" width=400>
+      <figcaption>Success! But ... </figcaption>
+    </figure>
+
+    <p>
+      The lasercut worked, but to really be an interesting play on light, the
+      lamp should be embedded deeper.
+    </p>
+
+
+
+
+
 
     <em>
       <h3>Hasty Email Notes</h3>
@@ -587,18 +655,7 @@
         you already have.
       </p>
     </em>
-    <h3>Gearing Up For The Next 3D Print.</h3>
-    <p>
-      I know the slot thickness I need for 3d printing. I need to measure the
-      lamp guts and make the actual bracketry. Forgot my sketch book at home, so
-      we're back to post-its.
-    </p>
 
-
-    <figure>
-      <img src ="img/hcde598-hw03-pic22-sketch09.png" width=400>
-      <figcaption>Lamp Guts Dimensions.</figcaption>
-    </figure>
 
     <p>
       So ....
@@ -643,40 +700,24 @@
         Grashopper NACA airfoil generator
       </a>
 
-      <h3>Converting to Milimeters</h3>
-      <p>
-        Dr. Paterson's Airfoil generator requires it. So, re-doing the lamp-guts
-        dimensions in mm, I have 30.76 x 16.4. Call it 31 x 17.
-      </p>
 
-      <figure>
-        <img src ="img/hcde598-hw03-pic23-airfoil-with-lamp-cutout.png" width=400>
-        <figcaption>First-cut Airfoil</figcaption>
-      </figure>
-
-      <p>
-        Let's print this and try it out.  This time 1mm = <strong>1mm</strong>
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw03-pic24-airfoil-export-mm.png" width=400>
-        <figcaption>Keep it in mm (hope this works)</figcaption>
-      </figure>
-
-      <figure>
-        <img src ="img/hcde598-hw03-pic25-airfoil-in-illustrator-mm.png" width=400>
-        <figcaption>Looks good in Adobe Illustrator</figcaption>
-      </figure>
-
-      <figure>
-        <img src ="img/hcde598-hw03-pic26-airfoil-with-lamp.png" width=400>
-        <figcaption>Success! But ... </figcaption>
-      </figure>
-
-      <p>
-        The lasercut worked, but to really be an interesting play on light, the
-        lamp should be embedded deeper.
-      </p>
+      <p>So the Plan of the Day (POTD) is ... </p>
+      <ol>
+        <li>Lasercut a new gauge with new/smaller slot width</li>
+        <li>
+          <strong>CAD up a Lamp Braket. </strong> Lasercut first, then 3D print.
+          Plan for loose tolerances on the lasercut, which will firm up in the
+          3D print.
+        </li>
+        <li>
+          <strong>More Spar Slots.</strong> A bit of Grashopper work, can be done
+          while the lamp braketery are 3d printing.
+        </li>
+        <li>
+          <strong>Airfoils with Lamp Cutouts</strong> Best to do after I have 3D
+          printed bracketry.
+        </li>
+      </ol>
 
     </div> <!-- day 5 -->
 
