@@ -28,6 +28,10 @@
       <h2>TL;DR:</h2>
       <ul>
         <li>
+          <strong>Spoiler Alert:</strong> I made a wing again. <em>Relax, I
+            haven't even seen Infinity War or GOT yet</em>
+        </li>
+        <li>
           I started out with a terrible idea that probably wouldn't get done
           in time.
 
@@ -59,12 +63,37 @@
 
     <div id="machine-settings">
       <h2>Machine Settings</h2>
-      <h3>Dremel 3D45 Ideamaker (PLA Filament)</h3>
+
+      <h3>Grashopper Gauge Generator (3D Printed )</h3>
+      <ul>
+        <li>Big Rectangle Width: 0.500</li>
+        <li>Big Rectangle Height: 1.500</li>
+        <li>Notch Size: 0.138</li>
+        <li>Slot depth: 0.256</li>
+        <li>Caliper Slot: 0.0880</li>
+        <li>Slot position delta: 0.248</li>
+        <li>Slot size Delta: 0.0150</li>
+        <li>Radius (for Fillets): 0.034</li>
+        <li>Spacing Between Copies: 1.4</li>
+        <li>How Many Copies: 2</li>
+      </ul>
+
+      <h3>Dremel 3D45 Ideamaker (3D Gauge & Strut Prototype)</h3>
       <ul>
         <li>Filament Type: PLA</li>
         <li>Nozzle Temp.: 230 C</li>
+        <li>Platform Temp.: (PLA default)</li>
+        <li>Print Speed: (PLA default)</li>
+        <li>Fan Speed: (PLA default)</li>
         <li>Format: gcode</li>
       </ul>
+
+      <h3>Adobe Illustrator Settings</h3>
+      <ul>
+        <li>Stroke: 0.001 inch</li>
+        <li>Print Layers: Vislible & Printable Layers</li>
+      </ul>
+
       <h3>Epilog 60W Laser Cutter (USPS Priority Mail Box)</h3>
       <ul>
         <li>Power: 100</li>
@@ -73,11 +102,6 @@
         <li>Job Type: Vector</li>
       </ul>
 
-      <h2>Adobe Illustrator Settings</h2>
-      <ul>
-        <li>Stroke: 0.001 inch</li>
-        <li>Print Layers: Vislible & Printable Layers</li>
-      </ul>
       <h3>NAC4seriisaerofoilgeneratorR6 (Grashopper)</h3>
       <ul>
         <li>Points: 101</li>
@@ -86,12 +110,30 @@
         <li>Thickness: 22.4</li>
         <li>Chord (mm): 208.9</li>
       </ul>
+
+      <h3>Dremel 3D45 Ideamaker (Production Struts)</h3>
+      <ul>
+        <li>Filament Type: Custom</li>
+        <li>Nozzle Temp.: 235 C</li>
+        <li>Platform Temp.: 45 C</li>
+        <li>Print Speed: 100%</li>
+        <li>Fan Speed: 100%</li>
+        <li>Format: gcode</li>
+      </ul>
+
+
+
+
+
+
+
       <h3>Machine  (Material )</h3>
       <ul>
         <li>Setting: Value</li>
         <li>Setting: Value</li>
         <li>Setting: Value</li>
       </ul>
+
     </div> <!-- MACHINE SETTINGS -->
 
     <!-- ***************  SHOUT OUTS *************** -->
@@ -100,12 +142,16 @@
       <ul>
         <li>
           UW MILL Staffer <em>Jo Jo</em> for helping me figure out how to
-          persuede the 3D printers to accept my gcode
+          persuede the 3D printers to accept my gcode.
         </li>
 
         <li>
-          UW MILL Staffer <em>Anita</em> for helping me figure out how to
-          persuede the 3D printers to accept my gcode
+          UW MILL Staffer <em>Anita</em> for steering me toward a printer that
+          actually works.
+        </li>
+
+        <li>
+          UW MILL Staffer <em>Livia</em> for temperature suggestions.
         </li>
 
         <li>
@@ -118,233 +164,233 @@
             Grashopper defintion that generates NACA series 4 airfoils
           </a>
         </li>
-      </div> <!-- spedial-thanks -->
+      </ul>
+    </div> <!-- spedial-thanks -->
 
-      <!-- ***************  DAY ONE  *************** -->
-      <div id="day-01">
-        <h2>DAY ONE: How Am I Going To Do This?</h2>
-        <p>
-          Got some family commitments this weekend, gonna be tricky to fit in
-          multi-hour print jobs.  Gotta keep things simple for a change. Main
-          thing to keep in mind is to budget <em>about an hour</em> print time for
-          each inch of "boundig box" for your print. In other words, something
-          6 inches across would take about six hours.
-        </p>
+    <!-- ***************  DAY ONE  *************** -->
+    <div id="day-01">
+      <h2>DAY ONE: How Am I Going To Do This?</h2>
+      <p>
+        Got some family commitments this weekend, gonna be tricky to fit in
+        multi-hour print jobs.  Gotta keep things simple for a change. Main
+        thing to keep in mind is to budget <em>about an hour</em> print time for
+        each inch of "boundig box" for your print. In other words, something
+        6 inches across would take about six hours.
+      </p>
 
-        <h3>Can I Teach A Lamp to Fly?</h3>
-        <p>
-          If I take my airfoils and rotate them into a hoop, I'd have something
-          like a jet engine.  I could have a 3d-printed hub in the middle to hold
-          the "turbine blades" .... time to sketch.
-        </p>
+      <h3>Can I Teach A Lamp to Fly?</h3>
+      <p>
+        If I take my airfoils and rotate them into a hoop, I'd have something
+        like a jet engine.  I could have a 3d-printed hub in the middle to hold
+        the "turbine blades" .... time to sketch.
+      </p>
 
-        <figure>
-          <img src ="img/hcde598-hw03-pic01-sketch01.png" width=400>
-          <figcaption>I might be on to something.</figcaption>
-        </figure>
+      <figure>
+        <img src ="img/hcde598-hw03-pic01-sketch01.png" width=400>
+        <figcaption>I might be on to something.</figcaption>
+      </figure>
 
-        <p>
-          Ok, I can print a ton of thin
-          cardboard symmetrical airfoils simialr to Homework 2.  If I can figure
-          out how to score my spars so they bend into a hoop -- or, use
-          strategically-flimsy material, I'll have my jet engine. Some rigid
-          mateiral in a cross could keep the hoop together. A cone-saped "spinner"
-          would be a good 3d print.
-        </p>
+      <p>
+        Ok, I can print a ton of thin
+        cardboard symmetrical airfoils simialr to Homework 2.  If I can figure
+        out how to score my spars so they bend into a hoop -- or, use
+        strategically-flimsy material, I'll have my jet engine. Some rigid
+        mateiral in a cross could keep the hoop together. A cone-saped "spinner"
+        would be a good 3d print.
+      </p>
 
-        <h3>Making the Fan Face .. with a Twist</h3>
-        <p>
-          To really make it look like a jet engine, I need the front (or top?) of
-          the lamp to look like this:
-        </p>
+      <h3>Making the Fan Face .. with a Twist</h3>
+      <p>
+        To really make it look like a jet engine, I need the front (or top?) of
+        the lamp to look like this:
+      </p>
 
-        <figure>
-          <img src ="img/Inlet_of_jet_engine_rotated.jpg" width=400>
-          <figcaption>
-            Tony Hisgett from Birmingham, UK [
-            <a href="https://creativecommons.org/licenses/by/2.0">
-              CC BY 2.0
-            </a>
-            ],
-            <a href="https://commons.wikimedia.org/wiki/File:Inlet_of_jet_engine.jpg">
-              via Wikimedia Commons
-            </a>
-          </figcaption>
-        </figure>
+      <figure>
+        <img src ="img/Inlet_of_jet_engine_rotated.jpg" width=400>
+        <figcaption>
+          Tony Hisgett from Birmingham, UK [
+          <a href="https://creativecommons.org/licenses/by/2.0">
+            CC BY 2.0
+          </a>
+          ],
+          <a href="https://commons.wikimedia.org/wiki/File:Inlet_of_jet_engine.jpg">
+            via Wikimedia Commons
+          </a>
+        </figcaption>
+      </figure>
 
-        <p>
-          <strong>
-            <em>
-              Must .... resist ... urge to make ... complex .. parts!!!
-            </em>
-          </strong>
-          Ahem, ok. My blades can be simple rectangles, laser-cut from twistable
-          material. The nose cone could have vertial slots, while the hoop has
-          slots at an angle. Or just keep them straight, and the light will
-          probalby shine through better.  Probalby stick with no-twist, so I can
-          re-use my USPS cardboard and slot measurements from Assignment 2.
-        </p>
+      <p>
+        <strong>
+          <em>
+            Must .... resist ... urge to make ... complex .. parts!!!
+          </em>
+        </strong>
+        Ahem, ok. My blades can be simple rectangles, laser-cut from twistable
+        material. The nose cone could have vertial slots, while the hoop has
+        slots at an angle. Or just keep them straight, and the light will
+        probalby shine through better.  Probalby stick with no-twist, so I can
+        re-use my USPS cardboard and slot measurements from Assignment 2.
+      </p>
 
-        <figure>
-          <img src ="img/hcde598-hw03-pic02-sketch02.png" width=400>
-          <figcaption>Keep it Simple, Stupid (ignore that twist on the right.)</figcaption>
-        </figure>
+      <figure>
+        <img src ="img/hcde598-hw03-pic02-sketch02.png" width=400>
+        <figcaption>Keep it Simple, Stupid (ignore that twist on the right.)</figcaption>
+      </figure>
 
-        <h3>How am I Going to Put a Lamp in This Thing?</h3>
-        <p>
-          Probably a central I-beam with a couple cross pieces.
-        </p>
+      <h3>How am I Going to Put a Lamp in This Thing?</h3>
+      <p>
+        Probably a central I-beam with a couple cross pieces.
+      </p>
 
-        <figure>
-          <img src ="img/hcde598-hw03-pic03-sketch03.png" width=400>
-          <figcaption>Lamp Framework</figcaption>
-        </figure>
+      <figure>
+        <img src ="img/hcde598-hw03-pic03-sketch03.png" width=400>
+        <figcaption>Lamp Framework</figcaption>
+      </figure>
 
-        <h3>Heyyyy Maybe I Can Re-Use My Wing.</h3>
-        <p>
-          It just-so-happens my lamp-innnards are actualy an LED strip light.
-          Furthermore, it just-so happens to fit perfectly on my Assingment 2
-          wing.
-        </p>
+      <h3>Heyyyy Maybe I Can Re-Use My Wing.</h3>
+      <p>
+        It just-so-happens my lamp-innnards are actualy an LED strip light.
+        Furthermore, it just-so happens to fit perfectly on my Assingment 2
+        wing.
+      </p>
 
-        <figure>
-          <img src ="img/hcde598-hw03-pic04-wing-lamp.png" width=400>
-          <figcaption>Hmmmmm......</figcaption>
-        </figure>
+      <figure>
+        <img src ="img/hcde598-hw03-pic04-wing-lamp.png" width=400>
+        <figcaption>Hmmmmm......</figcaption>
+      </figure>
 
-        <p>
-          If I replicate a bunch of ribs, I can hopefully create some nice light
-          interplay.
-        </p>
+      <p>
+        If I replicate a bunch of ribs, I can hopefully create some nice light
+        interplay.
+      </p>
 
-        <figure>
-          <img src ="img/hcde598-hw03-pic05-sketch04.png" width=400>
-          <figcaption>To heck with the jet engine idea, I'm making this!</figcaption>
-        </figure>
+      <figure>
+        <img src ="img/hcde598-hw03-pic05-sketch04.png" width=400>
+        <figcaption>To heck with the jet engine idea, I'm making this!</figcaption>
+      </figure>
 
-      </div> <!-- day 1 -->
+    </div> <!-- day 1 -->
 
-      <!-- ***************  DAY TWO  *************** -->
-      <div id="day-02">
-        <h2>DAY TWO: What am I Actually Gonna 3D Print?</h2>
-        <p>
-          I have a first-world problem. My lamp actually comes with an adhesive
-          mounting system that will work perfectly with my wing ... no 3D printed
-          brackets required.
-        </p>
+    <!-- ***************  DAY TWO  *************** -->
+    <div id="day-02">
+      <h2>DAY TWO: What am I Actually Gonna 3D Print?</h2>
+      <p>
+        I have a first-world problem. My lamp actually comes with an adhesive
+        mounting system that will work perfectly with my wing ... no 3D printed
+        brackets required.
+      </p>
 
-        <figure>
-          <img src ="img/hcde598-hw03-pic06-wing-lamp-mounting.png" width=400>
-          <figcaption>First World Poblem: Don't Need 3D Printed Brakcets</figcaption>
-        </figure>
+      <figure>
+        <img src ="img/hcde598-hw03-pic06-wing-lamp-mounting.png" width=400>
+        <figcaption>First World Poblem: Don't Need 3D Printed Brakcets</figcaption>
+      </figure>
 
-        <p>
-          What I <em>can</em> do though, is 3D Print some kind of struts or feet,
-          to get my lamp off the desk. Try for a "upper wing of a biplane" look.
-        </p>
+      <p>
+        What I <em>can</em> do though, is 3D Print some kind of struts or feet,
+        to get my lamp off the desk. Try for a "upper wing of a biplane" look.
+      </p>
 
-        <figure>
-          <img src ="img/hcde598-hw03-pic07-sketch05.png" width=400>
-          <figcaption>Struts, Maybe?</figcaption>
-        </figure>
+      <figure>
+        <img src ="img/hcde598-hw03-pic07-sketch05.png" width=400>
+        <figcaption>Struts, Maybe?</figcaption>
+      </figure>
 
-        <p>
-          So these struts are going to reach up and clip onto the wing.  Maybe
-          the thin arifoils; maybe the thick spars. I'm going to need to 3D
-          print a slot tester.  One way would be a simple block with two slots
-          cut at right angles. This could form the "head" of the strut that
-          clips onto <em>both</em> the airfoil and the spar.
-        </p>
+      <p>
+        So these struts are going to reach up and clip onto the wing.  Maybe
+        the thin arifoils; maybe the thick spars. I'm going to need to 3D
+        print a slot tester.  One way would be a simple block with two slots
+        cut at right angles. This could form the "head" of the strut that
+        clips onto <em>both</em> the airfoil and the spar.
+      </p>
 
-        <figure>
-          <img src ="img/hcde598-hw03-pic07-sketch06.png" width=200>
-          <figcaption>Simple Block with two slots.</figcaption>
-        </figure>
-        <p>
-          Easy to print ... but will I get it right the first time? Maybe I
-          should 3D print a version of by gauge. I can make it thiner to use
-          less material (and time).  Also, these ideas are coming rapidly
-          when I'm away from my sketchbook, so switching to post-its.
-        </p>
+      <figure>
+        <img src ="img/hcde598-hw03-pic07-sketch06.png" width=200>
+        <figcaption>Simple Block with two slots.</figcaption>
+      </figure>
+      <p>
+        Easy to print ... but will I get it right the first time? Maybe I
+        should 3D print a version of by gauge. I can make it thiner to use
+        less material (and time).  Also, these ideas are coming rapidly
+        when I'm away from my sketchbook, so switching to post-its.
+      </p>
 
-        <figure>
-          <img src ="img/hcde598-hw03-pic08-sketch07.png" width=200>
-          <figcaption>Simple Block with two slots.</figcaption>
-        </figure>
+      <figure>
+        <img src ="img/hcde598-hw03-pic08-sketch07.png" width=200>
+        <figcaption>Simple Block with two slots.</figcaption>
+      </figure>
 
-        <h3>OK, Let's Form a Plan and Get CADDING!</h3>
-        <p>
-          Cool, two parts to 3D print and some incremental mods to my Grasshopper
-          files. Given the long lead times, I need to sequence things.
-        </p>
+      <h3>OK, Let's Form a Plan and Get CADDING!</h3>
+      <p>
+        Cool, two parts to 3D print and some incremental mods to my Grasshopper
+        files. Given the long lead times, I need to sequence things.
+      </p>
 
-        <ol>
-          <li>
-            <strong>3D Printable Gauge </strong>I'm worried the plastic will behave
-            differently from cardboad, and the cardboard slot widths I developed
-            won't carry over.  This is a job for a gauge!
-          </li>
-          <li>
-            <strong>Two-slot block </strong>This will validate my slot choice
-            before I commit the time & material to a full-on strut.
-          </li>
-          <li>
-            <strong>Struts </strong>Re-use the two-slot block, or maybe  a one-slot
-            verison of it. This should be queued up such that all I need to do is
-            fine-tune the slot-width before printing.
-          </li>
-          <li>
-            <strong>Wing Spar with More Slots </strong>A pretty easy mod to last
-            week's grashopper code.
-          </li>
-          <li>
-            <strong>Airfoil with Lamp-notch Cut Out </strong>Probably plenty of
-            time for lasercutting while I wait for 3D prints.
-          </li>
-        </ol>
+      <ol>
+        <li>
+          <strong>3D Printable Gauge </strong>I'm worried the plastic will behave
+          differently from cardboad, and the cardboard slot widths I developed
+          won't carry over.  This is a job for a gauge!
+        </li>
+        <li>
+          <strong>Two-slot block </strong>This will validate my slot choice
+          before I commit the time & material to a full-on strut.
+        </li>
+        <li>
+          <strong>Struts </strong>Re-use the two-slot block, or maybe  a one-slot
+          verison of it. This should be queued up such that all I need to do is
+          fine-tune the slot-width before printing.
+        </li>
+        <li>
+          <strong>Wing Spar with More Slots </strong>A pretty easy mod to last
+          week's grashopper code.
+        </li>
+        <li>
+          <strong>Airfoil with Lamp-notch Cut Out </strong>Probably plenty of
+          time for lasercutting while I wait for 3D prints.
+        </li>
+      </ol>
 
-        <h3>Prepping the Gauge in Grasshopper</h3>
-        <p>
-          Shrunk down my Assingment 2 Gauge down to 1 inch by 0.5 in. Besides the
-          input siders I used last week, I had "configuration sliders" stashed
-          around to control overall gauge width and height, as well as the size of
-          THE NOTCH. Parameterization is starting to pay off.
-        </p>
+      <h3>Prepping the Gauge in Grasshopper</h3>
+      <p>
+        Shrunk down my Assingment 2 Gauge down to 1 inch by 0.5 in. Besides the
+        input siders I used last week, I had "configuration sliders" stashed
+        around to control overall gauge width and height, as well as the size of
+        THE NOTCH. Parameterization is starting to pay off.
+      </p>
 
-        <figure>
-          <img src ="img/hcde598-hw03-pic09-guage-for-3D.png" width=400>
-          <figcaption>
-            Original Gauge (left), Resized Gauage (center), Rectangle controls (right).
-          </figcaption>
-        </figure>
+      <figure>
+        <img src ="img/hcde598-hw03-pic09-guage-for-3D.png" width=400>
+        <figcaption>
+          Original Gauge (left), Resized Gauage (center), Rectangle controls (right).
+        </figcaption>
+      </figure>
 
-        <p>
-          By selecting an element <em>upstream</em> of my original output, I can
-          bake one gauge instead of two.
-        </p>
+      <p>
+        By selecting an element <em>upstream</em> of my original output, I can
+        bake one gauge instead of two.
+      </p>
 
-        <figure>
-          <img src ="img/hcde598-hw03-pic10-bake-only-one-guage.png" width=1024>
-          <figcaption>Bake one gauge instead of two.</figcaption>
-        </figure>
+      <figure>
+        <img src ="img/hcde598-hw03-pic10-bake-only-one-guage.png" width=1024>
+        <figcaption>Bake one gauge instead of two.</figcaption>
+      </figure>
 
-        <h3>Making it 3D in Rhino</h3>
-        <p>
-          <strong>Extrude</strong> and <strong>Cap</strong> seemed ok, but I'm
-          worried about how it's rendering hopefully just a wierd artifact with
-          my VM's virtual graphics card.
-        </p>
+      <h3>Making it 3D in Rhino</h3>
+      <p>
+        <strong>Extrude</strong> and <strong>Cap</strong> seemed ok, but I'm
+        worried about how it's rendering hopefully just a wierd artifact with
+        my VM's virtual graphics card.
+      </p>
 
-        <figure>
-          <img src ="img/hcde598-hw03-pic11-potential-problem.png" width=400>
-          <figcaption>Render problem or geometry problem?</figcaption>
-        </figure>
+      <figure>
+        <img src ="img/hcde598-hw03-pic11-potential-problem.png" width=400>
+        <figcaption>Render problem or geometry problem?</figcaption>
+      </figure>
 
-        <h3>Bringing it into Dremel DigiLab</h3>
-        <p>
-          Tried Dremel DigiLab, couldn't see anything. Tried Contangent, it prompted me to
-          convert mm to inches, then looked fine.
-        </menu>
+      <h3>Bringing it into Dremel DigiLab</h3>
+      <p>
+        Tried Dremel DigiLab, couldn't see anything. Tried Contangent, it prompted me to
+        convert mm to inches, then looked fine.
       </p>
 
       <figure>
@@ -381,7 +427,7 @@
 
     </div> <!-- day 3 -->
 
-    <!-- ***************  DAY 4  *************** -->
+    <!-- ***************  DAY FOUR  *************** -->
     <div id="day-4">
       <h2>DAY FOUR: Bracketry</h2>
       <p>
@@ -802,6 +848,7 @@
       </p>
     </div> <!-- day 5 -->
 
+    <!-- ***************  DAY SIX  *************** -->
     <div id="day-06">
       <h2>DAY SIX: Struts and Slots</h2>
       <p>
@@ -881,8 +928,8 @@
       </p>
 
       <figure>
-      <img src ="img/hcde598-hw03-pic49-ggg-meme.jpg" width=400>
-    </figure>
+        <img src ="img/hcde598-hw03-pic49-ggg-meme.jpg" width=400>
+      </figure>
 
       <p>
         And I can still do some fit tests with it.
@@ -916,22 +963,23 @@
       </p>
 
       <p>
-        First-off, get back into Rhino, see if I can extrude higher.
+        First-off, get back into Rhino, see if I can extrude higher.  Looks like
+        I shoudl delete the polysurface, keep the polycurve, and re-extrude.
       </p>
 
       <figure>
-        <img src ="img/hcde598-hw03-pic51-3Dstrut-delete-surface-keep-curve.png" width=400>
+        <img src ="img/hcde598-hw03-pic52-3Dstrut-delete-surface-keep-curve.png" width=400>
         <figcaption>Delete surface, keep curve.</figcaption>
       </figure>
 
       <p>
-        Need to re-export the gauge slot. Been there, done that.
-        Keep the 2d gauge around so it's easier to re-use.
+        Also had to go back to Grasshopper and regenerate my rectangle for slot
+        cutouts (again).  This time I'll keep the 2D gauge around so it's easier
+        to re-use.
       </p>
 
-
       <figure>
-        <img src ="img/hcde598-hw03-pic52-3Dstrut-thicker.png" width=400>
+        <img src ="img/hcde598-hw03-pic53-3Dstrut-thicker.png" width=400>
         <figcaption>There, that wasn't so bad. </figcaption>
       </figure>
 
@@ -945,19 +993,93 @@
       </p>
 
       <figure>
-        <img src ="img/hcde598-hw03-pic53-3-sruts-in-dremel.png" width=400>
+        <img src ="img/hcde598-hw03-pic54-3-sruts-in-dremel.png" width=400>
         <figcaption>Three struts ready(ish) to print.</figcaption>
       </figure>
 
       <p>
-        Looks like a 2.5 hour print ... gotta queue this up fast.
+        Looks like a 2.5 hour print ... gotta queue this up fast.  This time I'm
+        going to use custom filmaent settings instead of PLA defaults. Going for
+        235 deg C nozzle and 45 deg C platform. Hoping that will help the filaments
+        bond to to eachather for a stronger part and a smoother look.
       </p>
 
+      <figure>
+        <img src ="img/hcde598-hw03-pic55-custom-filament-settings.png" width=400>
+        <figcaption>Hope this works.</figcaption>
+      </figure>
+
+      <p>
+        Off to a good start. Back to writing & lasercutting.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw03-pic56-3-struts-start-printing.png" width=400>
+        <figcaption>So far so good.</figcaption>
+      </figure>
+
+      <h3>Pivot Back to Lasercutting</h3>
+      <p>
+        First thing I need is a good slot width. Back to the gauge.
+      </p>
+
+      <p>
+        <strong>First off, record my setting before I do anything</strong>
+        The settings I have now are crucial to successful 3d-printed slots.
+        Copied them all up to the <a href ="#machine-settings"> machine settings</a> section, but
+        still feeling paranoid so I made a backup copy of the grashopper file
+        as well.
+      </p>
+
+      <p>
+        Right, then. Back on <a href = "#day-04">Day Four</a> I discovered my
+        smallest slot-width was still too big for USPS cardbaord. So I'll make the
+        top width the new middle. <strong>Slot size delta</strong> is subtraced
+        from the two numbers above the middle (i.e. caliper) slot, and is added
+        to the two bottom ones. eplicate the "slot math" in Google Sheets so
+        I can see all the values.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw03-pic57-slot-width-spreadsheet.png" width=400>
+        <figcaption>Slot widths in Google Sheets..</figcaption>
+      </figure>
+
+      <p>
+        Run the Guage through the Bake -> Export -> print workflow that I used
+        exhaustivley in Assingment 2. Turns out Slot two is the best fit this time.
+        Based on my Google sheet, it's <strong>0.043 inches.</strong>
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw03-pic58-new-cardboard-gauges.png" width=400>
+        <figcaption>Cool! Now How do I convert this into millimeters?</figcaption>
+      </figure>
+
+      <h3>Converting to Milimeters</h3>
+      <p>
+        Okay, I have a good slot width <strong>(0.043 inches)</strong> and a
+        wing spar generator that also operates in inches. So I can make my
+        sing spar, then convert milimeters in like I did with the strut.
+      </p>
+
+      <p>
+        Do a step
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw03-pic58-new-cardboard-gauges.png" width=400>
+        <figcaption>Cool! Now How do I convert this into millimeters?</figcaption>
+      </figure>
+
+      <h3>Slot/Airfoil Integration.</h3>
+
+
+
+
+      <h3>Overall Wing-Lamp Dimensions</h3>
       <em>
         <h3>Hasty Email Notes</h3
-
-
-
 
           <p>
             You have the slot thickness you need for the 3-D print. That top notch is
@@ -966,48 +1088,45 @@
             dial in that slot, but any 3-D prints can be using the slot take miss
             you already have.
           </p>
-        </em>
 
-
-
-
-        <h3>Overall Wing-Lamp Dimensions</h3>
-        <p>
-          Width and length, or Wingspann and Chord if you want to have fun with it.
-          Anyhow, using my Assingment 2 wing as a guide, i need a wingspan of 9.5
-          inches, about half of the Assingment 2 wing. I could use a thicker airfiol,
-          so let's CAD up the boundign rectangle for the lamp guts, and outer rectangle
-          for the bracket, and fire up
-
-          <a href ="https://www.grasshopper3d.com/profile/GarethPaterson">Dr. Gareth Paterson's </a>
-
-          <a href ="https://www.grasshopper3d.com/profiles/blogs/naca-series-4-aerofoil-generator">
-            Grashopper NACA airfoil generator
-          </a>
-
-
-          <p>So the Plan of the Day (POTD) is ... </p>
-          <ol>
-            <li>Lasercut a new gauge with new/smaller slot width</li>
-            <li>
-              <strong>CAD up a Lamp Braket. </strong> Lasercut first, then 3D print.
-              Plan for loose tolerances on the lasercut, which will firm up in the
-              3D print.
-            </li>
-            <li>
-              <strong>More Spar Slots.</strong> A bit of Grashopper work, can be done
-              while the lamp braketery are 3d printing.
-            </li>
-            <li>
-              <strong>Airfoils with Lamp Cutouts</strong> Best to do after I have 3D
-              printed bracketry.
-            </li>
-          </ol>
-
-          <h3>Another Thing That Happened Today</h3>
+          <h3>Overall Wing-Lamp Dimensions</h3>
           <p>
-            Another paragraph.
-          </p>
+            Width and length, or Wingspann and Chord if you want to have fun with it.
+            Anyhow, using my Assingment 2 wing as a guide, i need a wingspan of 9.5
+            inches, about half of the Assingment 2 wing. I could use a thicker airfiol,
+            so let's CAD up the boundign rectangle for the lamp guts, and outer rectangle
+            for the bracket, and fire up
+
+            <a href ="https://www.grasshopper3d.com/profile/GarethPaterson">Dr. Gareth Paterson's </a>
+
+            <a href ="https://www.grasshopper3d.com/profiles/blogs/naca-series-4-aerofoil-generator">
+              Grashopper NACA airfoil generator
+            </a>
+
+
+            <p>So the Plan of the Day (POTD) is ... </p>
+            <ol>
+              <li>Lasercut a new gauge with new/smaller slot width</li>
+              <li>
+                <strong>CAD up a Lamp Braket. </strong> Lasercut first, then 3D print.
+                Plan for loose tolerances on the lasercut, which will firm up in the
+                3D print.
+              </li>
+              <li>
+                <strong>More Spar Slots.</strong> A bit of Grashopper work, can be done
+                while the lamp braketery are 3d printing.
+              </li>
+              <li>
+                <strong>Airfoils with Lamp Cutouts</strong> Best to do after I have 3D
+                printed bracketry.
+              </li>
+            </ol>
+
+            <h3>Another Thing That Happened Today</h3>
+            <p>
+              Another paragraph.
+            </p>
+          </em>
         </div> <!-- day 6 -->
 
         <div id="day-nn">
