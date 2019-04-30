@@ -688,8 +688,6 @@
       printng will come into play as "struts" to lift the wing-lamp off my desk.
     </p>
 
-    <h1> RESUME HERE </h1>
-
     <h3>CAD Up Some Struts</h3>
     <p>
       Now that I know what to print, I should CAD it up ASAO, to max out my
@@ -699,13 +697,13 @@
 
     <h3>Back to the Grashopper Gauge File</h3>
     <p>
-        Pull up the gauge generator again.  This time, I just want the rectangle
-        for the upper slot.  Find it, bake it into a new clean Rhino file.
+      Pull up the gauge generator again.  This time, I just want the rectangle
+      for the upper slot.  Find it, bake it into a new clean Rhino file.
     </p>
 
     <figure>
-      <img src ="img/hcde598-hw03-pic36-bake-the-slot.png" width=400>
-      <figcaption>I need a pic of  this.</figcaption>
+      <img src ="img/hcde598-hw03-pic36-bake-the-slot.png" width=1024>
+      <figcaption>Find the top slot, bake it only.</figcaption>
     </figure>
 
     <p>
@@ -713,108 +711,147 @@
     </p>
 
     <figure>
-      <img src ="img/hcde598-hw03-pic37-make-a-strut.png" width=400>
-      <figcaption>I need a pic of  this.</figcaption>
+      <img src ="img/hcde598-hw03-pic37-basic-strut-geometry.png" width=400>
+      <figcaption>Basic Geometry.</figcaption>
     </figure>
 
+
     <p>
-      Cut the slot into the strut. run it through the dremel workflow.
+      Extrude Curves 0.1260 inches (about 3 mm).
     </p>
 
     <figure>
-      <img src ="img/hcde598-hw03-pic38-strut-in-dremel.png" width=400>
-      <figcaption>I need a pic of  this.</figcaption>
+      <img src ="img/hcde598-hw03-pic38-extruded-strut.png" width=800>
+      <figcaption>Extruded Geometry</figcaption>
     </figure>
 
-        <em>
+    <p>
+      Cut the slot into the strut, merge the "foot." <strong>BooleanUnion</strong>
+      and <strong>BooleanSplit</strong> seemed to get it done, but it was a bit
+      tedious to click and drag the "cutting slot" away from the main strut.
+      Kept coming off in bits and pices.
+    </p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-    <em>
-      <h3>Hasty Email Notes</h3>
-      <p>
-        You have the slot thickness you need for the 3-D print. That top notch is
-        fully dialed in. You do need to dial in the slot thickness for the postal
-        cardboard. So today you’ll need to laser cut at least one more gauge to
-        dial in that slot, but any 3-D prints can be using the slot take miss
-        you already have.
-      </p>
-    </em>
-
+    <figure>
+      <img src ="img/hcde598-hw03-pic39-union-and-split.png" width=800>
+      <figcaption>Extruded Geometry</figcaption>
+    </figure>
 
     <p>
-      So ....
+      Delete the debris, cap what's left, and I think I'm ready for Dremel
+      DigiLab.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw03-pic40-finished-strut-in-rhino.png" width=800>
+      <figcaption>Extruded Geometry</figcaption>
+    </figure>
+
+    <p>
+      Export to STL, pull into Cotangent. Hmm, this time, it didn't prompt me to
+      convert to inches. Back to Rhino, set both <strong>Layout Units</strong> and
+      <strong>Model Units</strong> to inches. Export to STL, load directly into
+      Dremel DigiLab.  Doesn't help. More scale-hacking, this seems to have
+      worked:
     </p>
 
     <ol>
-      <li>Start with a trace of the lamp guts.</li>
-      <li>Make the hole a bit bigger to account for 3D printer slop.</li>
-      <li>Copy & scale up to ma.</li>
-      <li>Start with a trace of the lamp guts.</li>
-      <li>Start with a trace of the lamp guts.</li>
+      <li>Original model was build in inches, while Rhino was set to milimeters</li>
+      <li>
+        Go to the "file" toolbar icon, set both <strong>Layout Units</strong> and
+        <strong>Model Units</strong> to inches.
+      </li>
+
+      <li>
+        Go to the "file" toolbar icon, set  both <strong>Model Units</strong>
+        back to milimeters.
+      </li>
+
+      <li>
+        When prompted to scale model by about 25, click <strong>Yes.</strong>
+      </li>
+
+      <li>Export to STL.</li>
+
+      <li>Load into Dremel Digilab ... looks right</li>
     </ol>
 
-    <p>
-      Hmm.....
+    <figure>
+      <img src ="img/hcde598-hw03-pic41-strut-in-dremel.png" width=400>
+      <figcaption>I think this will work</figcaption>
+    </figure>
+
+    <h3>What to do with 25 minutes?</h3>
+    <p>Okay, we got a 3D print ready to start first-thing tomorow. Best we can
+      do now is cut more Airfoils with holes
     </p>
 
-    <ol>
-      <li>Start with an airfoil and a "bounding rectangle" for the bracket.</li>
-      <li>Trim the Rectangle against the airfoil, to establish outer shape of bracket.</li>
-      <li>Cut a "hole" to match the lamp-guts.</li>
-      <li>Cut a notch for the wing spar. This will use the 3D-print slot thickness. </li>
-      <li>Start with a trace of the lamp guts.</li>
-    </ol>
-
-    <p>
-      You know what? Now that I've thought about this, I'm going to have to work up
-      the overal dimensions of the lamp-wing before I do anything.
-    </p>
-
-    <h3>Overall Wing-Lamp Dimensions</h3>
-    <p>
-      Width and length, or Wingspann and Chord if you want to have fun with it.
-      Anyhow, using my Assingment 2 wing as a guide, i need a wingspan of 9.5
-      inches, about half of the Assingment 2 wing. I could use a thicker airfiol,
-      so let's CAD up the boundign rectangle for the lamp guts, and outer rectangle
-      for the bracket, and fire up
-
-      <a href ="https://www.grasshopper3d.com/profile/GarethPaterson">Dr. Gareth Paterson's </a>
-
-      <a href ="https://www.grasshopper3d.com/profiles/blogs/naca-series-4-aerofoil-generator">
-        Grashopper NACA airfoil generator
-      </a>
 
 
-      <p>So the Plan of the Day (POTD) is ... </p>
-      <ol>
-        <li>Lasercut a new gauge with new/smaller slot width</li>
-        <li>
-          <strong>CAD up a Lamp Braket. </strong> Lasercut first, then 3D print.
-          Plan for loose tolerances on the lasercut, which will firm up in the
-          3D print.
-        </li>
-        <li>
-          <strong>More Spar Slots.</strong> A bit of Grashopper work, can be done
-          while the lamp braketery are 3d printing.
-        </li>
-        <li>
-          <strong>Airfoils with Lamp Cutouts</strong> Best to do after I have 3D
-          printed bracketry.
-        </li>
-      </ol>
+
+
+
 
     </div> <!-- day 5 -->
+
+    <div id="day-06">
+      <h2>DAY SIX: Thing That's Happening</h2>
+      <p>
+        An intro paragraph to set things up.
+      </p>
+
+      <em>
+        <h3>Hasty Email Notes</h3>
+        <p>
+          You have the slot thickness you need for the 3-D print. That top notch is
+          fully dialed in. You do need to dial in the slot thickness for the postal
+          cardboard. So today you’ll need to laser cut at least one more gauge to
+          dial in that slot, but any 3-D prints can be using the slot take miss
+          you already have.
+        </p>
+      </em>
+
+
+
+
+      <h3>Overall Wing-Lamp Dimensions</h3>
+      <p>
+        Width and length, or Wingspann and Chord if you want to have fun with it.
+        Anyhow, using my Assingment 2 wing as a guide, i need a wingspan of 9.5
+        inches, about half of the Assingment 2 wing. I could use a thicker airfiol,
+        so let's CAD up the boundign rectangle for the lamp guts, and outer rectangle
+        for the bracket, and fire up
+
+        <a href ="https://www.grasshopper3d.com/profile/GarethPaterson">Dr. Gareth Paterson's </a>
+
+        <a href ="https://www.grasshopper3d.com/profiles/blogs/naca-series-4-aerofoil-generator">
+          Grashopper NACA airfoil generator
+        </a>
+
+
+        <p>So the Plan of the Day (POTD) is ... </p>
+        <ol>
+          <li>Lasercut a new gauge with new/smaller slot width</li>
+          <li>
+            <strong>CAD up a Lamp Braket. </strong> Lasercut first, then 3D print.
+            Plan for loose tolerances on the lasercut, which will firm up in the
+            3D print.
+          </li>
+          <li>
+            <strong>More Spar Slots.</strong> A bit of Grashopper work, can be done
+            while the lamp braketery are 3d printing.
+          </li>
+          <li>
+            <strong>Airfoils with Lamp Cutouts</strong> Best to do after I have 3D
+            printed bracketry.
+          </li>
+        </ol>
+
+      <h3>Another Thing That Happened Today</h3>
+      <p>
+        Another paragraph.
+      </p>
+    </div> <!-- day 6 -->
 
     <div id="day-nn">
       <h2>DAY N: Thing That's Happening</h2>
@@ -827,6 +864,16 @@
       </p>
     </div> <!-- day nn -->
 
+    <div id="day-nn">
+      <h2>DAY N: Thing That's Happening</h2>
+      <p>
+        An intro paragraph to set things up.
+      </p>
+      <h3>Another Thing That Happened Today</h3>
+      <p>
+        Another paragraph.
+      </p>
+    </div> <!-- day nn -->
 
   </div> <!--widebody-->
 
