@@ -550,30 +550,189 @@
 
     <!-- ***************  DAY FOUR  *************** -->
     <div id="day-04">
-      <h2>DAY FOUR: Thing That's Happening</h2>
+      <h2>DAY FOUR: Scaling and Holing</h2>
       <p>
-        An intro paragraph to set things up.
-      </p>
-
-      <h3>One More Hole and a Re-Scale</h3>
-      <p>
-        Link AEH will e interesting.
+        We've got our target lenghts from last night, so get on with it.
+        Going from this ...
       </p>
 
       <figure>
-        <img src ="red-panda.jpg" width=400>
-        <figcaption>A figure of a panda!</figcaption>
+        <img src ="img/hcde598-hw04-pic23-link-aeh-assembly-redlined.png" width=400>
+        <figcaption>Too Short, missed some holes.</figcaption>
       </figure>
 
-      <h3>Bring in the Airfoils.</h3>
       <p>
-        Another paragraph.
+        ... to this! I was pleaed that bent-link <strong>AEH</strong> was as
+        easy to scale as everything else; just re-scale each leg. I was concerned
+        my dimensionins & constraints would have made it impossible to scale a
+        leg without throwing the whole sketch into an unsolvable tizzy, but I
+        somehow got it right this time.
       </p>
 
       <figure>
-        <img src ="red-panda.jpg" width=400>
-        <figcaption>A figure of a panda!</figcaption>
+        <img src ="img/hcde598-hw04-pic24-rescaled-links.png" width=400>
+        <figcaption>Getting closer.</figcaption>
       </figure>
+
+      <p>
+        Y'know ... I'll bet there's an elegant way to make the length of one
+        link proprotional to the rest, so I could just scale one measuremnt. I
+        also think I'm not going to have time to find/learn it before this thing
+        is due.  Moving on ...
+      </p>
+
+      <h3>Now, About Those Holes ....</h3>
+      <p>
+        Eyballing it, Imma need to punch a hole right in the middle of
+        <strong>AEH</strong>, and maybe two "hole widths" away from the bottom
+        hole of <strong>FED</strong>
+      </p>
+
+
+      <p>
+        Link AEH turned out to be easy. I already had an intesection point at
+        the "elbow," so I added a new crcle there, settng the diameter to match
+        the other two.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw04-pic25-link-aeh-new-hole.png" width=400>
+        <figcaption>Link AEH with a third (center) hole.</figcaption>
+      </figure>
+
+      <p>
+        For <strong>FED</strong> I added a new constrution line, dimensioned
+        the length, then placed a circle there in the same manner as
+        <strong>AEH.</strong>
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw04-pic26-link-fed-new-hole.png" width=400>
+        <figcaption>Link FED with a third (near bottom) hole.</figcaption>
+      </figure>
+
+      <p>
+        The cool thing is, when I went back to the assembly, the holes where
+        there! No "re-baking," rebuilding, or anything!
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw04-pic27-assy-with-all-holes.png" width=400>
+        <figcaption>Holy ... </figcaption>
+      </figure>
+
+      <h3>Pinning it Together - Layering Matters</h3>
+      <p>
+        Okay, Imma 'bout ready to set some motion constraints and place some
+        rivets.  But first, Let's look at this thing from a different angle and
+        sort how how many layers each rivet has to penetrate.
+      </p>
+
+      <p>
+        Looks like every joint is two layers -- never three (below.)  It goes
+        like this:
+      </p>
+
+      <ol>
+        <li>Start by laying down <strong>BF</strong> and <strong>AEH.</strong></li>
+        <li>Add <strong>AB</strong> and <strong>DF</strong> next.</li>
+        <li>Now add <strong>GH.</strong></li>
+        <li>Finally <strong>DG</strong> goes last.</li>
+      </ol>
+
+      <p>
+        So everything's pretty normal, except <strong>GH</strong> is kinda wierd
+        in the way it lies <em>between</em> <strong>AEH</strong> and
+        <strong>DG</strong>.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw04-pic28-layering.png" width=400>
+        <figcaption>Maybe I don't need to buy new material tomorrow.</figcaption>
+      </figure>
+
+      <h3>Put a Pin in It (or Several)</h3>
+      <p>
+        It took a lot of wierd twisty-turny orientations, but I was able to
+        establish all the revoluate and fasterner mates.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw04-pic29-mated-and-pinned.png" width=400>
+        <figcaption>Pinned and Mated</figcaption>
+      </figure>
+
+
+      <p>
+        Can't quite get it to move though, I need to go back to Joshua's vidcap
+        and figure out how he did that.  Couldn't find it in the video, tried
+        some googling, decided to use <em>Fix</em> to hold <strong>BF</strong>
+        still while I move everything else.  Things move, but Imma need to
+        adjust some lengths.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw04-pic30-fowler-motion-try01.gif" width=400>
+        <figcaption>Kinda ... </figcaption>
+      </figure>
+
+      <p>
+        All right, let's pull up the "Pinned and Mated" figure, and add the
+        pin labels.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw04-pic31-prep-for-resize.png" width=400>
+        <figcaption>Gonna hafta (re)rescale this thing.</figcaption>
+      </figure>
+
+      <h3>Ready to Rescale (Again)</h3>
+      <p>
+        Okay, get closer to
+        <a href = "http://www.rcuniverse.com/forum/members/ebola0001.html">
+          Ebola0001's
+        </a>
+        flap likage, I'm going to need shrink <strong>AD</strong> by 20% or so
+        to make <strong>AB</strong> point to the lower-right instead of lower
+        left.
+      </p>
+
+      <p>
+        Hey wait a minute ... <strong>AEH</strong> and <strong>DG</strong> are
+        pinned in the wrong place!  Lemme fix that and try the motion again.
+        Undo and redo some revolutes and fastners. Introduce rotation limits on
+        <strong>AB.</strong> Add a nice animation and ...
+      </p>
+
+
+      <figure>
+        <img src ="img/hcde598-hw04-pic32-fowler-motion-try02.gif" width=400>
+        <figcaption>Closer, but shoudl still re-scale.</figcaption>
+      </figure>
+
+      <h3>Find the Pivot</h3>
+      <p>
+        Imma go back to
+        <a href = "http://www.rcuniverse.com/forum/members/ebola0001.html">
+          Ebola0001's
+        </a>
+        gif and isolate the one frame where link <strong>GH</strong> is
+        vertical.  Her we go.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw04-pic33-link-alignment.png" width=400>
+        <figcaption>Need to realign a link or two.</figcaption>
+      </figure>
+
+      <p>
+        The main problem is <strong>GH.</strong> Link <strong>DG</strong> needs
+        to be longer so <strong>GH</strong> points northeast instead of
+        northwest. <strong>FED</strong> could be shorter but I'm scared that's
+        going to throw a bunch of other stuff off. I'll just adjust
+        <strong>GH</strong> for now.
+      </p>
+
 
     </div> <!-- day 4 -->
 
@@ -584,6 +743,19 @@
         An intro paragraph to set things up.
       </p>
 
+
+
+
+
+            <h3>Bring in the Airfoils.</h3>
+            <p>
+              Another paragraph.
+            </p>
+
+            <figure>
+              <img src ="red-panda.jpg" width=400>
+              <figcaption>A figure of a panda!</figcaption>
+            </figure>
       <h3>Another Thing That Happened Today</h3>
       <p>
         Another paragraph.
