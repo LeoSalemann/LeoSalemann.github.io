@@ -27,9 +27,9 @@
     <div id="TL;DR">
       <h2>TL;DR</h2>
       <ul>
-        <li>Found a loophole in in Assigment, gonna make a wing again.</li>
+        <li>Found a loophole in in Assignment, gonna make a wing again.</li>
         <li>
-          Box Wings are real, but my assingment isn't one of them.
+          Box wings are real, but my assignment isn't one of them.
 
           <figure>
             <img src =https://upload.wikimedia.org/wikipedia/commons/7/71/Lockheed_box_wing_aircraft_concept_2011.jpg width=400>
@@ -40,7 +40,6 @@
               </a>
             </figcaption>
           </figure>
-
 
         </li>
       </ul>
@@ -92,17 +91,17 @@
     <div id="day-01">
       <h2>DAY ONE: Get my FAQ's Straight</h2>
       <p>
-        The assingment says "box" but the FAQ's say any 3d object made of
+        The assignment says "box" but the FAQ's say any 3d object made of
         milled parts will do. So my good ol' wing with airfoils and spars
         should do just fine.
       </p>
 
       <h3>Avoid Abuse With Strategic Re-Use</h3>
       <p>
-        I've got my Grashopper scripts for generating airofils and spars. They
+        I've got my Grashopper scripts for generating airfoils and spars. They
         can be easily scaled down to fit on the FR-1. I'll need to be less
         cavalier about cut-outs, though -- none of this extra rectangle crap.
-        I'll probably use OnShape for righteous airfoil cut outs and chamfers,
+        I'll probably use OnShape for righteous airfoil cut outs, chamfers,
         and fillets.
       </p>
 
@@ -127,9 +126,9 @@
       </figure>
 
       <p>
-        But anyway, making one of these is a terrible idea that would put my
-        whole assingment at risk. So I'll get a conventional wing to exist,
-        then see if there's time left.
+        But anyway, making one of these from the get-go is a terrible idea that
+        would put my whole assignment at risk. So I'll get a conventional wing
+        to exist first, then see if there's time left.
       </p>
 
       <h3> What was the Plan Again?</h3>
@@ -140,10 +139,16 @@
 
       <ul>
         <li>Review in-class videos to make sure I know what I'm doing.</li>
-        <li>Pull some wings and airofils from Grashopper into OnShape</li>
-        <li>Build righteous tool paths in OnShape</li>
-        <li>Run the OnShape -> Bantam Mill workflow like a normal person for a change</li>
-        <li>If there's any time and material left (yeah, right) get weird and boxy with it.</li>
+        <li>Pull some wings and airfoils from Grashopper into OnShape.</li>
+        <li>Build righteous tool paths in OnShape.</li>
+        <li>
+          Run the OnShape -> Bantam Mill workflow like a normal person for a
+          change.
+        </li>
+        <li>
+          If there's any time and material left (yeah, right) get weird and boxy
+          with it.
+        </li>
       </ul>
     </div> <!-- day 1 -->
 
@@ -151,7 +156,7 @@
     <div id="day-02">
       <h2>DAY TWO: Sketch It! Sketch It Good!</h2>
       <p>
-        Took a day off yesterday, got some ideas on how to reuse, repurpose the
+        Took a day off yesterday, got some ideas on how to reuse/repurpose the
         in-class box demo. It's all about slots and notches. I can reuse the slots
         in my airfoils, and the notches in some between-foil spars.
       </p>
@@ -198,23 +203,23 @@
         <li>Grab a side, make it skinny so it becomes a spar.</li>
         <li>Grab a slot, shorten it so it can be used in an airfoil.</li>
         <li>
-          Make some spars with my HW3 grashopper files. No fillets; add
-          round-offs in OnShape.
+          Make some spars with my HW3 Grashopper files. No fillets in
+          Grashopper; add them in OnShape.
         </li>
-        <li>Make an airofil with slots in Grashopper, also no fillets.</li>
+        <li>Make an airfoil with slots in Grashopper, also no fillets.</li>
         <li>Harmonize all the geometry in OnShape.</li>
         <li>Run the OnShape -> Bantam workflow.</li>
       </ol>
 
       <p>
-        About that Worflow; time to view some in-class video captures.
+        About that Worflow; time to view that in-class video capture.
       </p>
 
-      <h3>Key Learnings of Video Make Benefit Glorious Homework Assingment</h3>
+      <h3>Key Learnings of Video Make Benefit Glorious Homework Assignment</h3>
       <ul>
         <li>During KiCAD Import, use <strong>Edge Cuts</strong> layer.</li>
         <li>Set an origin with <strong>Place Auxilliary Axis Origin.</strong></li>
-        <li>You can import multiple DWG's into one KiCAD project</li>
+        <li>You can import multiple DWG's into one KiCAD project.</li>
         <li>
           You can draw out the FR1 outline so you know how many parts you can
           lay up at once.
@@ -223,73 +228,166 @@
           Use <strong>File > Plot</strong> to export.
           <ul>
             <li>Uncheck all but Edge Cuts.</li>
-            <li>Pick any output directory</li>
+            <li>Pick any output directory.</li>
             <li>Use relative paths.</li>
-            <li>Click <strong>Plot</strong></li>
+            <li>Click <strong>Plot.</strong></li>
           </ul>
         </li>
         <li>
-          When importing into Bantam Tools you need to do a <strong>hack</strong>
+          When importing into Bantam Tools you need to do a <strong>hack.</strong>
           <ul>
-            <li>Set <strong>Outline></strong> to
-              <strong>the gerber file</strong></li>
-              <li>
-                Ignore the <strong>Top</strong> value. Bantam needs it to be there,
-                so accept it and be tolerant.
-              </li>
-              <li>Uncheck <strong>Traces</strong></li>
-              <li>Material: <strong>Generic</strong></li>
-              <li>Measure youre material thinkness</li>
-              <li>
-                Placement Z = material + double-side tape. Measure a single; make a
-                tape sandwich, measure the sandwich, subtract.
-              </li>
-              <li>Probalby gonna stick with 1/32 in end mill</li>
-              <li>
-                In OnShape, use fillete. Make "notch length" short enough to
-                accomodate them.
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div> <!-- day 2 -->
+            <li>Set <strong>Outline></strong> to the gerber file.</li>
+            <li>
+              Ignore the <strong>Top</strong> value. Bantam needs it to be there,
+              so accept it and be tolerant.
+            </li>
+          </ul>
+        </li>
 
-      <!-- ***************  DAY THREE  *************** -->
-      <div id="day-nn">
-        <h2>DAY N: Thing That's Happening</h2>
-        <p>
-          An intro paragraph to set things up.
-        </p>
+        <li>
+          There's also some normal Bantam Tool settings to fiddle with.
+          <ul>
+            <li>Uncheck <strong>Traces.</strong></li>
+            <li>Material: <strong>Generic.</strong></li>
+            <li>Measure youre material thinkness.</li>
+            <li>
+              Placement Z = material + double-side tape. Measure a single; make a
+              tape sandwich, measure the sandwich, subtract.
+            </li>
+            <li>Probalby gonna stick with 1/32 in end mill.</li>
+            <li>
+              In OnShape, use fillete. Make "notch length" short enough to
+              accomodate them.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div> <!-- day 2 -->
 
-        <figure>
-          <img src ="red-panda.jpg" width=400>
-          <figcaption>A figure of a panda!</figcaption>
-        </figure>
-
-        <h3>Another Thing That Happened Today</h3>
-        <p>
-          Another paragraph.
-        </p>
-
-        <figure>
-          <img src ="red-panda.jpg" width=400>
-          <figcaption>A figure of a panda!</figcaption>
-        </figure>
-      </div> <!-- day nn -->
-    </div> <!--widebody-->
-
-
-    <!-- ***************  DAY NNN  *************** -->
+    <!-- ***************  DAY THREE  *************** -->
     <div id="day-03">
       <h2>DAY THREE: CAD</h2>
       <p>
-        An intro paragraph to set things up.
+        My biggest worry is the airfoil.  It's got a pointy trailind edge, so
+        I'm worried Bantam might kick up a fuss with the tool paths.  Time to
+        fail fast and get a simple foil into Bantam ASAP.
       </p>
 
       <figure>
-        <img src ="red-panda.jpg" width=400>
-        <figcaption>A figure of a panda!</figcaption>
+        <img src ="img/hcde598-hw02-pic47-airfoil-in-rhino.png" width=400>
+        <figcaption>Beware the pointiness</figcaption>
       </figure>
+
+      <p>
+          Rummage through previous homewoks, find a simple airfoil, pull into
+          OnShape. Turns out 3dm's import just fine.   Here's one from Homwork
+          3, just need to whack out that rectangle.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw05-pic04-3dm-airfoil-in-onshape.png" width=400>
+        <figcaption>Let's try this one from Assingment 3.</figcaption>
+      </figure>
+
+      <p>
+        Extrude the airfoil by 1.87mm, matching my FR1's thickness ... not working.
+        OnShape doesn't seem to acknowledge the imported 3DM as a legit curve.
+      </p>
+
+      <p>
+        Try Rhino. Can't really find a clean airfoil with no notches, so go back
+        to
+        <a href ="https://www.grasshopper3d.com/profile/GarethPaterson">
+          Dr. Gareth Paterson's
+        </a>
+
+        <a href ="https://www.grasshopper3d.com/profiles/blogs/naca-series-4-aerofoil-generator">
+          NACA series 4 airfoil Generator (Grashopper Definition)
+        </a>
+        from Homework 3.  Fiddle with the inputs again until I get something
+        thick, no unusual curves, but still a recognizeable airfoil shape.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw05-pic05-new-rhino-airfoil.png" width=400>
+        <figcaption>Nevermind, let's create a new one.</figcaption>
+      </figure>
+
+      <p>
+          Now there's a couple things to try.  I could go direct to DXF from
+          Rhino, pull into KiCad and Bantam.  That'll let me validate tool paths
+          the fastest. Later, I'll try a Rhino -> OnShape -> KiCAD->Bantam workflow
+          so I can do all the part-fitting and fillet-cutting in OnShape.
+      </p>
+
+      <p>
+        Interesting.  It says <em>Marked Areas need a smaller tool</em> but
+        it <em>looks</em> like it will cut just fine (or close enough, anyway).
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw05-pic06-airfoil-in-bantam.png" width=400>
+        <figcaption>Nevermind, let's create a new one.</figcaption>
+      </figure>
+
+      <p>
+        Zooming in, it looks like may airfoil picked up some "jaggies" (aliasing)
+        during the imports and exports.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw05-pic07-airfoil-bantam-zoom-in.png" width=400>
+        <figcaption>Uh-oh .... jaggies.</figcaption>
+      </figure>
+
+
+      <p>
+        Go back to KiCAD ... looks pretty smooth there.  Try plotting from
+        KiCAD again.
+      </p>
+
+      <p>
+        Going back to Rhino, the airfoil looks smooth.  Retry the export, there's
+        more than one scheme avaialble.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw05-pic08-rhino-dxf-options.png" width=400>
+        <figcaption>Time to start schemeing</figcaption>
+      </figure>
+
+      <p>
+        Try <strong>CAM Metric</strong>, pull it through KiCAD then Bantam. No
+        more warnings.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw05-pic09-airfoil-try-02.png" width=400>
+        <figcaption>Still jaggies, but no warnings .. I'll take it.</figcaption>
+      </figure>
+
+      <h3>Getting Iterative</h3>
+      <p>
+        Okay, so I'm feeling confident I can get Bantam to cut me an airfoil.
+        Rather than cutting a solid foil that can't be used, I wanna print the
+        minimal number of parts that validate airofoil shape as well as assembling
+        foils and spars. Two foils, two spars, Joshua-Style joinery will will
+        prove out all I'm looking to prove, and could be a MVA (Minimally Viable
+        Assingment) in a pinch.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw05-pic10-sketch03.png" width=400>
+        <figcaption>Still jaggies, but no warnings .. I'll take it.</figcaption>
+      </figure>
+
+
+
+
+
+
+
+
 
       <h3>Another Thing That Happened Today</h3>
       <p>
@@ -302,6 +400,31 @@
       </figure>
     </div> <!-- day nn -->
   </div> <!--widebody-->
+
+
+  <!-- ***************  DAY NNN  *************** -->
+  <div id="day-03">
+    <h2>DAY N: Thing That's Happening</h2>
+    <p>
+      An intro paragraph to set things up.
+    </p>
+
+    <figure>
+      <img src ="red-panda.jpg" width=400>
+      <figcaption>A figure of a panda!</figcaption>
+    </figure>
+
+    <h3>Another Thing That Happened Today</h3>
+    <p>
+      Another paragraph.
+    </p>
+
+    <figure>
+      <img src ="red-panda.jpg" width=400>
+      <figcaption>A figure of a panda!</figcaption>
+    </figure>
+  </div> <!-- day nn -->
+</div> <!--widebody-->
 
 </body>
 </html>
