@@ -1,0 +1,126 @@
+{
+    "dirty": false,
+    "markers": {
+        "count": 0,
+        "nullDisplayString": ""
+    },
+    "planDetail": {
+        "0": {
+            "cutHoles": true,
+            "cutOutline": true,
+            "cutTraces": false,
+            "extraFileUrls": {
+            },
+            "fileUrl": "file:///C:/Users/leosa_000/Documents/git/LeoSalemann.github.io/hcde598/hw05/inclass-top-v2/inclass-top-v2-Edge_Cuts.gbr",
+            "geomMarkers": {
+                "count": 0,
+                "nullDisplayString": ""
+            },
+            "hasCustomTraceClearance": false,
+            "hasCustomTraceDepth": false,
+            "hasUncuttableGeometry": false,
+            "messages": {
+                "failures": [
+                ],
+                "isEmpty": true,
+                "problems": [
+                ],
+                "tips": [
+                ],
+                "warnings": [
+                ]
+            },
+            "name": "inclass-top-v2-Edge_Cuts.gbr",
+            "parentStock": {
+                "defaultSizeIndex": -1,
+                "hasCustomSize": true,
+                "minOrigin": {
+                },
+                "placement": {
+                    "anchorRight": false,
+                    "offset": {
+                        "x": "6.000",
+                        "y": "6.000",
+                        "z": "1.520"
+                    }
+                },
+                "size": {
+                    "x": "127.000",
+                    "y": "101.600",
+                    "z": "1.460"
+                },
+                "zrotation": 0
+            },
+            "placement": {
+                "anchorRight": false,
+                "offset": {
+                    "x": "0.000",
+                    "y": "0.000",
+                    "z": "0.000"
+                }
+            },
+            "progress": 100,
+            "readyToCut": true,
+            "rotationDegrees": 0,
+            "runningTime": 124,
+            "sourceUrl": "",
+            "tools": [
+                {
+                    "conductive": false,
+                    "fluteCount": 0,
+                    "group": 1,
+                    "height": 36.5,
+                    "maxCuttingRadius": 0.396875,
+                    "maxPassDepth": 1.5875,
+                    "name": "1/32in Flat End Mill",
+                    "shankRadius": 1.5875,
+                    "uuid": "ffc3953b-a29d-4c22-8263-975b2722adbc"
+                }
+            ],
+            "traceClearance": 0.15,
+            "traceDepth": 0.15,
+            "useDetailToolEverywhere": false,
+            "visible": true,
+            "workplans": [
+                {
+                    "gcodeWarning": "",
+                    "runningTime": 80,
+                    "tool": "ffc3953b-a29d-4c22-8263-975b2722adbc",
+                    "toolNumber": 1
+                },
+                {
+                    "gcodeWarning": "",
+                    "runningTime": 44,
+                    "tool": "ffc3953b-a29d-4c22-8263-975b2722adbc",
+                    "toolNumber": 1
+                }
+            ]
+        }
+    },
+    "plans": {
+        "count": 1,
+        "nullDisplayString": "",
+        "runningTime": 0
+    },
+    "stepSize": 2,
+    "stock": {
+        "defaultSizeIndex": -1,
+        "hasCustomSize": true,
+        "minOrigin": {
+        },
+        "placement": {
+            "anchorRight": false,
+            "offset": {
+                "x": "6.000",
+                "y": "6.000",
+                "z": "1.520"
+            }
+        },
+        "size": {
+            "x": "127.000",
+            "y": "101.600",
+            "z": "1.460"
+        },
+        "zrotation": 0
+    }
+}

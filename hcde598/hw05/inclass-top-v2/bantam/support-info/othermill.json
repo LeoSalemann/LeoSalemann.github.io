@@ -1,0 +1,129 @@
+{
+    "othermill": {
+        "colletOffset": -70.5,
+        "commandLog": {
+            "dynamicSortFilter": true,
+            "filterCaseSensitivity": 0,
+            "filterKeyColumn": 0,
+            "filterRole": 0,
+            "isSortLocaleAware": false,
+            "recursiveFilteringEnabled": false,
+            "sortCaseSensitivity": 1,
+            "sortRole": 0,
+            "sourceModel": {
+            }
+        },
+        "configuration": {
+        },
+        "firmwareFlasher": {
+            "currentPage": 0,
+            "lastError": "",
+            "readyToFlash": false,
+            "totalPages": 0,
+            "versionHintString": "72.73"
+        },
+        "firmwareVersionString": "",
+        "freezeInitialMPos": true,
+        "gcodeState": {
+            "arcPlaneMode": 0,
+            "coordinateSystem": 0,
+            "distanceMode": 0,
+            "feedrate": 0,
+            "feedrateMode": 1,
+            "g55": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "g56": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "g57": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "g58": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "g59": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "homingState": -1,
+            "lineNumber": 0,
+            "message": "",
+            "mpos": {
+                "x": 0,
+                "y": 119.5,
+                "z": 0
+            },
+            "ofs": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "pathMode": 2,
+            "pos": {
+                "x": 0,
+                "y": 119.5,
+                "z": 0
+            },
+            "probeCoordinates": {
+                "x": null,
+                "y": null,
+                "z": null
+            },
+            "probingState": -1,
+            "spindleMode": 0,
+            "spindleSpeed": 0,
+            "units": 0,
+            "velocity": 0
+        },
+        "hardwareVersionString": "",
+        "machineState": {
+            "connected": false,
+            "escRebooting": false,
+            "estop": false,
+            "homed": false,
+            "idle": true,
+            "initializing": false,
+            "interlock": false
+        },
+        "millSetup": {
+            "bracket": {
+                "attached": false,
+                "maxAcceptableFit": 0.1,
+                "poorestFit": 0,
+                "rotationDegrees": null,
+                "sufficientlyProbed": false
+            },
+            "colletOffset": -70.5,
+            "fixturingOriginName": "spoilboard",
+            "spoilboard": {
+                "attached": true,
+                "minOrigin": {
+                },
+                "placement": {
+                    "anchorRight": false,
+                    "offset": {
+                        "x": "2.000",
+                        "y": "2.200",
+                        "z": "0.000"
+                    }
+                },
+                "size": {
+                    "x": "139.700",
+                    "y": "114.400",
+                    "z": "6.350"
+                }
+            }
+        },
+        "outOfDateFirmware": false
+    }
+}
