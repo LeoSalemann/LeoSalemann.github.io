@@ -40,7 +40,16 @@
               </a>
             </figcaption>
           </figure>
+        </li>
 
+        <li>
+          Once again, i was able to take the in-class example, and warp it to my will.
+        </li>
+
+        <li>
+          The interconnectedness of the box parts made it a little tricky to
+          resize them, but it was possible. A from-sratch solustion would probably
+          have been more elegant.
         </li>
       </ul>
 
@@ -56,25 +65,32 @@
     <!-- ***************  MACHINE SETTINGS     ************* -->
 
     <div id="machine-settings">
-      <h2>Machine Settings</h2>
-      <h3>Machine One (Material One)</h3>
+      <h2>antam CNC  Settings</h2>
+      <h3>Material Size</h3>
       <ul>
-        <li>Setting: Value</li>
-        <li>Setting: Value</li>
-        <li>Setting: Value</li>
+        <li>Width (X): 100.00mm</li>
+        <li>Height (Y): 70.00mm</li>
+        <li>Thickness (Z): 1.56mm</li>
       </ul>
-      <h3>Machine One (Material Two)</h3>
+      <h3>Material Placement</h3>
       <ul>
-        <li>Setting: Value</li>
-        <li>Setting: Value</li>
-        <li>Setting: Value</li>
+        <li>X: 0.00mm</li>
+        <li>Y: -5.00mm</li>
+        <li>Z: 2.08mm</li>
       </ul>
-      <h3>Machine Two (Material ONe)</h3>
+
+      <h3>GBR File Placment</h3>
       <ul>
-        <li>Setting: Value</li>
-        <li>Setting: Value</li>
-        <li>Setting: Value</li>
+        <li>X: 4.00mm</li>
+        <li>Y: 8.00mm</li>
+        <li>Z: 0.00mm</li>
       </ul>
+
+      <h3>Other</h3>
+      <ul>
+        <li>Milling Tools: 1/32in Flat End Mill</li>
+      </ul>
+
     </div> <!-- MACHINE SETTINGS -->
 
     <!-- ***************  SHOUT OUTS *************** -->
@@ -82,7 +98,15 @@
       <h2>Special Thanks to ....</h2>
       <ul>
         <li>
-          Role <em>Name</em> for the good thing they did.
+          HCDE Student <em>Name</em> for the good thing they did.
+        </li>
+
+        <li>
+          HCDE Student <em>@Christa Keizer</em> for recording the OnShape >
+          KiCAD > Bantam workflow.
+          HCDE Student <em>@Tanya</em> for recording the MILL demo.
+          HCDE Student <em>@Irena Smoke</em> for making extra FR1 available.
+          HCDE Student <em>Jos&eacute; Lara</em> for making extra FR1 adn double-back tape avaialble.
         </li>
       </ul>
     </div> <!-- spedial-thanks -->
@@ -279,9 +303,9 @@
       </figure>
 
       <p>
-          Rummage through previous homewoks, find a simple airfoil, pull into
-          OnShape. Turns out 3dm's import just fine.   Here's one from Homwork
-          3, just need to whack out that rectangle.
+        Rummage through previous homewoks, find a simple airfoil, pull into
+        OnShape. Turns out 3dm's import just fine.   Here's one from Homwork
+        3, just need to whack out that rectangle.
       </p>
 
       <figure>
@@ -314,10 +338,10 @@
       </figure>
 
       <p>
-          Now there's a couple things to try.  I could go direct to DXF from
-          Rhino, pull into KiCad and Bantam.  That'll let me validate tool paths
-          the fastest. Later, I'll try a Rhino -> OnShape -> KiCAD->Bantam workflow
-          so I can do all the part-fitting and fillet-cutting in OnShape.
+        Now there's a couple things to try.  I could go direct to DXF from
+        Rhino, pull into KiCad and Bantam.  That'll let me validate tool paths
+        the fastest. Later, I'll try a Rhino -> OnShape -> KiCAD->Bantam workflow
+        so I can do all the part-fitting and fillet-cutting in OnShape.
       </p>
 
       <p>
@@ -384,13 +408,263 @@
       <p>
         Right then, off to OnShape!
       </p>
-      
+
+      <h3>Pull in the Airfoil</h3>
+      <p>
+        Let's grab that CAM Metric dxf that worked so well in Bantam, and see
+        if I can make an OnShape Part out of it.  Interesting, it came in red
+        on black
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw05-pic11-cam-airfoil-in-onshape.png" width=400>
+        <figcaption>What the ... </figcaption>
+      </figure>
+
+      <p>
+        A little <a href ="https://cad.onshape.com/help/Content/translation.htm">googling</a>
+        tells me I'll probably have better luck importing the Rhino 3DM file.
+        Having the same trouble getting from curve to extrusion though. Lemme
+        try extruding in Rhino.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw05-pic12-rhino-airfoil-extruded.png" width=400>
+        <figcaption>Oh good, I remembered how to do this. </figcaption>
+      </figure>
+
+      <p>
+        This is encouraging.  Onshape recognizes it as a Part. Now let's see
+        if I can get the airofil part and Joshua's box parts to play nice in
+        the same assembly.  Yeah.... Imma need to separate some aprts.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw05-pic13-airfoil-box-assembly.png" width=400>
+        <figcaption>It kinda worked.</figcaption>
+      </figure>
+
+      <p>
+        Okay, after fumbling around with the mouseology, I managed to grab the
+        sketch of Joshua's box top and paste into the part studio of my airfoil.
+        Now I can (hopefuly) Grab one of his slots, shorten it, and cut a hole
+        or two into my airofil.  I might-just wanna larger airofoil, actually.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw05-pic14-airfoil-and-boxtop.png" width=400>
+        <figcaption>Hope I can get two slots into the airfoil.</figcaption>
+      </figure>
+
+      <p>
+        Looks like I need to re-dimension after the copy/paste.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw05-pic15-airfoil-plus-big-slot.png" width=400>
+        <figcaption>Hope I can get two slots into the airfoil.</figcaption>
+      </figure>
+
+      <p>
+        Okay, now if I can shrink the lenth from 26mm to 2 or 3, copy, paste,
+        and ...
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw05-pic16-airfoil-2-little-slots.png" width=400>
+        <figcaption>Now I gotta punch some holes.</figcaption>
+      </figure>
+
+      <p>
+        I dunno ... it's not really working because the airfoil is a part, a
+        curve, but not a sketch.  I'mma put the holes in with Rhino ... nah,
+        I miss my OnShape dimensioneering.
+      </p>
+
+      <p>
+        Hey, wait ... maybe I can
+        <a href ="https://cad.onshape.com/help/Content/insertdwgordxf.htm">
+          import dxf into a sketch
+        </a>
+        after all. Create a new sketch, import form DXF, copy/paste shape
+        elements from Joshua's box, extrude by 1.6mm, and ...
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw05-pic17-airfoil-part.png" width=400>
+        <figcaption>Airfoil Part! We got an Airofil Part!</figcaption>
+      </figure>
+
+      <h3>Mke a Spar</h3>
+      <p>
+        This <em>should</em> be as easy as taking Joshua's box-side and
+        shrinking a dimension or two. But first, some measurements.
+      </p>
+
+      <ul>
+        <li>
+          Joshua's slot length is <strong>26 mm</strong> from one arc-center to
+          the next.
+
+          <figure>
+            <img src ="img/hcde598-hw05-pic18-original-slot-length.png" width=400>
+            <figcaption>Original slot length.</figcaption>
+          </figure>
+        </li>
+        <li>
+          Joshua's notch width is <strong>24 mm</strong> across,
+          not counting the fillets.
+
+          <figure>
+            <img src ="img/hcde598-hw05-pic19-original-notch-width.png" width=400>
+            <figcaption>Original notch width.</figcaption>
+          </figure>
+        </li>
+        <li>
+          Joshua's fillets are <strong>1 mm.</strong> Looks like these will come
+          free if I copy his part.
+
+          <figure>
+            <img src ="img/hcde598-hw05-pic20-original-fillets.png" width=400>
+            <figcaption>Original fillets.</figcaption>
+          </figure>
+        </li>
+      </ul>
+
+      <p>
+        The key thing here, is that the slot is 2 mm longer than the notch. So
+        we probably wanna 4 mm slot with a 2mm notch. Then, we gotta ...
+      </p>
+      <ol>
+        <li>Start with Joshua's box side</li>
+        <li>reduce slot halfwidth from 12 to 1</li>
+        <li>reduce overall side with from NN to YY</li>
+      </ol>
+
+      <p>
+        Turns out all the sketches and dimensions in Joshua's box are inter-realted
+        to each other.  First, shrink his slot lenghts on his Sketch 1down to 4mm.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw05-pic21-box-shortened-slots.png" width=400>
+        <figcaption>Shrunken slot lengths.</figcaption>
+      </figure>
+
+      <p>
+        Next, Fiddle with Sketch1 side lenth and slot-to-edge distance to make
+        the smallest box possible.  Baslically side length can go down to 9mm
+        and slot-to-edge can go down to 1.57/2 + 0.1 before anything breaks too
+        badly.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw05-pic22-shrunken-box-bottom.png" width=400>
+        <figcaption>Shrunken box bottom.</figcaption>
+      </figure>
+
+      <p>
+        Moving on to box sides (Sketch2). Shrink the noth half-length from 12 mm
+        down to 2.  The rest of the side got "skinny" after shrinking Sketch1.
+      </p>
 
 
+      <figure>
+        <img src ="img/hcde598-hw05-pic23-shrunken-box-side.png" width=400>
+        <figcaption>Starting to look spar-ish</figcaption>
+      </figure>
+
+      <h3>Wing Parts, Assemble!</h3>
+      <p>
+        Now it's a matter of parts-wrangling in assembly mode. Forget the pin
+        and slot mating, forget the fancy-shmancy part-level transforms.  Imma
+        just grab, move, rotate until it looks about right.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw05-pic24-wing-assembly.png" width=400>
+        <figcaption>Pretty darn close to my sketch.</figcaption>
+      </figure>
+
+      <h3>Okay, Let's Mill Some Parts!</h3>
+
+      <p>
+        Grab the spar, grap the foil, export eac to its own DXF.  Load those
+        into KiCAD
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw05-pic25-parts-in-kicad.png" width=400>
+        <figcaption>Hope this works.</figcaption>
+      </figure>
+
+      <p>
+        Hmm .. those aft spar slots (near the pointy end of the airofils) don't
+        look like they're going to leave much material behind, but let's take
+        them into Bantam to see what it says.
+      </p>
+
+      <p>
+        Huh, no complaints.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw05-pic26-parts-in-bantam.png" width=400>
+        <figcaption>If Bantam's happy, I'm happy.</figcaption>
+      </figure>
+
+      <h3>Time to Make a sandwich</h3>
+
+      <p>
+        These are gonna be small parts with thin bands of material, so imma lay
+        the tape across the <em>whole</em> board.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw05-pic27-tape-sandwitch.png" width=400>
+        <figcaption>Get that tape everwhere.</figcaption>
+      </figure>
+
+      <p>
+        Caliper says my sandwich is <strong>3.60 mm</strong> thinck, while one
+        board is <strong>1.52 mm</strong>, so my z-offset needs to be
+        <strong>2.08</strong>
+      </p>
 
 
+      <figure>
+        <img src ="img/hcde598-hw05-pic28-bantam-settings.png" width=400>
+        <figcaption>Adding the z-offset to Bantam.</figcaption>
+      </figure>
 
 
+      <p>
+        First time through, Bantam just started milling thin air several centimeters
+        above the material. Not homed in Z yet.
+      </p>
+
+      <figure>
+        <img src ="red-panda.jpg" width=400>
+        <figcaption>A figure of a panda!</figcaption>
+      </figure>
+
+      <p>
+        Dammit! No slots in my airfoils!
+      </p>
+
+      <p>
+        Sure enough, I somehow loaded the wrong airfoil Bantam.
+      </p>
+
+      <p>
+        Actualy, I think I had holes turned off.
+      </p>
+
+
+      <figure>
+        <img src ="red-panda.jpg" width=400>
+        <figcaption>A figure of a panda!</figcaption>
+      </figure>
 
 
 
