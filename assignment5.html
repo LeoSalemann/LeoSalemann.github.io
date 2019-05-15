@@ -51,14 +51,40 @@
           resize them, but it was possible. A from-sratch solustion would probably
           have been more elegant.
         </li>
+        <li>
+          Learned to "lie a little" with material depths and z-offests to get
+          the Bantam mill to actually cut all the way through.
+        </li>
+        <li>
+          Pretty happy with how my teeny tiny airfoils turned out! Pointy
+          trailing edges and everything!
+        </li>
+        <li>
+          Pretty sad with how loose my notch-n-slot joinery was.
+        </li>
+        <li>
+          The only way to be sure you have the right tool in the mill is to
+          set it yourself.
+        </li>
       </ul>
 
       <h2>Source Files</h2>
       <p>
-        Available on github.com at
-        <a href= "https://github.com/LeoSalemann/LeoSalemann.github.io/tree/master/hcde598/hw05">
-          https://github.com/LeoSalemann/LeoSalemann.github.io/tree/master/hcde598/hw05
-        </a>
+        <ul>
+          <li>
+            Available on github.com at
+            <a href= "https://github.com/LeoSalemann/LeoSalemann.github.io/tree/master/hcde598/hw05">
+              https://github.com/LeoSalemann/LeoSalemann.github.io/tree/master/hcde598/hw05
+            </a>
+          </li>
+          <li>
+            Also see OnShape document
+            <a href ="https://cad.onshape.com/documents/acaf59f41c22b138e324baa8/w/61d7377cd41f9c9676c6a67e/e/55f2df669eb9de04b726dc75">
+
+            </a>
+          </li>
+        </ul>
+
       </p>
     </div> <!-- TL;DR -->
 
@@ -678,182 +704,281 @@
 
 
 
-  <!-- ***************  DAY FOUR  *************** -->
-  <div id="day-04">
-    <h2>DAY FOUR: Milling at the MILL</h2>
-    <p>
-      Took another day off, I'm such a hedonist. So it almost worked last time.
-      I got airfoils, spars, but no slots for the spars to fit into. After some
-      thrashing around, i figured out I simply had left <strong>Holes</strong>
-      turned off.
-    </p>
+    <!-- ***************  DAY FOUR  *************** -->
+    <div id="day-04">
+      <h2>DAY FOUR: Milling at the MILL</h2>
+      <p>
+        Took another day off, I'm such a hedonist. So it almost worked last time.
+        I got airfoils, spars, but no slots for the spars to fit into. After some
+        thrashing around, i figured out I simply had left <strong>Holes</strong>
+        turned off.
+      </p>
 
-    <p>
-      Imma use the same piece I milled last time, which means I need to offset
-      my KiCAD plot so I don't re-mill what I had before. About <strong>32 mm</strong>
-      should do it. The good news is, I don't need to re-mill the spars; I just
-      need new airofils. Save more time & material.
-    </p>
-
-    <figure>
-      <img src ="img/hcde598-hw05-pic33-kicad-no-spars.png" width=400>
-      <figcaption>Back to KiCAD, delete the spars, re-plot</figcaption>
-    </figure>
-
-    <figure>
-      <img src ="img/hcde598-hw05-pic34-bantam-no-spars.png" width=400>
-      <figcaption>Pull the plot into Bantam, offset 32mm in Y.</figcaption>
-    </figure>
-
-
-    <h3>Ah, Crap</h3>
-    <p>
-      It didn't cut all the way through.
+      <p>
+        Imma use the same piece I milled last time, which means I need to offset
+        my KiCAD plot so I don't re-mill what I had before. About <strong>32 mm</strong>
+        should do it. The good news is, I don't need to re-mill the spars; I just
+        need new airofils. Save more time & material.
+      </p>
 
       <figure>
-        <img src ="img/hcde598-hw05-pic35-failed-to-cut-thru.png" width=400>
-        <figcaption>Cut-through failure</figcaption>
+        <img src ="img/hcde598-hw05-pic33-kicad-no-spars.png" width=400>
+        <figcaption>Back to KiCAD, delete the spars, re-plot</figcaption>
       </figure>
 
-      The parts came out with some persuasion and a utility knife. It <em>looks</em>
-      like my notch and slot will work if properly milled.
-
       <figure>
-        <img src ="img/hcde598-hw05-pic36-assembled-sloppy-wing.png" width=400>
-        <figcaption>Cut-through failure</figcaption>
+        <img src ="img/hcde598-hw05-pic34-bantam-no-spars.png" width=400>
+        <figcaption>Pull the plot into Bantam, offset 32mm in Y.</figcaption>
       </figure>
 
 
-      Okay, so last time I told Bantam my <strong>Material</strong>
-      had a <strong>Z Offset</strong> of <strong>1.56 mm</strong>, causing the mill
-      to stop before cutting all the way through. So if I tell Bantam my material
-      is <em>lower</em> it should cut <em>deeper.</em>  It's pretty hard to get
-      a caliper reading, on the layer that was left behind. I'm getting something
-      like <strong>0.34 mm.</strong>  I want this to go through, so Imma round up
-      to <strong>0.4mm, </strong> bringing my new  <strong>Materia Z Offset</strong>
-      to <strong>1.1mm</strong>
-    </p>
+      <h3>Ah, Crap</h3>
+      <p>
+        It didn't cut all the way through.
 
-    <figure>
-      <img src ="img/hcde598-hw05-pic37-banam-new-z-offset.png" width=400>
-      <figcaption>Less Tape, Faster Removal</figcaption>
-    </figure>
+        <figure>
+          <img src ="img/hcde598-hw05-pic35-failed-to-cut-thru.png" width=400>
+          <figcaption>Cut-through failure</figcaption>
+        </figure>
 
-    <h3>Back to Bantam</h3>
-    <p>
-      Start with a fresh FR1 sandwitch. Reload the Gerber file with all the
-      airfoils and spars. Set <strong>Materia Z Offset</strong>
-      to <strong>1.1mm</strong> and cut again. Use the same full-tape for <thead>
-      "sandwitch meat" but do a simple "Union Jack" pattern for the surface that
-      tapes to the aluminum bed.
-    </p>
+        The parts came out with some persuasion and a utility knife. It <em>looks</em>
+        like my notch and slot will work if properly milled.
 
-    <figure>
-      <img src ="img/hcde598-hw05-pic38-union-jack-tape.png" width=400>
-      <figcaption>Less Tape, Faster Removal</figcaption>
-    </figure>
-
-    <h3>AGAAIN !?!?!</h3>
-    <p>
-      <em>Another</em> cut-though failure! Wait a sec.  I changed
-      <strong>Material <em>Thickness</em></strong>; I should be changing
-      <strong>Material <em>Z-Offest</em></strong>. Let's. Try. Again. Set the
-      <strong>Material Thickness</strong> to <strong>1.65</strong> (lie a little
-      and say it's thicker than it really is); Set the <strong>Material Z Offset</strong>
-      to <strong>1.5</strong> (lie a little and say it's not as high off of the
-      base plate as it really is).
-    </p>
-
-    <figure>
-      <img src ="img/hcde598-hw05-pic39-bantam-settings-try-03.png" width=400>
-      <figcaption>Bamtam settings, 3rd attempt.</figcaption>
-    </figure>
-
-    <p>
-      Uh-oh, loose parts. That'll teach me to try re-using the "sandwitch tape"
-      from a prior run.
-    </p>
-
-    <figure>
-      <img src ="img/hcde598-hw05-pic40-loose-parts.png" width=400>
-      <figcaption>nononononono</figcaption>
-    </figure>
+        <figure>
+          <img src ="img/hcde598-hw05-pic36-assembled-sloppy-wing.png" width=400>
+          <figcaption>Cut-through failure</figcaption>
+        </figure>
 
 
+        Okay, so last time I told Bantam my <strong>Material</strong>
+        had a <strong>Z Offset</strong> of <strong>1.56 mm</strong>, causing the mill
+        to stop before cutting all the way through. So if I tell Bantam my material
+        is <em>lower</em> it should cut <em>deeper.</em>  It's pretty hard to get
+        a caliper reading, on the layer that was left behind. I'm getting something
+        like <strong>0.34 mm.</strong>  I want this to go through, so Imma round up
+        to <strong>0.4mm, </strong> bringing my new  <strong>Materia Z Offset</strong>
+        to <strong>1.1mm</strong>
+      </p>
 
-    <h3>It Kinda worked</h3>
-    <p>
-      The parts came out, give or take a ding or two. They fit together, although
-      they're loose.
-    </p>
+      <figure>
+        <img src ="img/hcde598-hw05-pic37-banam-new-z-offset.png" width=400>
+        <figcaption>Less Tape, Faster Removal</figcaption>
+      </figure>
 
-    <figure>
-      <img src ="img/hcde598-hw05-pic41-assembly-try01.png" width=400>
-      <figcaption>Finshed(?)</figcaption>
-    </figure>
+      <h3>Back to Bantam</h3>
+      <p>
+        Start with a fresh FR1 sandwitch. Reload the Gerber file with all the
+        airfoils and spars. Set <strong>Materia Z Offset</strong>
+        to <strong>1.1mm</strong> and cut again. Use the same full-tape for <thead>
+          "sandwitch meat" but do a simple "Union Jack" pattern for the surface that
+          tapes to the aluminum bed.
+        </p>
 
-    <h3>How Would I do Better</h3>
-    <p>
-      The notches are ok, the slot lenghts are ok, the slot widths are too loose.
-      Caliper says the notch is 1.30mm thick, while the slot is 1.37mm. Onshape
-      says the Slots were to be 1.6mm thick. If I set my caliper for 1.59, I can't
-      even fit it into the slot.
-    </p>
+        <figure>
+          <img src ="img/hcde598-hw05-pic38-union-jack-tape.png" width=400>
+          <figcaption>Less Tape, Faster Removal</figcaption>
+        </figure>
 
-    <p>
-      So I'm kinda flying blind.  I could make a big long "fake airfoil" with a
-      bunch of slots, all the same length, but gradually smaller widths. Step
-      down 0.02 per slot maybe.
-    </p>
+        <h3>AGAAIN !?!?!</h3>
+        <p>
+          <em>Another</em> cut-though failure! Wait a sec.  I changed
+          <strong>Material <em>Thickness</em></strong>; I should be changing
+          <strong>Material <em>Z-Offest</em></strong>. Let's. Try. Again. Set the
+          <strong>Material Thickness</strong> to <strong>1.65</strong> (lie a little
+          and say it's thicker than it really is); Set the <strong>Material Z Offset</strong>
+          to <strong>1.5</strong> (lie a little and say it's not as high off of the
+          base plate as it really is).
+        </p>
 
-    <figure>
-      <img src ="img/hcde598-hw05-pic42-slot-tester-onshape.png" width=400>
-      <figcaption>Slot Tester in OnShape</figcaption>
-    </figure>
+        <figure>
+          <img src ="img/hcde598-hw05-pic39-bantam-settings-try-03.png" width=400>
+          <figcaption>Bamtam settings, 3rd attempt.</figcaption>
+        </figure>
 
-    <figure>
-      <img src ="img/hcde598-hw05-pic43-slot-tester-kicad.png" width=400>
-      <figcaption>Slot Tester in Kicad</figcaption>
-    </figure>
+        <p>
+          Uh-oh, loose parts. That'll teach me to try re-using the "sandwitch tape"
+          from a prior run.
+        </p>
 
-hcde598-hw05-pic43-slot-tester-kicad-wing-removed.png
-
-    <h3>Another Thing That Happened Today</h3>
-    <p>
-      Another paragraph.
-    </p>
-
-    <figure>
-      <img src ="red-panda.jpg" width=400>
-      <figcaption>A figure of a panda!</figcaption>
-    </figure>
-
-  </div> <!-- day 04 -->
+        <figure>
+          <img src ="img/hcde598-hw05-pic40-loose-parts.png" width=400>
+          <figcaption>nononononono</figcaption>
+        </figure>
 
 
-  <!-- ***************  DAY NNN  *************** -->
-  <div id="day-0n">
-    <h2>DAY N: Thing That's Happening</h2>
-    <p>
-      An intro paragraph to set things up.
-    </p>
 
-    <figure>
-      <img src ="red-panda.jpg" width=400>
-      <figcaption>A figure of a panda!</figcaption>
-    </figure>
+        <h3>It Kinda worked</h3>
+        <p>
+          The parts came out, give or take a ding or two. They fit together, although
+          they're loose.
+        </p>
 
-    <h3>Another Thing That Happened Today</h3>
-    <p>
-      Another paragraph.
-    </p>
+        <figure>
+          <img src ="img/hcde598-hw05-pic41-assembly-try01.png" width=400>
+          <figcaption>Finshed(?)</figcaption>
+        </figure>
 
-    <figure>
-      <img src ="red-panda.jpg" width=400>
-      <figcaption>A figure of a panda!</figcaption>
-    </figure>
-  </div> <!-- day nn -->
-</div> <!--widebody-->
+        <h3>How Would I do Better</h3>
+        <p>
+          The notches are ok, the slot lenghts are ok, the slot widths are too loose.
+          Caliper says the notch is 1.30mm thick, while the slot is 1.37mm. Onshape
+          says the Slots were to be 1.6mm thick. If I set my caliper for 1.59, I can't
+          even fit it into the slot.
+        </p>
 
-</body>
-</html>
+        <p>
+          So I'm kinda flying blind.  I could make a big long "fake airfoil" with a
+          bunch of slots, all the same length, but gradually smaller widths. Step
+          down 0.02 per slot maybe.
+        </p>
+
+        <figure>
+          <img src ="img/hcde598-hw05-pic42-slot-tester-onshape.png" width=400>
+          <figcaption>Slot Tester in OnShape</figcaption>
+        </figure>
+
+        <figure>
+          <img src ="img/hcde598-hw05-pic43-slot-tester-kicad.png" width=400>
+          <figcaption>Slot Tester in Kicad</figcaption>
+        </figure>
+
+
+        <figure>
+          <img src ="img/hcde598-hw05-pic44-slot-tester-kicad-wing-removed.png" width=400>
+          <figcaption>Slot Tester in KiCAD, wing parts removed.</figcaption>
+        </figure>
+
+      </div> <!-- day 04 -->
+
+      <!-- ***************  DAY FIVE  *************** -->
+      <div id="day-05">
+        <h2>DAY FIVE: Doing It Right for a Change (I Hope)</h2>
+        <p>
+          Let's get on with it.  Print that slot-test from yesterday ...
+        </p>
+
+        <p>
+          Interesting. A frame colision warning.  In other words, the milling head
+          can't "scoot left enough" to cut my part.
+        </p>
+
+        <figure>
+          <img src ="img/hcde598-hw05-pic44-bantam-frame-collision-warning.png" width=400>
+          <figcaption>A figure of a panda!</figcaption>
+        </figure>
+
+        <p>
+          Bumping the Edg Cut Placement X-offset up to 10m seems to take care of it.
+        </p>
+
+        <figure>
+          <img src ="img/hcde598-hw05-pic44-bantam-frame-collision-fixed.png" width=400>
+          <figcaption>A figure of a panda!</figcaption>
+        </figure>
+
+        <p>
+          Hm. The thought occurs that I may have been able to save some time and
+          tool wear by skipping the rectangluar outline and just cutting the slot
+          holes. Or maybe somehting I'm not considering at themoment would convince
+          me that would be terrible idea if I tried it.  I'm just gonna let the
+          mill run and work on my write-up.
+        </p>
+
+        <p>
+          Oh, great; something unexpected and unfortunate happened again.  None
+          of my slots fit particularly well.  Upon closer inspection the slot
+          widths on the top (copper side) ....
+        </p>
+
+        <figure>
+          <img src ="img/hcde598-hw05-pic45-slot-test-oops-top.png" width=400>
+          <figcaption>A figure of a panda!</figcaption>
+        </figure>
+
+        <p>
+          ... are visibly different form the bottom  (substrate) side.
+        </p>
+
+        <figure>
+          <img src ="img/hcde598-hw05-pic46-slot-test-oops-bottom.png" width=400>
+          <figcaption>A figure of a panda!</figcaption>
+        </figure>
+
+        <p>
+          ... an <em>even closer</em> edgwise inspection shows the cuts are
+          sloped instead of vertiical.  I measured the end of the milling tool
+          at 1/32 inch (I swear I did!) but it turns out it wasn't an actual end
+          mill.
+        </p>
+
+        <p>
+          Rig up and try (yet) again. This time I'll do slots only, no rectangle.
+          whack the rectangle out in KiCAD, re-plot for Bantam. Add a y-offset
+          of <strong>21.1 mm</strong> so the slots will land in an open spot of
+          my (heavily used) material.
+        </p>
+
+        <figure>
+          <img src ="img/hcde598-hw05-pic47-slot-test-try2-bantam.png" width=400>
+          <figcaption>A figure of a panda!</figcaption>
+        </figure>
+
+        <p>
+          Wait a sec. Without the rectangle, Bantam wants to cut rings instead
+          of holes. Need to have the rectangle, but I could interrupt the cutting
+          process to save some time. Back to the original slot tester.
+        </p>
+
+        <figure>
+          <img src ="img/hcde598-hw05-pic48-slot-test-try3-bantam.png" width=400>
+          <figcaption>A figure of a panda!</figcaption>
+        </figure>
+
+        <p>
+          The smallest slot holds ... barely.
+        </p>
+        <figure>
+          <img src ="img/hcde598-hw05-pic49-slot-test-try3-irl.png" width=400>
+          <figcaption>A figure of a panda!</figcaption>
+        </figure>
+
+        <h3>Another Thing That Happened Today</h3>
+        <p>
+          Another paragraph.
+        </p>
+
+        <figure>
+          <img src ="red-panda.jpg" width=400>
+          <figcaption>A figure of a panda!</figcaption>
+        </figure>
+      </div> <!-- day 05 -->
+
+
+      <!-- ***************  DAY NNN  *************** -->
+      <div id="day-0n">
+        <h2>DAY N: Thing That's Happening</h2>
+        <p>
+          An intro paragraph to set things up.
+        </p>
+
+        <figure>
+          <img src ="red-panda.jpg" width=400>
+          <figcaption>A figure of a panda!</figcaption>
+        </figure>
+
+        <h3>Another Thing That Happened Today</h3>
+        <p>
+          Another paragraph.
+        </p>
+
+        <figure>
+          <img src ="red-panda.jpg" width=400>
+          <figcaption>A figure of a panda!</figcaption>
+        </figure>
+      </div> <!-- day nn -->
+
+
+    </div> <!--widebody-->
+
+  </body>
+  </html>
