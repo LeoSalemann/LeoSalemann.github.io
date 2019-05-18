@@ -96,3 +96,9 @@ figcaption {
   color: #FFF;
   text-decoration: none;
 }
+
+@media only screen and (max-width: 512px) {
+  .assignment {
+    width: 100%;
+  }
+}
