@@ -386,70 +386,101 @@
           for the polyester.
         </p>
 
-        <h3>Schedule Strategy</h3>
+        <div id="schedule">
+          <h3>Schedule Strategy</h3>
+          <p>
+            The assignment calls for making 4 finished pieces. I have both cast
+            and craft and remove cats now, so I’ll make for a silicone molds so I
+            can make all my casting simultaneously. Everything takes an overnight
+            or full day to Cara, so I should be able to buy more material at local
+            stores  if I’m running short.  My casing schedule will probably look
+            something like this, assuming I can cast my first silicone mold on
+            Sunday, I'll have one silicone mold ready on Monday, and zero finished
+            canopies.
+          </p>
+
+
+          <table >
+            <tr><th>Day</th><th>I have</th><th>I can pour</th></tr>
+            <tr><td>Sunday</td><td>1 wax mold</td><td>1 silicone mold</td></tr>
+            <tr>
+              <td>Monday</td>
+              <td>
+                1 wax mold<br>
+                1 silicone mold
+              </td>
+              <td>
+                1 silicone mold<br>
+                1 canopy
+              </td>
+            </tr>
+            <tr>
+              <td>Tuesday</td>
+              <td>
+                1 wax mold<br>
+                2 silicone molds<br>
+                1 canopy
+              </td>
+              <td>
+                1 silicone mold<br>
+                2 canopies<br>
+              </td>
+            </tr>
+            <tr>
+              <td>Wednesday</td>
+              <td>
+                1 wax mold<br>
+                3 silicone molds<br>
+                3 canopies
+              </td>
+              <td>
+                1 canopy<br>
+              </td>
+            </tr>
+          </table>
+
+          <p>
+            Okay, so I should have all the canopies I need by Thursday May 23, for
+            an assingment that's due Sunday, May 26.
+          </p>
+        </div>
+
+
+        <h3>Rescale for new wax.</h3>
         <p>
-          The assignment calls for making 4 finished pieces. I have both cast
-          and craft and remove cats now, so I’ll make for a silicone molds so I
-          can make all my casting simultaneously. Everything takes an overnight
-          or full day to Cara, so I should be able to buy more material at local
-          stores  if I’m running short.  My casing schedule will probably look
-          something like this, assuming I can cast my first silicone mold on
-          Sunday, I'll have one silicone mold ready on Monday, and zero finished
-          canopies.
+          I have a new wax block since last time, and I never was able to generate
+          g-code form Fustion 360.  Back to Rhino, rebuild my mold. Easiest way I
+          could find was to do it from scratch, since it's just two rectangles, a
+          couple extrusions, and an imported shape.  Upon close inspectin, my
+          Rhino units are actually milimeters, so Imma go with that.
         </p>
 
-        <table>
-          <tr><th>Day</th><th>I have</th><th>I can pour</th></tr>
-          <tr><td>Sunday</td><td>1 wax mold</td><td>1 silicone mold</td></tr>
-          <tr>
-            <td>Monday</td>
-            <td>
-              1 wax mold<br>
-              1 silicone mold
-            </td>
-            <td>
-              1 silicone mold<br>
-              1 canopy
-            </td>
-          </tr>
-          <tr>
-            <td>Tuesday</td>
-            <td>
-              1 wax mold<br>
-              2 silicone molds<br>
-              1 canopy
-            </td>
-            <td>
-              1 silicone mold<br>
-              2 canopies<br>
-            </td>
-          </tr>
-          <tr>
-            <td>Wednesday</td>
-            <td>
-              1 wax mold<br>
-              3 silicone molds<br>
-              3 canopies
-            </td>
-            <td>
-              1 canopy<br>
-            </td>
-          </tr>
-        </table>
-
         <p>
-          Okay, so I should have all the canopies I need by Thursday May 23, for
-          an assingment that's due Sunday, May 26. 
+          Make an outer rectangle starting at <strong>(0,0)</strong> with length
+          <strong>88</strong> and width <strong>78</strong> based on caliper
+          measurements. Five milimeters makes for a good wall thinkness and easy
+          math. Inner rectangle starts at <strong>(5,5,5)</strong> with length
+          <strong>78</strong> and width <strong>68</strong>. Extrude the outer
+          rectangle by <strong>39</strong> (from caliper). Extrude inner recangle
+          by the same to ensure overlap for a "clean subtraction." Cap and do a
+          BooleanDifference.
         </p>
-
-
 
         <figure>
-          <img src ="red-panda.jpg" width=800>
-          <figcaption>A figure of a panda!</figcaption>
+          <img src ="img/hcde598-hw06-pic21-new-box.png" width=800>
+          <figcaption>That didn't take long.</figcaption>
         </figure>
 
+        <p>
+          Add the canopy again, scale, move and rotate like last time.
+        </p>
 
+        <figure>
+          <img src ="img/hcde598-hw06-pic22-new-mold.png" width=800>
+          <figcaption>There, back to normal.</figcaption>
+        </figure>
+
+        <!--
         <h3>Another Thing That Happened Today</h3>
         <p>
           Another paragraph.
@@ -459,6 +490,7 @@
           <img src ="red-panda.jpg" width=800>
           <figcaption>A figure of a panda!</figcaption>
         </figure>
+      -->
 
 
       </div> <!-- day 04 -->
