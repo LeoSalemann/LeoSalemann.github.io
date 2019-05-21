@@ -218,530 +218,662 @@
 
 
     <figure>
-      <a href="https://commons.wikimedia.org/wiki/File:Oberursel_U.III.jpg#/media/File:Oberursel_U.III.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Oberursel_U.III.jpg" width=800 alt="Oberursel U.III.jpg"></a><br>By <a href="https://de.wikipedia.org/wiki/Benutzer:Softeis" class="extiw" title="de:Benutzer:Softeis">de:Benutzer:Softeis</a> - First uploaded on German Wikipedia (15:46, 7. Jul 2003). Copied from <a href="https://pl.wikipedia.org/wiki/Grafika:Silnik_gwiazdowy.jpg" class="extiw" title="pl:Grafika:Silnik gwiazdowy.jpg">pl:Grafika:Silnik_gwiazdowy.jpg</a> because the image on <a href="https://de.wikipedia.org/wiki/Bild:Umlaufmotor1.jpg" class="extiw" title="de:Bild:Umlaufmotor1.jpg">de:Bild:Umlaufmotor1.jpg</a> wasn`t visible., <a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=61257">Link</a></p>
-      </figure
-
-      <p>
-        So maybe a "bubble canopy" would be easier. It'd look really good if I can cast
-        in clear resin.  And If I wanna play hard-mode, I could make a two part mold and
-        have a hollow canopy.
-      </p>
-
-      <figure>
-        <a href="https://commons.wikimedia.org/wiki/File:F-86f-527fbs-Ramstein.jpeg#/media/File:F-86f-527fbs-Ramstein.jpeg"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/F-86f-527fbs-Ramstein.jpeg" alt="F-86f-527fbs-Ramstein.jpeg"></a><br>By United States Air Force Historical Research Agency, Maxwell AFB Alabama - <a class="external free" href="http://en.wikipedia.org/wiki/Image:F-86f-527fbs-Ramstein.jpg">http://en.wikipedia.org/wiki/Image:F-86f-527fbs-Ramstein.jpg</a>, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=1578563">Link</a>
-      </figure>
-
-      <h3>Ok, Where Imma Find a Canopy?</h3>
-      <p>
-        Turns out standalone canopies are hard to find; it's a lot easier
-        to find aircraft and hope I can slice the canopy off. As luck would
-        have it (honestly, I <em>did not</em> plan this in advance)
-      </p>
-
-
-      <p>
-        Making the box was fairly painless in Rhino.
-        <a href ="https://free3d.com">free3d.com</a> has the same
-        <a href ="https://free3d.com/3d-model/fighter-jet-sg-v1--213106.html">F-86</a>
-        I found on wikimedia.
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic08-f86-free3d.png" width=800>
-        <figcaption>This is encouraging </figcaption>
-      </figure>
-
-      <p>
-        Download, unzip, import into Rhino. Rhino recongizes the obj file,
-        and provides options to import by object and object names. Imma
-        try that.
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic09-f86-free3d-import-rhino.png" width=400>
-        <figcaption>This is encouraging.</figcaption>
-      </figure>
-
-      <p>
-        Whoah! Textures and everything!
-      </p>
-      <figure>
-        <img src ="img/hcde598-hw06-pic10-f86-in-rhino.png" width=800>
-        <figcaption>Not bad.</figcaption>
-      </figure>
-
-      <p>
-        Now the crucial test  ... can I pull the canaopy off of the airplane?
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic11-f86-canopy-removed-rhino.png" width=800>
-        <figcaption>Yes! Yeessss!!!</figcaption>
-      </figure>
-
-      <p>
-        Export the canopy as an obj. Go back to my box, and import the
-        canopy. Mab OBJ Y to Rhino Z and I'm set.  Canopy's a little big.
-        Translate and rotate to maneuver it over the box.
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic12-f86-canopy-over-box.png" width=800>
-        <figcaption>Lining up for diagonal placement.</figcaption>
-      </figure>
-
-      <p>
-        Scale it down, translate it to the bottom of the box.
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic13-f86-canopy-in-box.png" width=800>
-        <figcaption>Lined up at the bottom.</figcaption>
-      </figure>
-
-      <p>
-        Okay, if I can shave off the bottom I'm home free. Forget the 45
-        degree rotation thing. Keep it orthongonal so it's easier to align
-        the kinda curvy canopy bottom with pitch and without accidentally
-        introducing roll.
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic14-f86-canopy-clipped.png" width=800>
-        <figcaption>Lined up at the bottom.</figcaption>
-      </figure>
-
-      <p>
-        <em>Now</em> Rotate the canopy 45 degrees. Export to stl, load into
-        Fusion 360, and ...
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic15-f86-canopy-in-fusion360.png" width=800>
-        <figcaption>Ready to simulate (I think) ...</figcaption>
-      </figure>
-
-      <p>
-        A quick <strong>Inspect > Measure</strong> in Fusion 360 shows my
-        block at <strong>30.00 mm (1.181 in)</strong> across.
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic16-f86-canopy-measurement.png" width=400>
-        <figcaption>... or not; too small.</figcaption>
-      </figure>
-
-      <p>
-        A bit of late-night math says I should scale be <strong>2.54></strong>
-        to get 3 inches.
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic17-f86-canopy-scaled.png" width=400>
-        <figcaption>Close enough.</figcaption>
-      </figure>
-    </div> <!-- day 2 -->
-
-    <!-- ***************  DAY NNN  *************** -->
-    <div id="day-03">
-      <h2>DAY THREE: Maybe I can Pull This Off After All</h2>
-      <p>
-        Bought a new block of wax at Fluke at 1.5" x 7" x 3". A Fluke staffer
-        was kind enough to cut it for me, and I'm a terrible person for not
-        catching his name and including him in my <strong>Special Thanks</strong>
-        section. Funny story: He first cut it with a jigsaw (thin blade, high
-        speed) causing it to melt back together while still being cut. A broader,
-        slower bandsaw blade did the trick. So now I have an actually millable
-        block (two, in fact) and I just need to re-synch my CAD files with the
-        new block size. But first, I want to think about casting materials.
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic18-new-blocks.png" width=800>
-        <figcaption>This is more like it.</figcaption>
-      </figure>
-
-      <h3>A Clear Alternative That's Not Set in Stone</h3>
-
-      <p>
-        Rather than plaster, I'd like to cast my canopy in something clear. My
-        <em>EasyMold</em> by <em>Castn'Craft</em> advertises a Clear
-        Expoxy/Resin combo.
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic19-castin-craft-clear-epoxy.png" width=800>
-        <figcaption>I feel a shopping spree coming on...</figcaption>
-      </figure>
-
-      <p>
-        A review of the <em>EasyMold</em> material data
-        sheet & instructions shows me it's possible. It'll require heat cure
-        <em>or</em> extended 24-hour curing time.  I can wait; don't wanna
-        introduce resins into my kitchen oven. Another
-        cool trick I just picked up from the MDS:
-        <blockquote>
-          For block molds you can measure how much silicone you'll need by pouring
-          dry rice (or something similar) into your mold, then transferring it
-          into a measuring cup.
-        </blockquote>
-        Half the measurement tells you how much part A and part B you need!
-      </p>
-
-      <h3>Shopping Spree!</h3>
-      <p>
-        Ran out to my local (Issaquah) Micheal's found both Castin' Craft's
-        <em>EasyCast</em> as well as Clear Polyester.
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic20-clear-choices.png" width=800>
-        <figcaption>Decisions, decisions ... </figcaption>
-      </figure>
-
-      <p>
-        <em>EasyCast</em> is cheaper and simpler but the dry times could be up to
-        three days. The other one seems like it will cure faster, but trickier
-        mixing in a complicated multi layer pout. I’m going to buy the cheaper
-        one and get my mold ready ASAP. If I run out of time I’ll come back
-        for the polyester.
-      </p>
-
-      <div id="schedule">
-        <h3>Schedule Strategy</h3>
-        <p>
-          The assignment calls for making 4 finished pieces. I have both cast
-          and craft and remove cats now, so I’ll make for a silicone molds so I
-          can make all my casting simultaneously. Everything takes an overnight
-          or full day to Cara, so I should be able to buy more material at local
-          stores  if I’m running short.  My casing schedule will probably look
-          something like this, assuming I can cast my first silicone mold on
-          Sunday, I'll have one silicone mold ready on Monday, and zero finished
-          canopies.
-        </p>
-
-
-        <table >
-          <tr><th>Day</th><th>I have</th><th>I can pour</th></tr>
-          <tr><td>Sunday</td><td>1 wax mold</td><td>1 silicone mold</td></tr>
-          <tr>
-            <td>Monday</td>
-            <td>
-              1 wax mold<br>
-              1 silicone mold
-            </td>
-            <td>
-              1 silicone mold<br>
-              1 canopy
-            </td>
-          </tr>
-          <tr>
-            <td>Tuesday</td>
-            <td>
-              1 wax mold<br>
-              2 silicone molds<br>
-              1 canopy
-            </td>
-            <td>
-              1 silicone mold<br>
-              2 canopies<br>
-            </td>
-          </tr>
-          <tr>
-            <td>Wednesday</td>
-            <td>
-              1 wax mold<br>
-              3 silicone molds<br>
-              3 canopies
-            </td>
-            <td>
-              1 canopy<br>
-            </td>
-          </tr>
-        </table>
-
-        <p>
-          Okay, so I should have all the canopies I need by Thursday May 23, for
-          an assingment that's due Sunday, May 26.
-        </p>
-      </div>
-
-
-      <h3>Rescale for new wax.</h3>
-      <p>
-        I have a new wax block since last time, and I never was able to generate
-        g-code form Fustion 360.  Back to Rhino, rebuild my mold. Easiest way I
-        could find was to do it from scratch, since it's just two rectangles, a
-        couple extrusions, and an imported shape.  Upon close inspectin, my
-        Rhino units are actually milimeters, so Imma go with that.
-      </p>
-
-      <p>
-        Make an outer rectangle starting at <strong>(0,0)</strong> with length
-        <strong>88</strong> and width <strong>78</strong> based on caliper
-        measurements. Five milimeters makes for a good wall thinkness and easy
-        math. Inner rectangle starts at <strong>(5,5,5)</strong> with length
-        <strong>78</strong> and width <strong>68</strong>. Extrude the outer
-        rectangle by <strong>39</strong> (from caliper). Extrude inner recangle
-        by the same to ensure overlap for a "clean subtraction." Cap and do a
-        BooleanDifference.
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic21-new-box.png" width=800>
-        <figcaption>That didn't take long.</figcaption>
-      </figure>
-
-      <p>
-        Add the canopy again, scale, move and rotate like last time.
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic22-new-mold.png" width=800>
-        <figcaption>There, back to normal.</figcaption>
-      </figure>
-
-      <p>
-        Rhino -> STL -> Fusion 360 was pretty easy, although fusion deciced
-        to scale my model 10X. No problem, easily corrected.
-      </p>
-
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic23-new-mold-in-fusion.png" width=800>
-        <figcaption>10X too big? Thanks, Fusion!</figcaption>
-      </figure>
-
-      <p>
-        Fusion though it would be a good idea to ignore the fact that one corner of
-        my model was already at <strong>(0,0,0)</strong>, and left me with something
-        in negative X and Y, hovering way up in positive Z.
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic24-scaled-mold.png" width=800>
-        <figcaption>Hilarious. I love having to move things in fusion.</figcaption>
-      </figure>
-
-      <p>
-        Set up the tooling, and ....
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic25-z-error.png" width=800>
-        <figcaption>Oh great, Zcleaarance error.</figcaption>
-      </figure>
-
-      <p>
-        A bit of googling lead me to an
-        <a href ="https://forums.autodesk.com/t5/hsm-support-forum/error-zclearance-is-too-low-for-surface-zhi-zclearance-gt/m-p/6093025#M8209">
-          Autodesk Forum Post
-        </a>
-        by
-        <a href = "https://forums.autodesk.com/t5/user/viewprofilepage/user-id/2208016">
-          Neal Stein
-        </a>
-
-        suggests the tool might be trying to go "under" my
-        canopy. Perhaps I need to embed it deeper and try again.  I actually
-        want a "shallower" mold so I can use less silicone. Here we go with
-        try #3.  Take the canopy from here ...
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic26-canopy-old-z.png" width=800>
-        <figcaption>Canopy at the old z.</figcaption>
-      </figure>
-
-      <p>
-        And move it up to here.
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic27-canopy-new-z.png" width=800>
-        <figcaption>Canopy at the new z.</figcaption>
-      </figure>
-
-      <p>
-        Now bring the bottom of the box up plenty high, making sure to bury
-        all the wierd curves and overhangs on the bottom of the canoyp.
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic28-raised-floor.png" width=800>
-        <figcaption>That should do it.</figcaption>
-      </figure>
-
-      <p>
-        Okay back to the Extrude -> Cap -> STL -> Fussion workflow.  Let's see
-        how it turns out this time.
-      </p>
-
-      <p>
-        This is where I started thrashing around a bit.  Got the same error
-        so I had to sink the canopy even further. Got some wierd "bottom
-        cannot be above top" errors, and made these changes.
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic29-top-bottom-settings.png" width=400>
-        <figcaption>Hope this works</figcaption>
-      </figure>
-
-      <p>
-        On about the third try, I got valid toolpaths and a successful
-        simulation.
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic30-tool-paths.png" width=800>
-        <figcaption>Yay, it worked!</figcaption>
-      </figure>
-
-      <p>
-        Pulling the g-code into Bantam naturally caused a wild offest.
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic31-bantam-import.png" width=800>
-        <figcaption>I love adjusting offsets.</figcaption>
-      </figure>
-
-      <p>
-        But after the usual ajustments, Bantam said It could be done in
-        2 hours and 3 minutes.
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic32-bantam-adjusted.png" width=800>
-        <figcaption>Looks doable.</figcaption>
-      </figure>
-
-      <p>
-        Turning off the tool paths shows I'm gonna have a highly countoured
-        canopy.  Should I dare try 1/16 bit?  Maybe tomorrow.
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic33-canopy-in-bantam.png" width=800>
-        <figcaption>Eh, it'll count.</figcaption>
-      </figure>
-
-    </div> <!-- day 04 -->
-
-    <!-- ***************  DAY FIVE  *************** -->
-    <div id="day-05">
-
-
-      <h2>DAY FIVE: Milling Day</h2>
-      <p>
-        Somehow ended up being first to cut, having my STL and block dimensions ready.
-        STL came into VCarve Pro ok.
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic34-canopy-in-vcarve.png" width=800>
-        <figcaption>So far so good.</figcaption>
-      </figure>
-
-      <p>
-        Glued my was in place and ...
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic35-glued-wax-block.png" width=800>
-        <figcaption>Hope this works.</figcaption>
-      </figure>
-
-      <p>
-        Whoops. Block was oriented longways in Y; Vcarve was oriented longways
-        in X.
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic36-cutting-error.png" width=800>
-        <figcaption>Now we're on the right track.</figcaption>
-      </figure>
-
-      <p>
-       A bit of software tweakage (Thanks, @Nadya!), a retry ...
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic37-cutting-recovery.png" width=800>
-        <figcaption>Now we're on the right track.</figcaption>
-      </figure>
-
-      <p>
-        Rough cut turned out ... rough. Next time I'll plan for thicker walls,
-        to allow more leeway with block size and placement.
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic38-canopy-rough-cut.png" width=800>
-        <figcaption>Feeling better about this.</figcaption>
-      </figure>
-
-      <p>
-        Looks like a canopy after the finishing pass. Also give it a little glue
-        gun therapy to patch that hole.
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic39-canopy-final-cut.png" width=800>
-        <figcaption>Groovy, but good.</figcaption>
-      </figure>
-
-      <p>
-        Some quality time with 300-grit sandpaper addressed the countours. Will
-        probably try a heat gun to get it back to a glass finish.
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic40-canopy-sanded.png" width=800>
-        <figcaption>Getting smoother</figcaption>
-      </figure>
-
-
-      <h3>Home with the HeatGun</h3>
-      <p>
-        I still need to do this today.
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic41-canopy-heatgunned.png" width=800>
-        <figcaption>After Heat Gun treatment</figcaption>
-      </figure>
-
-      <h3>First Pour</h3>
-      <p>
-        I still need to do this today.
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw06-pic42-first-silicone.png" width=800>
-        <figcaption>First Pour, hope it looks good tomorrow.</figcaption>
-      </figure>
-
-    </div> <!-- day 05 -->
-
-
-    <div id="day-nn">
-      <!--
-
-      <h2>DAY N: Thing That's Happening</h2>
-      <p>
-      An intro paragraph to set things up.
+      <a href="https://commons.wikimedia.org/wiki/File:Oberursel_U.III.jpg#/media/File:Oberursel_U.III.jpg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Oberursel_U.III.jpg" width=800 alt="Oberursel U.III.jpg">
+      </a>
+      <br>
+      By
+      <a href="https://de.wikipedia.org/wiki/Benutzer:Softeis" class="extiw" title="de:Benutzer:Softeis">
+        de:Benutzer:Softeis
+      </a>
+      - First uploaded on German Wikipedia (15:46, 7. Jul 2003). Copied from
+      <a href="https://pl.wikipedia.org/wiki/Grafika:Silnik_gwiazdowy.jpg" class="extiw" title="pl:Grafika:Silnik gwiazdowy.jpg">
+        pl:Grafika:Silnik_gwiazdowy.jpg
+      </a>
+      because the image on
+      <a href="https://de.wikipedia.org/wiki/Bild:Umlaufmotor1.jpg" class="extiw" title="de:Bild:Umlaufmotor1.jpg">
+        de:Bild:Umlaufmotor1.jpg
+      </a>
+      wasn`t visible.,
+      <a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">
+        CC BY-SA 3.0
+      </a>
+      ,
+      <a href="https://commons.wikimedia.org/w/index.php?curid=61257">
+        Link
+      </a>
+    </figure>
+
+    <p>
+      So maybe a "bubble canopy" would be easier. It'd look really good if I can cast
+      in clear resin.  And If I wanna play hard-mode, I could make a two part mold and
+      have a hollow canopy.
     </p>
 
     <figure>
-    <img src ="red-panda.jpg" width=800>
-    <figcaption>A figure of a panda!</figcaption>
-  </figure>
+      <a href="https://commons.wikimedia.org/wiki/File:F-86f-527fbs-Ramstein.jpeg#/media/File:F-86f-527fbs-Ramstein.jpeg"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/F-86f-527fbs-Ramstein.jpeg" alt="F-86f-527fbs-Ramstein.jpeg"></a><br>By United States Air Force Historical Research Agency, Maxwell AFB Alabama - <a class="external free" href="http://en.wikipedia.org/wiki/Image:F-86f-527fbs-Ramstein.jpg">http://en.wikipedia.org/wiki/Image:F-86f-527fbs-Ramstein.jpg</a>, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=1578563">Link</a>
+    </figure>
 
-  <h3>Another Thing That Happened Today</h3>
-  <p>
-  Another paragraph.
+    <h3>Ok, Where Imma Find a Canopy?</h3>
+    <p>
+      Turns out standalone canopies are hard to find; it's a lot easier
+      to find aircraft and hope I can slice the canopy off. As luck would
+      have it (honestly, I <em>did not</em> plan this in advance)
+    </p>
+
+
+    <p>
+      Making the box was fairly painless in Rhino.
+      <a href ="https://free3d.com">free3d.com</a> has the same
+      <a href ="https://free3d.com/3d-model/fighter-jet-sg-v1--213106.html">F-86</a>
+      I found on wikimedia.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic08-f86-free3d.png" width=800>
+      <figcaption>This is encouraging </figcaption>
+    </figure>
+
+    <p>
+      Download, unzip, import into Rhino. Rhino recongizes the obj file,
+      and provides options to import by object and object names. Imma
+      try that.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic09-f86-free3d-import-rhino.png" width=400>
+      <figcaption>This is encouraging.</figcaption>
+    </figure>
+
+    <p>
+      Whoah! Textures and everything!
+    </p>
+    <figure>
+      <img src ="img/hcde598-hw06-pic10-f86-in-rhino.png" width=800>
+      <figcaption>Not bad.</figcaption>
+    </figure>
+
+    <p>
+      Now the crucial test  ... can I pull the canaopy off of the airplane?
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic11-f86-canopy-removed-rhino.png" width=800>
+      <figcaption>Yes! Yeessss!!!</figcaption>
+    </figure>
+
+    <p>
+      Export the canopy as an obj. Go back to my box, and import the
+      canopy. Mab OBJ Y to Rhino Z and I'm set.  Canopy's a little big.
+      Translate and rotate to maneuver it over the box.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic12-f86-canopy-over-box.png" width=800>
+      <figcaption>Lining up for diagonal placement.</figcaption>
+    </figure>
+
+    <p>
+      Scale it down, translate it to the bottom of the box.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic13-f86-canopy-in-box.png" width=800>
+      <figcaption>Lined up at the bottom.</figcaption>
+    </figure>
+
+    <p>
+      Okay, if I can shave off the bottom I'm home free. Forget the 45
+      degree rotation thing. Keep it orthongonal so it's easier to align
+      the kinda curvy canopy bottom with pitch and without accidentally
+      introducing roll.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic14-f86-canopy-clipped.png" width=800>
+      <figcaption>Lined up at the bottom.</figcaption>
+    </figure>
+
+    <p>
+      <em>Now</em> Rotate the canopy 45 degrees. Export to stl, load into
+      Fusion 360, and ...
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic15-f86-canopy-in-fusion360.png" width=800>
+      <figcaption>Ready to simulate (I think) ...</figcaption>
+    </figure>
+
+    <p>
+      A quick <strong>Inspect > Measure</strong> in Fusion 360 shows my
+      block at <strong>30.00 mm (1.181 in)</strong> across.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic16-f86-canopy-measurement.png" width=400>
+      <figcaption>... or not; too small.</figcaption>
+    </figure>
+
+    <p>
+      A bit of late-night math says I should scale be <strong>2.54></strong>
+      to get 3 inches.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic17-f86-canopy-scaled.png" width=400>
+      <figcaption>Close enough.</figcaption>
+    </figure>
+  </div> <!-- day 2 -->
+
+  <!-- ***************  DAY THREE  *************** -->
+  <div id="day-03">
+    <h2>DAY THREE: Maybe I can Pull This Off After All</h2>
+    <p>
+      Bought a new block of wax at Fluke at 1.5" x 7" x 3". A Fluke staffer
+      was kind enough to cut it for me, and I'm a terrible person for not
+      catching his name and including him in my <strong>Special Thanks</strong>
+      section. Funny story: He first cut it with a jigsaw (thin blade, high
+      speed) causing it to melt back together while still being cut. A broader,
+      slower bandsaw blade did the trick. So now I have an actually millable
+      block (two, in fact) and I just need to re-synch my CAD files with the
+      new block size. But first, I want to think about casting materials.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic18-new-blocks.png" width=800>
+      <figcaption>This is more like it.</figcaption>
+    </figure>
+
+    <h3>A Clear Alternative That's Not Set in Stone</h3>
+
+    <p>
+      Rather than plaster, I'd like to cast my canopy in something clear. My
+      <em>EasyMold</em> by <em>Castn'Craft</em> advertises a Clear
+      Expoxy/Resin combo.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic19-castin-craft-clear-epoxy.png" width=800>
+      <figcaption>I feel a shopping spree coming on...</figcaption>
+    </figure>
+
+    <p>
+      A review of the <em>EasyMold</em> material data
+      sheet & instructions shows me it's possible. It'll require heat cure
+      <em>or</em> extended 24-hour curing time.  I can wait; don't wanna
+      introduce resins into my kitchen oven. Another
+      cool trick I just picked up from the MDS:
+      <blockquote>
+        For block molds you can measure how much silicone you'll need by pouring
+        dry rice (or something similar) into your mold, then transferring it
+        into a measuring cup.
+      </blockquote>
+      Half the measurement tells you how much part A and part B you need!
+    </p>
+
+    <h3>Shopping Spree!</h3>
+    <p>
+      Ran out to my local (Issaquah) Micheal's found both Castin' Craft's
+      <em>EasyCast</em> as well as Clear Polyester.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic20-clear-choices.png" width=800>
+      <figcaption>Decisions, decisions ... </figcaption>
+    </figure>
+
+    <p>
+      <em>EasyCast</em> is cheaper and simpler but the dry times could be up to
+      three days. The other one seems like it will cure faster, but trickier
+      mixing in a complicated multi layer pout. I’m going to buy the cheaper
+      one and get my mold ready ASAP. If I run out of time I’ll come back
+      for the polyester.
+    </p>
+
+    <div id="schedule">
+      <h3>Schedule Strategy</h3>
+      <p>
+        The assignment calls for making 4 finished pieces. I have both cast
+        and craft and remove cats now, so I’ll make for a silicone molds so I
+        can make all my casting simultaneously. Everything takes an overnight
+        or full day to Cara, so I should be able to buy more material at local
+        stores  if I’m running short.  My casing schedule will probably look
+        something like this, assuming I can cast my first silicone mold on
+        Sunday, I'll have one silicone mold ready on Monday, and zero finished
+        canopies.
+      </p>
+
+      <table >
+        <tr><th>Day</th><th>I have</th><th>I can pour</th></tr>
+        <tr><td>Sunday</td><td>1 wax mold</td><td>1 silicone mold</td></tr>
+        <tr>
+          <td>Monday</td>
+          <td>
+            1 wax mold<br>
+            1 silicone mold
+          </td>
+          <td>
+            1 silicone mold<br>
+            1 canopy
+          </td>
+        </tr>
+        <tr>
+          <td>Tuesday</td>
+          <td>
+            1 wax mold<br>
+            2 silicone molds<br>
+            1 canopy
+          </td>
+          <td>
+            1 silicone mold<br>
+            2 canopies<br>
+          </td>
+        </tr>
+        <tr>
+          <td>Wednesday</td>
+          <td>
+            1 wax mold<br>
+            3 silicone molds<br>
+            3 canopies
+          </td>
+          <td>
+            1 canopy<br>
+          </td>
+        </tr>
+      </table>
+
+      <p>
+        Okay, so I should have all the canopies I need by Thursday May 23, for
+        an assingment that's due Sunday, May 26.
+      </p>
+    </div> <!-- #schedule -->
+
+
+    <h3>Rescale for new wax.</h3>
+    <p>
+      I have a new wax block since last time, and I never was able to generate
+      g-code form Fustion 360.  Back to Rhino, rebuild my mold. Easiest way I
+      could find was to do it from scratch, since it's just two rectangles, a
+      couple extrusions, and an imported shape.  Upon close inspectin, my
+      Rhino units are actually milimeters, so Imma go with that.
+    </p>
+
+    <p>
+      Make an outer rectangle starting at <strong>(0,0)</strong> with length
+      <strong>88</strong> and width <strong>78</strong> based on caliper
+      measurements. Five milimeters makes for a good wall thinkness and easy
+      math. Inner rectangle starts at <strong>(5,5,5)</strong> with length
+      <strong>78</strong> and width <strong>68</strong>. Extrude the outer
+      rectangle by <strong>39</strong> (from caliper). Extrude inner recangle
+      by the same to ensure overlap for a "clean subtraction." Cap and do a
+      BooleanDifference.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic21-new-box.png" width=800>
+      <figcaption>That didn't take long.</figcaption>
+    </figure>
+
+    <p>
+      Add the canopy again, scale, move and rotate like last time.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic22-new-mold.png" width=800>
+      <figcaption>There, back to normal.</figcaption>
+    </figure>
+
+    <p>
+      Rhino -> STL -> Fusion 360 was pretty easy, although fusion deciced
+      to scale my model 10X. No problem, easily corrected.
+    </p>
+
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic23-new-mold-in-fusion.png" width=800>
+      <figcaption>10X too big? Thanks, Fusion!</figcaption>
+    </figure>
+
+    <p>
+      Fusion though it would be a good idea to ignore the fact that one corner of
+      my model was already at <strong>(0,0,0)</strong>, and left me with something
+      in negative X and Y, hovering way up in positive Z.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic24-scaled-mold.png" width=800>
+      <figcaption>Hilarious. I love having to move things in fusion.</figcaption>
+    </figure>
+
+    <p>
+      Set up the tooling, and ....
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic25-z-error.png" width=800>
+      <figcaption>Oh great, Zcleaarance error.</figcaption>
+    </figure>
+
+    <p>
+      A bit of googling lead me to an
+      <a href ="https://forums.autodesk.com/t5/hsm-support-forum/error-zclearance-is-too-low-for-surface-zhi-zclearance-gt/m-p/6093025#M8209">
+        Autodesk Forum Post
+      </a>
+      by
+      <a href = "https://forums.autodesk.com/t5/user/viewprofilepage/user-id/2208016">
+        Neal Stein
+      </a>
+
+      suggests the tool might be trying to go "under" my
+      canopy. Perhaps I need to embed it deeper and try again.  I actually
+      want a "shallower" mold so I can use less silicone. Here we go with
+      try #3.  Take the canopy from here ...
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic26-canopy-old-z.png" width=800>
+      <figcaption>Canopy at the old z.</figcaption>
+    </figure>
+
+    <p>
+      And move it up to here.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic27-canopy-new-z.png" width=800>
+      <figcaption>Canopy at the new z.</figcaption>
+    </figure>
+
+    <p>
+      Now bring the bottom of the box up plenty high, making sure to bury
+      all the wierd curves and overhangs on the bottom of the canoyp.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic28-raised-floor.png" width=800>
+      <figcaption>That should do it.</figcaption>
+    </figure>
+
+    <p>
+      Okay back to the Extrude -> Cap -> STL -> Fussion workflow.  Let's see
+      how it turns out this time.
+    </p>
+
+    <p>
+      This is where I started thrashing around a bit.  Got the same error
+      so I had to sink the canopy even further. Got some wierd "bottom
+      cannot be above top" errors, and made these changes.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic29-top-bottom-settings.png" width=400>
+      <figcaption>Hope this works</figcaption>
+    </figure>
+
+    <p>
+      On about the third try, I got valid toolpaths and a successful
+      simulation.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic30-tool-paths.png" width=800>
+      <figcaption>Yay, it worked!</figcaption>
+    </figure>
+
+    <p>
+      Pulling the g-code into Bantam naturally caused a wild offest.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic31-bantam-import.png" width=800>
+      <figcaption>I love adjusting offsets.</figcaption>
+    </figure>
+
+    <p>
+      But after the usual ajustments, Bantam said It could be done in
+      2 hours and 3 minutes.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic32-bantam-adjusted.png" width=800>
+      <figcaption>Looks doable.</figcaption>
+    </figure>
+
+    <p>
+      Turning off the tool paths shows I'm gonna have a highly countoured
+      canopy.  Should I dare try 1/16 bit?  Maybe tomorrow.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic33-canopy-in-bantam.png" width=800>
+      <figcaption>Eh, it'll count.</figcaption>
+    </figure>
+
+  </div> <!-- day 03 -->
+
+  <!-- ***************  DAY FOUR  *************** -->
+  <div id="day-04">
+
+
+    <h2>DAY FOUR: Milling Day</h2>
+    <p>
+      Somehow ended up being first to cut, having my STL and block dimensions ready.
+      STL came into VCarve Pro ok.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic34-canopy-in-vcarve.png" width=800>
+      <figcaption>So far so good.</figcaption>
+    </figure>
+
+    <p>
+      Glued my was in place and ...
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic35-glued-wax-block.png" width=800>
+      <figcaption>Hope this works.</figcaption>
+    </figure>
+
+    <p>
+      Whoops. Block was oriented longways in Y; Vcarve was oriented longways
+      in X.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic36-cutting-error.png" width=800>
+      <figcaption>Now we're on the right track.</figcaption>
+    </figure>
+
+    <p>
+      A bit of software tweakage (Thanks, @Nadya!), a retry ...
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic37-cutting-recovery.png" width=800>
+      <figcaption>Now we're on the right track.</figcaption>
+    </figure>
+
+    <p>
+      Rough cut turned out ... rough. Next time I'll plan for thicker walls,
+      to allow more leeway with block size and placement.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic38-canopy-rough-cut.png" width=800>
+      <figcaption>Feeling better about this.</figcaption>
+    </figure>
+
+    <p>
+      Looks like a canopy after the finishing pass. Also give it a little glue
+      gun therapy to patch that hole.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic39-canopy-final-cut.png" width=800>
+      <figcaption>Groovy, but good.</figcaption>
+    </figure>
+
+    <p>
+      Some quality time with 300-grit sandpaper addressed the countours. Will
+      probably try a heat gun to get it back to a glass finish.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic40-canopy-sanded.png" width=800>
+      <figcaption>Getting smoother</figcaption>
+    </figure>
+
+
+    <h3>Home with the HeatGun</h3>
+    <p>
+      Okay, I'm back from Fluke. First thing imma do, is see if I can smooth
+      out these scratches with my heat gun ... wihout turnning my hard-earned
+      mold into a puddle of blue despondence. Time for for some light reading!
+      First-up, the heat gun:
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic41-heatgun-label.png" width=800>
+      <figcaption>375 &#8451; eh? That seems hot.</figcaption>
+    </figure>
+
+    <p>
+      Lowest setting is 375 &#8451;. Good to know. Moving on to machinable wax,
+      their tech specs at
+      <a href ="https://www.machinablewax.com/technical.php">
+        https://www.machinablewax.com/technical.php
+      </a>
+      says it melts at 116 &#8451;.  Uh-oh, gotta be careful with this.
+    </p>
+
+    <h3>Let's Try an Experiment</h3>
+    <p>
+      The thickest part of my mold is on the bottom.  So I'll flip it, scuff it,
+      and try to melt the scuffs out.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic42-scuffed-mold.png" width=800>
+      <figcaption>What I'm starting with.</figcaption>
+    </figure>
+
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic43-heatgunning-mold.png" width=800>
+      <figcaption>Don't screw this up ... Don't screw this up ... </figcaption>
+    </figure>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic44-smooth-mold.png" width=800>
+      <figcaption>Gotta be careful, but it can be done..</figcaption>
+    </figure>
+
+
+    <h3>Moving on to The Main Event</h3>
+    <p>
+      Heatunning the canopy worked well for the most part ..
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic45-canopy-heatgunned.png" width=800>
+      <figcaption>Pretty good ... </figcaption>
+    </figure>
+
+    <p>
+      Except for some stubborn grooves at the very edge.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic46-canopy-remaining-grooves.png" width=800>
+      <figcaption>... but maybe a little more. </figcaption>
+    </figure>
+
+    <p>
+      More scuffing, more melting, less courage, less patience ...
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic47-canopy-remoothed.png" width=800>
+      <figcaption>
+        Okay I'm stopping now.  That wall near the top is getting awfully thin.
+      </figcaption>
+    </figure>
+
+
+
+
+    <h3>First Pour</h3>
+    <p>
+      Start with a volume test, in this case some stee-cut oats. Fill the
+      mold ...
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic48-mold-volume-test.png" width=800>
+      <figcaption>Not sure how much this is ....</figcaption>
+    </figure>
+
+    <p>
+      ... transfer to measuring cup.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic49-measured-volume.png" width=800>
+      <figcaption>... now I am.</figcaption>
+    </figure>
+
+    <p>
+      Two ounces, how convenient. Transfer to a couple paper cups, mark the
+      fill lines.
+    </p>
+
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic50-marked-cups.png" width=800>
+      <figcaption>Done with oats; ready for silicone.</figcaption>
+    </figure>
+
+    <p>
+      Pour out an Part A and B from the EasyMold package, using the recently
+      Sharpied fill lines. Pretty goopy stuff, glad I'm using disposables.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic51-poured-parts-A-and-B.png" width=800>
+      <figcaption>No major messes so far.</figcaption>
+    </figure>
+
+    <p>
+      Mix, pour, and ... bubbles ... plus some uneven color.  I'll try to mix
+      more throughly tomorrow, but I'll take my changes with this one for
+      tonight.
+    </p>
+
+    <figure>
+      <img src ="img/hcde598-hw06-pic53-first-silicone.png" width=800>
+      <figcaption>First Pour, hope it looks good tomorrow.</figcaption>
+    </figure>
+
+  </div> <!-- day 04 -->
+
+
+  <div id="day-nn">
+    <!--
+
+    <h2>DAY N: Thing That's Happening</h2>
+    <p>
+    An intro paragraph to set things up.
+  </p>
+
+  <figure>
+  <img src ="red-panda.jpg" width=800>
+  <figcaption>A figure of a panda!</figcaption>
+</figure>
+
+<h3>Another Thing That Happened Today</h3>
+<p>
+Another paragraph.
 </p>
 
 <figure>
