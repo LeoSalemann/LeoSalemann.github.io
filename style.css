@@ -84,7 +84,7 @@ figcaption {
 }
 
 .widebody {
-  width: 1024px;
+  max-width: 1024px;
   padding: 5px 30px 30px 30px;
 }
 
