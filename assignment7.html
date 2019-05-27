@@ -538,7 +538,11 @@
           <h2>DAY FOUR: Order Some Parts</h2>
           <ul>
             <li>Date: <strong>Monday 5/27/19</strong></li>
-            <li>Time: <strong>9:30am - 12:38 pm </strong></li>
+            <li>Time:
+              <strong>
+                9:30am-12:38pm; 1:41pm-2:37pm;  3:23pm - 4:52pm
+              </strong>
+            </li>
             <li>Location: <strong>Home (Sammamish, WA)</strong></li>
             <li>Goals:
               <ul><strong>
@@ -779,47 +783,164 @@
                 swept wing desings and scanned planns, thoug.
               </p>
 
-            </div> <!-- day 4 -->
+              <h3>1:41pm-2:37pm Playing With Plans</h3>
+              <p>
+                One of the big unknowns is how the interplay between the pdf plans
+                that cad tootls is gonna work.  So let's try that.
+              </p>
 
+              <ol>
+                <li><strong>Download the Plans.</strong>
+                  Came as JPG, so far, so good.
+                </li>
+                <li><strong>Isolate an Airofil.</strong>
+                  Open in Paint.net (Right-click/Edit in Win10), select an airfoil
+                  from the overall plans, copy.
+                </li>
+                <li><strong>Add to Illustrator</strong>
+                  Paste the Airfoil into Adobe Illustrator, Resize the arboard
+                  to be just-big enough for the foil, rather than the entire
+                  32x22 inch lasercutter bed.
+                </li>
+                <li><strong>Vectorize in Illustrator</strong>
+                  Select the aifriol, then Object Menu > Image Trace > Expand.
+                  Export as DXF
+                </li>
 
+                <li><strong>Pull into Rhino</strong>
+                  Pull the DXF into Rhino, align so it faces same direciton
+                  as Grashopper Airfoil generator.  Generate a foil, try to get
+                  it to match.
+                </li>
 
-            <!-- ***************  DAY NNN  *************** -->
+                <figure>
+                  <img src ="img/hcde598-hw07-pic01-airfoil-based-on-plan.png" width=800>
+                  <figcaption>This might work after all</figcaption>
+                </figure>
+              </ol>
 
-            <div id="day-nn">
-              <!--
-              <h2>DAY N: Thing That's Happening</h2>
+              <h3>3:23pm - 4:52pm Basic Sizing</h3>
+              <p>
+                Still need to order those parts.  Before I can know (roughly)
+                what size pins I to order, I need an idea of how big this thing
+                is gonna be. The original plans are "chopped" such that they
+                don't show the full wingspan.
+              </p>
+
+              <figure>
+                <img src ="hcde598/hw07/Northrop_N1m_RCM-655_Plan_AA.jpg" width=800>
+                <figcaption>Gotta turn this ... </figcaption>
+              </figure>
+
+              <p>
+                Import into Adobe Illustrator, copy, crop, rotate, scale, and ...
+              </p>
+
+              <figure>
+                <img src ="img/hcde598-hw07-pic02-plans-in-illustrator.png" width=800>
+                <figcaption>... into this. </figcaption>
+              </figure>
+
+              <p>
+                Now I can take some mesurments from illutrator. By just drawing
+                a ling along certain features and reading off itss length.
+              </p>
               <ul>
-              <li>Date: <strong>when?</strong></li>
-              <li>Time: <strong>when?</strong></li>
-              <li>Location: <strong>where?</strong></li>
-              <li>Goals:
-              <ul><strong>
-              <li>this one</li>
-              <li>that one</li>
-            </strong></li>
-            <li>
-            <li>
-            Steps Planned:
-            <ol><strong>
-            <li> This one </li>
-            <li> That one </li>
-          </strong></ol>
-        </li>
+                <li>Half spar lengh of <strong>439 mm</strong></li>
+                <li>Max Airfoil chord length of <strong>235 mm</strong></li>
+                <li>Midway Airfoil chord length of <strong>154 mm</strong></li>
+                <li>Small Airfoil chord length of <strong>90 mm</strong></li>
+                <li>Tip Airfoil chord length of <strong>45 mm</strong></li>
+              </ul>
 
+              <p>
+                Next, I'll grab that airfoil I made earlier, set the chord length
+                to 154 mm, import into OnShape, and see if I can scale my fowler flap mechansim from
+                Assingment 4 to fit. Nice, OnShape interpreted my 154 mm airofil as
+                8037mm.
+              </p>
+
+              <p>
+                Wait.  I'm overthinking this big-time. I can just go to adobe
+                Illustrator and measure there. Duh.  Zoom in on the plan in
+                Illustrator.  Aileron lies between Airfoils 6 and 10, with 10
+                beign the smallest.
+              </p>
+
+              <figure>
+                <img src ="img/hcde598-hw07-pic03-plans-aileron-zoom-in.png" width=800>
+                <figcaption>... into this. </figcaption>
+              </figure>
+
+              <p>
+                Find Airfoil 10 aond the plan, zoom and measure. Draw a box
+                representing a pin, get 0.08 inches.
+              </p>
+
+              <figure>
+                <img src ="img/hcde598-hw07-pic04-airfoil-10-zoom-in.png" width=800>
+                <figcaption>Finding the pin size</figcaption>
+              </figure>
+
+              <p>
+                Going through my notes from Assingment 3, my calipers said the
+                USPS cardboard was 0.08in thick. In Assingment 5, my FR-1 was
+                1.65mm which comes to 0.006inches.  In Assingment 4, I made a
+                fowler flap linkage with no more than two layers per pin.
+                So I'm looking for:
+              </p>
+
+              <ul>
+                <li> Head diameter of 0.08in. </li>
+                <li> Shank diameter of something less (0.05in. maybe?)</li>
+                <li> Shank length of 0.086 or so </li>
+              </ul>
+
+            </p>
+            Now I'm ready for McMaster-Carr!
+          </p>
+
+        </div> <!-- day 4 -->
+
+
+
+        <!-- ***************  DAY NNN  *************** -->
+
+        <div id="day-nn">
+          <!--
+          <h2>DAY N: Thing That's Happening</h2>
+          <ul>
+          <li>Date: <strong>when?</strong></li>
+          <li>Time: <strong>when?</strong></li>
+          <li>Location: <strong>where?</strong></li>
+          <li>Goals:
+          <ul><strong>
+          <li>this one</li>
+          <li>that one</li>
+        </strong></li>
         <li>
-        Steps Taken:
+        <li>
+        Steps Planned:
         <ol><strong>
         <li> This one </li>
         <li> That one </li>
       </strong></ol>
     </li>
 
-    <li>Roadblocks & Impacts: <strong>what?</strong></li>
-    <li>Satisfaction (1-5): <strong>what?</strong></li>
-  </ul>
+    <li>
+    Steps Taken:
+    <ol><strong>
+    <li> This one </li>
+    <li> That one </li>
+  </strong></ol>
+</li>
 
-  <p>
-  An intro paragraph to set things up.
+<li>Roadblocks & Impacts: <strong>what?</strong></li>
+<li>Satisfaction (1-5): <strong>what?</strong></li>
+</ul>
+
+<p>
+An intro paragraph to set things up.
 </p>
 
 <figure>
