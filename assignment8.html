@@ -81,7 +81,7 @@
       <div id="day-01-header">
         <ul>
           <li>Date: <strong>Wednesday 5/29/19</strong></li>
-          <li>Time: <strong>6:20pm - 8:03pm</strong></li>
+          <li>Time: <strong>6:20pm - 8:03pm; 8:30-11:55pm</strong></li>
           <li>Location: <strong>UW Madrona 311 & MILL</strong></li>
           <li>Goals:
             <strong>
@@ -106,8 +106,10 @@
             Steps Taken:
             <ol>
               <strong>
-                <li> this one </li>
-                <li> that one </li>
+                <li> Resolve Scaling Issues. </li>
+                <li> Final mm vs. inches deciison.</li>
+                <li> Airfoils and Spars from Grashopper </li>
+                <li> No OnShape </li>
               </strong>
             </ol>
           </li>
@@ -205,7 +207,7 @@
 
         <figure>
           <img src ="img/hcde598-hw08-pic07-tomahawk-plans-mertic.png" width=800>
-          <figcaption>Tere, that didn't take long</figcaption>
+          <figcaption>There, that didn't take long</figcaption>
         </figure>
 
         <p>
@@ -231,11 +233,136 @@
         <p>
           721 mm. Not bad at all. Time to save, commit, push, then re-do the
           airfoil and spar generation.
-          </p
+        </p>
+
+        <p>
+          Re-trace the fuselage in Rhino, using Control Point Curves as Usual.
+        </p>
+
+        <figure>
+          <img src ="img/hcde598-hw08-pic10-fuselage-trace-rhino.png" width=800>
+          <figcaption>Got my fuselage back.</figcaption>
+        </figure>
+
+        <p>
+          Pull up the
+          <a href = "assignment3.html#airfoil-generator">
+            Dr. Paterson's airfoil generator from Assignment 3
+          </a>
+          , line up the airfoil from the Tomahawk plans and roll my own. Start with
+          the 129mm chord length measured from the plans, and set the thicknness
+          to 20/129 = 15.5% of chord.  I can actually get pretty close.
+        </p>
+
+        <figure>
+          <img src ="img/hcde598-hw08-pic11-grasshopper-airfoil-try01.png" width=800>
+          <figcaption>Grashopper airfoil in red; original from plans in yellow.</figcaption>
+        </figure>
+
+        <p>
+          That said, I'm gonna go a little bigger, so I have more room for ailerons
+          and hopefully fowler flaps.
+        </p>
+
+        <figure>
+          <img src ="img/hcde598-hw08-pic12-grasshopper-airfoil-overscaled.png" width=800>
+          <figcaption>Overscalled, but stil looks ok.</figcaption>
+        </figure>
+
+        <p>
+          Bake the airfoil, move it over by the traced fuselage, line up for
+          horizontal stabilizer.  Here's my next "cheat." To avoid having to cut
+          v-notches to prevent the elevator and rudder from interfereing, I'm
+          going to just extend the chord so the elevator portion simply overhangs
+          the vertical tail. If I set my rudder the right way, no interferance
+          (I hope.)
+        </p>
+
+        <figure>
+          <img src ="img/hcde598-hw08-pic13-grasshopper-elevator-overscaled.png" width=800>
+          <figcaption>Trying to be clever, hope it doesn't backfire.</figcaption>
+        </figure>
+
+        <p>
+          On to the wing spars, regenerating for milimeters.  Use the
+          <a href = "assignment3.html#day-07">
+            spar generator from Assingment 3
+          </a>
+          , but first
+          <strong>think about cardboard thickness.</strong>
+          In assingment 3, all the cardboard was the us postal stuff. This time,
+          the airofils will still be the USPS thin cardboard, while the spars
+          will be science fair trifold or somtehing similar. So, the slots
+          cut into the spar will be thin, to accmodate the airofils.
+          <em>I can use the slot thicknesses from Assingment 3.</em>
+          The slots cut into the airofils will be thick, to accmodate the thick
+          spar.  I might be able to dig up the thickness from one of my early guage
+          studies, but I can worry about that later.  Important thing is I can
+          <em>use the Assingment 3 spar generator with its existing slot
+            dimensions</em>
+          </p>
+
+          <p>
+            Tunrs out the Spar generator actually operates in inches, but it kinda
+            doesn't matter.  I can prettymuch "eyeball it" to get the spart lengh
+            to agree with the wing span on the original plan.
+          </p>
+
+          <figure>
+            <img src ="img/hcde598-hw08-pic14-spar-vs-plans.png" width=800>
+            <figcaption>
+              Generating inches-based spar for metric based model.
+              Hope this works.
+            </figcaption>
+          </figure>
+
+          <p>
+            Similarly, I can compare it to the airfoil I just made to make sure
+            the spar is narrow enough.
+          </p>
+
+          <figure>
+            <img src ="img/hcde598-hw08-pic15-spar-vs-airfoil.png" width=800>
+            <figcaption>
+              Hmmm ... pretty thin-looking spar.
+            </figcaption>
+          </figure>
+
+          <p>
+            I gonna probalby hafta do some prelminary laser cuts pretty soon.
+            But first imma thinken the spar, then just be more careful where I
+            place along the airfoil profile.
+          </p>
+
+          <figure>
+            <img src ="img/hcde598-hw08-pic16-thicker-spar-vs-airfoil.png" width=800>
+            <figcaption>
+              That looks better.
+            </figcaption>
+          </figure>
+
+          <p>
+            Bake, and move on to the elevator spar.  This one looks small enough
+            that I can probalby use USPS cardboard, too.
+          </p>
+
+          <figure>
+            <img src ="img/hcde598-hw08-pic17-stabilizer-spar.png" width=800>
+            <figcaption>
+              That looks better.
+            </figcaption>
+          </figure>
+
+          <p>
+            <strong>Take some measurements</strong>
+          </p>
+
+          <ul>
+            <li>USPS: <strong>0.0643" / 1.56mm</strong></li>
+            <li>trifold: <strong>0.1525" / 3.87mm </strong></li>
+            <li>monitor box: <strong>0.2020 / 5.13 mm</strong></li>
+          </ul>
         </div>
-
-
-
       </div> <!-- day 01 -->
 
 
