@@ -34,8 +34,8 @@
       <h2>Source Files</h2>
       <p>
         Available on github.com at
-        <a href= "">
-          https://github.com/LeoSalemann/LeoSalemann.github.io/tree/master/hcde598/hwNN
+        <a href= "https://github.com/LeoSalemann/LeoSalemann.github.io/tree/master/hcde598/hw08">
+          https://github.com/LeoSalemann/LeoSalemann.github.io/tree/master/hcde598/hw08
         </a>
       </p>
     </div> <!-- TL;DR -->
@@ -75,9 +75,9 @@
     </div> <!-- spedial-thanks -->
 
 
-    <!-- ***************  DAY ON3  *************** -->
+    <!-- ***************  DAY ONE  *************** -->
     <div id="day-01">
-      <h2>DAY N: Thing That's Happening</h2>
+      <h2>DAY ONE: Start Cadding for Reeal</h2>
       <div id="day-01-header">
         <ul>
           <li>Date: <strong>Wednesday 5/29/19</strong></li>
@@ -86,8 +86,7 @@
           <li>Goals:
             <strong>
               <ul>
-                <li>this one</li>
-                <li>that one</li>
+                <li>CAD up all the major cardboard parts.</li>
               </ul>
             </strong>
           </li>
@@ -95,8 +94,10 @@
             Steps Planned:
             <ol>
               <strong>
-                <li> this one </li>
-                <li> that one </li>
+                <li> Resolve Scaling Issues. </li>
+                <li> Final mm vs. inches deciison.</li>
+                <li> Airfoils and Spars from Grashopper </li>
+                <li> Notching and Assemblies in OnShape </li>
               </strong>
             </ol>
           </li>
@@ -125,148 +126,193 @@
         </ul>
       </div>
 
-      <p>
-        Measure the Assingment 5 scanned plan, get a scale factor.<br>
-        Scale in Adobe Illusrator (easiest) exort to SVG. <br>
-        Retrace the fuselage <br>
+      <!-- day-01-6:20pm-CADDING -->
+      <div id = "day-01-6:20pm-CADDING">
+        <p>
+          Measure the Assingment 5 scanned plan, get a scale factor.<br>
+          Scale in Adobe Illusrator (easiest) exort to SVG. <br>
+          Retrace the fuselage <br>
+        </p>
+
+        <p>
+          Generate main airfoil with grashopper.
+        </p>
+
+        <figure>
+          <img src ="img/hcde598-hw08-pic01-grasshopper-wing.png" width=800>
+          <figcaption>Wing profile via Grashoppper</figcaption>
+        </figure>
+
+        <p>
+          Generate stabilizer (horizontal tail) with grashopper.
+        </p>
+        <figure>
+          <img src ="img/hcde598-hw08-pic02-grasshopper-stabilizer.png" width=800>
+          <figcaption>Horizontal Stabilizer profile via Grashoppper</figcaption>
+        </figure>
 
 
-      </p>
+        <p>
+          Bring out the wing spar generator from assignment 3.  Turn off the
+          milimeter conversion. Start with the basic wing spar lenth and slot
+          count.
+        </p>
 
-      <p>
-        Generate main airfoil with grashopper.
-      </p>
+        <figure>
+          <img src ="img/hcde598-hw08-pic03-grasshopper-wing-spar-length-foil-count.png" width=800>
+          <figcaption>Horizontal Stabilizer profile via Grashoppper</figcaption>
+        </figure>
 
-      <figure>
-        <img src ="img/hcde598-hw08-pic01-grasshopper-wing.png" width=800>
-        <figcaption>Wing profile via Grashoppper</figcaption>
-      </figure>
+        <p>
+          Compare wing spar vs. the airfoil, dial in the height.
+        </p>
 
-      <p>
-        Generate stabilizer (horizontal tail) with grashopper.
-      </p>
-      <figure>
-        <img src ="img/hcde598-hw08-pic02-grasshopper-stabilizer.png" width=800>
-        <figcaption>Horizontal Stabilizer profile via Grashoppper</figcaption>
-      </figure>
-
-
-      <p>
-        Bring out the wing spar generator from assignment 3.  Turn off the
-        milimeter conversion. Start with the basic wing spar lenth and slot
-        count.
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw08-pic03-grasshopper-wing-spar-length-foil-count.png" width=800>
-        <figcaption>Horizontal Stabilizer profile via Grashoppper</figcaption>
-      </figure>
-
-      <p>
-        Compare wing spar vs. the airfoil, dial in the height.
-      </p>
-
-      <figure>
-        <img src ="img/hcde598-hw08-pic04-grasshopper-wing-spar-height-check.png" width=800>
-        <figcaption>Thickness seems to check out.</figcaption>
-      </figure>
+        <figure>
+          <img src ="img/hcde598-hw08-pic04-grasshopper-wing-spar-height-check.png" width=800>
+          <figcaption>Thickness seems to check out.</figcaption>
+        </figure>
 
 
-      <p>
-        Move on to the elevator
-      </p>
+        <p>
+          Move on to the elevator
+        </p>
 
-      <figure>
-        <img src ="img/hcde598-hw08-pic05-grasshopper-stabilizer-spar-length-foil-count.png" width=800>
-        <figcaption>Spar length.</figcaption>
-      </figure>
-
-
-
-      <figure>
-        <img src ="img/hcde598-hw08-pic06-grasshopper-stabilizer-spar-height-check.png" width=400>
-        <figcaption>Height check</figcaption>
-      </figure>
+        <figure>
+          <img src ="img/hcde598-hw08-pic05-grasshopper-stabilizer-spar-length-foil-count.png" width=800>
+          <figcaption>Spar length.</figcaption>
+        </figure>
 
 
 
-    </div> <!-- day 01 -->
+        <figure>
+          <img src ="img/hcde598-hw08-pic06-grasshopper-stabilizer-spar-height-check.png" width=400>
+          <figcaption>Height check</figcaption>
+        </figure>
+      </div>
+      <div id = "day-01-8:57pm-Units">
+        <h3>Inches or MiliMeters?</h3>
+        <p>
+          I started by charging off in inches, mostly based of the bed sizes
+          of the epilog lasers. The thought occurs my careful notch work from
+
+          <a href = "assignment3.html"> Assingment 3 (Airfoil Lamp) </a>
+
+          was in millimeters.  Also I'm having scaling problems when I go Adobe
+          Illustrator into Rhino anyway. Grashopper Airfoil generator wants
+          millimeters, Dremel 3D wants milimeters, Adobe Illstrato can be converted.
+          Take a deep breath, go back to Illustrator, re-do my dimentions in mm.
+        </p>
+
+        <figure>
+          <img src ="img/hcde598-hw08-pic07-tomahawk-plans-mertic.png" width=800>
+          <figcaption>Tere, that didn't take long</figcaption>
+        </figure>
+
+        <p>
+          Configure Rhnio for millimeters.  Redo the Illustrator -> Rhino
+          workflow. Measure wing in Rhino; compare to AI.
+        </p>
+
+        <figure>
+          <img src ="img/hcde598-hw08-pic08-tomahawk-plans-in-rhino.png" width=800>
+          <figcaption>2053.69mm in Rhino; 723mm in Illustrator</figcaption>
+        </figure>
+
+        <p>
+          Back to Illustrator, scale by 723/2053.59 = 0.352, re-export to SVG,
+          re-import to Rhino and ...
+        </p>
+
+        <figure>
+          <img src ="img/hcde598-hw08-pic09-tomahawk-scaled-plans-in-rhino.png" width=800>
+          <figcaption>Scaled .. good enough</figcaption>
+        </figure>
+
+        <p>
+          721 mm. Not bad at all. Time to save, commit, push, then re-do the
+          airfoil and spar generation.
+          </p
+        </div>
 
 
 
-    <!-- ***************  DAY NNN  *************** -->
-    <div id="day-nn">
-      <!--
-      <h2>DAY N: Thing That's Happening</h2>
-      <div id="day-nn-header">
+      </div> <!-- day 01 -->
+
+
+
+      <!-- ***************  DAY NNN  *************** -->
+      <div id="day-nn">
+        <!--
+        <h2>DAY N: Thing That's Happening</h2>
+        <div id="day-nn-header">
         <ul>
-          <li>Date: <strong>day m/d/y</strong></li>
-          <li>Time: <strong>HH:MMpm - HH:MMpm</strong></li>
-          <li>Location: <strong>place</strong></li>
-          <li>Goals:
-            <strong>
-              <ul>
-                <li>this one</li>
-                <li>that one</li>
-              </ul>
-            </strong>
-          </li>
-          <li>
-            Steps Planned:
-            <ol>
-              <strong>
-                <li> this one </li>
-                <li> that one </li>
-              </strong>
-            </ol>
-          </li>
+        <li>Date: <strong>day m/d/y</strong></li>
+        <li>Time: <strong>HH:MMpm - HH:MMpm</strong></li>
+        <li>Location: <strong>place</strong></li>
+        <li>Goals:
+        <strong>
+        <ul>
+        <li>**Thursday I'll be Home, should do the 3D printign designs</li>
+        <li>that one</li>
+      </ul>
+    </strong>
+  </li>
+  <li>
+  Steps Planned:
+  <ol>
+  <strong>
+  <li> this one </li>
+  <li> that one </li>
+</strong>
+</ol>
+</li>
 
-          <li>
-            Steps Taken:
-            <ol>
-              <strong>
-                <li> this one </li>
-                <li> that one </li>
-              </strong>
-            </ol>
-          </li>
+<li>
+Steps Taken:
+<ol>
+<strong>
+<li> this one </li>
+<li> that one </li>
+</strong>
+</ol>
+</li>
 
-          <li>Roadblocks & Impacts:
-            <strong>
-              Some, maybe a few.
-            </strong>
-          </li>
-          <li>
-            Satisfaction (1-5):
-            <strong>
-              X (description)
-            </strong>
-          </li>
-        </ul>
-      </div>
+<li>Roadblocks & Impacts:
+<strong>
+Some, maybe a few.
+</strong>
+</li>
+<li>
+Satisfaction (1-5):
+<strong>
+X (description)
+</strong>
+</li>
+</ul>
+</div>
 
-      <p>
-        An intro paragraph to set things up.
-      </p>
+<p>
+An intro paragraph to set things up.
+</p>
 
-      <figure>
-        <img src ="red-panda.jpg" width=400>
-        <figcaption>A figure of a panda!</figcaption>
-      </figure>
+<figure>
+<img src ="red-panda.jpg" width=400>
+<figcaption>A figure of a panda!</figcaption>
+</figure>
 
-      <h3>Another Thing That Happened Today</h3>
-      <p>
-        Another paragraph.
-      </p>
+<h3>Another Thing That Happened Today</h3>
+<p>
+Another paragraph.
+</p>
 
-      <figure>
-        <img src ="red-panda.jpg" width=400>
-        <figcaption>A figure of a panda!</figcaption>
-      </figure>
-    -->
-    </div> <!-- day nn -->
+<figure>
+<img src ="red-panda.jpg" width=400>
+<figcaption>A figure of a panda!</figcaption>
+</figure>
+-->
+</div> <!-- day nn -->
 
-  </div> <!--widebody-->
+</div> <!--widebody-->
 
 </body>
 </html>
