@@ -101,4 +101,8 @@ figcaption {
   .assignment {
     width: 100%;
   }
+  .widebod {
+    max-width: 100%;
+    width: 100%;
+  }
 }
