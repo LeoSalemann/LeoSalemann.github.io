@@ -77,7 +77,7 @@
 
     <!-- ***************  DAY ONE  *************** -->
     <div id="day-01">
-      <h2>DAY ONE: Start Cadding for Reeal</h2>
+      <h2>DAY ONE: Start Cadding for Real</h2>
       <div id="day-01-header">
         <ul>
           <li>Date: <strong>Wednesday 5/29/19</strong></li>
@@ -491,319 +491,443 @@
         <div id="day-03-header">
           <ul>
             <li>Date: <strong>Friday 5/31/19</strong></li>
-            <li>Time: <strong>7:14pm - 12:00am; 1:02am - 1:19am</strong></li>
-            <li>Location: <strong>UW, MILL</strong></li>
-            <li>Goals:<
-              <strong>
-                <uL>
-                  <li>Ignore <em>all</em> the moving control surfaces.</li>
-                  <li>First get "fixed" wing and stablizer done.</li>
-                  <li>  Do some slot-test studies for cardboard-to-arcryllic.</li>
-                  <li> Do slot & hole studies with FR-1.</li>
+            <li>Time and place:
+              <ul>
+                <strong>
+                  <li>7:14pm - 12:00am @ UW MILL</li>
+                  <li>1:02am - 1:19am @ Home (Sammamish, WA)</li>
+                </strong>
+              </ul>
+              <li>Goals:
+                <strong>
+                  <uL>
+                    <li>Ignore <em>all</em> the moving control surfaces.</li>
+                    <li>First get "fixed" wing and stablizer done.</li>
+                    <li>  Do some slot-test studies for cardboard-to-arcryllic.</li>
+                    <li> Do slot & hole studies with FR-1.</li>
+                  </ul>
+                </strong>
+              </li>
+
+              <li>
+                Steps Planned:
+                <ol>
+                  <strong>
+                    <li> CAD up Horizontal stabilizer, print & assemble with USPS cardboard </li>
+                    <li> Do a Fuseage or at least tail in scrap arcryllic. </li>
+                    <li> Measure, gauge, test such so cardboard fits arcryllic.</li>
+                    <li> Slot/Gauge studies in Bantam CNC</li>
+                  </strong>
+                </ol>
+              </li>
+
+              <li>
+                Steps Taken:
+                <ol>
+                  <strong>
+                    <li> CAD up Horizontal stabilizer, print & assemble with USPS cardboard </li>
+                    <li> CAD up a gauge to prep for wing spars. </li>
+                  </strong>
+                </ol>
+              </li>
+
+              <li>Roadblocks & Impacts:
+                <strong>
+                  Lost a day, so to heck with 3D fuselage and CNC/vacuum formed canopy.
+                </strong>
+              </li>
+              <li>
+                Satisfaction (1-5):
+                <strong>
+                  2 (bummed about losing a day)
+                </strong>
+              </li>
+            </ul>
+          </div>
+
+          <!-- First Thing, Let's CAD That Stabilizer -->
+          <div id="day-03-7:19pm-stabilizer-cad">
+            <h3>7:19 PM First Thing, Let's CAD That Stabilizer</h3>
+            <p>
+              It's a simple little wing, all made with USPS cardboard.  Should
+              go quick, so let's get on with it. First-ofr, redo the spar because
+              (a) I lost my save from last time and (b) I need to re do it for an
+              even number of airfoils anyway.
+            </p>
+
+            <figure>
+              <img src ="img/hcde598-hw08-pic18-stabilizer-spar-redo.png" width=800>
+              <figcaption>Final(?) Horizontal Satilizer Parts (Grashopper/Rhino)</figcaption>
+            </figure>
+
+
+            <p>
+              <strong>Can I do the Extrusion in OnShape?</strong>
+              Wonder if I can export the 2d curves as their own 3dm's for OnShape,
+              rather than extrude and cap in Rhino like last time.
+            </p>
+
+            <figure>
+              <img src ="img/hcde598-hw08-pic19-stabilizer-2d-in-onshape.png" width=800>
+              <figcaption>OMG It Worked!</figcaption>
+            </figure>
+
+            <p>
+              Actually, yes!  I'm gonna do it again though, this time moving it to
+              origin in Rhino first, and naming it stabilizer-horiz-airfoil so
+              my names will sort nicely when I add a spar, and when I deal with
+              vertical vs. horizontal stabilizers.
+            </p>
+
+            <figure>
+              <img src ="img/hcde598-hw08-pic20-stabilizer-2d-in-onshape-try2.png" width=800>
+              <figcaption>Perfection.</figcaption>
+            </figure>
+
+
+            <p>
+              So it looks like extruding in Rhino is easier after all. A 2D import
+              into OnShape leaves me with a plain curve that I can't turn into a sketch or
+              do anything useful with.  Extruded Rhino files come in as actual Parts
+              which can be dimensioned.  Dimensions seem to check out. I just need to
+              convert 0.138 inches
+              (<a href = "assignment3.html#machine-settings">"Notch Size" from Assignment 3</a>)
+              to 3.482 mm.
+            </p>
+
+            <figure>
+              <img src ="img/hcde598-hw08-pic21-stabilizer-2d-in-onshape-try3.png" width=800>
+              <figcaption>More perfecter.</figcaption>
+            </figure>
+
+            <p>
+              Okay, <em>now</em> move the spar over to origin in Rhino, extrude by
+              3.482 mm, and import into OnShape. Now let's see if I can cut
+              notches in OnShape instead of Rhino.
+            </p>
+
+            <p>
+              <strong>Or, Maybe Not.</strong> I can't find anything that will
+              "cut" one 3d shape from another.  Back to Rhino.  Use my spar
+              generator to bake an "airfiol slot." Line them up at varous ponints
+              along the stabilizer airfoil curve. No trims, no cuts, nothing fancy.
+              Just let the lasercutter do that part. Export to ai format,
+              1mm = 1mm.
+            </p>
+
+            <p>
+              Looks like the scaling held together.
+            </p>
+
+            <figure>
+              <img src ="img/hcde598-hw08-pic22-stabilizer-rhino-to-illustrator.png" width=800>
+              <figcaption>Maybe this will work.</figcaption>
+            </figure>
+
+            <p>
+              Copy, paste move a few times so I have multiple spars and airfoils.
+              Need to group the slots with the airfoil (feels lame, I should probaby
+              trim in Rhino like an adult).  Bunch everything up tight in one corner
+              to conserve cardboard. Just doing a test-fit at this point.
+            </p>
+
+            <figure>
+              <img src ="img/hcde598-hw08-pic23-stabilizer-rhino-to-illustrator.png" width=800>
+              <figcaption>If it's lame but it works, maybe it's not lame?</figcaption>
+            </figure>
+
+            <p>
+              Turned out okay.  That's reassuring.
+            </p>
+
+            <figure>
+              <img src ="img/hcde598-hw08-pic24-stabilizer-irl.png" width=800>
+              <figcaption>Looks like I still got it.</figcaption>
+            </figure>
+
+            <p>
+              I'm starting to re-think my chord length, though. These airfoils
+              don't fit cleantly on stndard FR1.
+            </p>
+
+            <figure>
+              <img src ="img/hcde598-hw08-pic25-stabilizer-on-FR1.png" width=800>
+              <figcaption>Maybe smaller?</figcaption>
+            </figure>
+
+            <p>
+              Sure, I could get <em>one</em> airfoil out of FR-1 if I lay it
+              diagonally, but I could get 2 or three if I just shorten it a
+              smidge. On the other hand, I have 20 FR1's with plenty more unused
+              on the "share shelf."  So I'll move on to other issues and consider
+              shortening the airfoils later.
+            </p>
+
+          </div>
+
+          <div id="day-03-10:34pm-wing">
+            <h3>10:34pm On to the Main Wing</h3>
+            <p>
+              First decision is whether to use science fair trifold or some new
+              cardboard I got form an ultrawide PC monitor. At frist I was temped
+              to stick with the trifold since I had used in my gauge studies from
+              <a href ="assingment2.htm.">Assingment 2</a>, but I didn't really record
+              what thickness actually worked (shame on me!).  Also, the PC monitor
+              box cardboard is so much stiffer, I can't really turn it down. It's
+              caliper and gauge-making time.
+            </p>
+
+
+            <p>
+              <strong>Slot thicknesses and Unit Wierdness</strong>
+              Okay, let's think this through. I'm <em>trying</em> to go pure
+              milimeters, but I already kinda cheated with the horizontal stabilizer
+              since it the slot widths were already dialed in for USPS cardboard
+              and it was using inches. Now I'm about to make a wing <em>spar</em> that's
+              much thicker than the USPS cardboard, while the wing <em>airfoils</em>
+              are still USPS cardboard. So the <em>thick spar</em> will have
+              <em>thin slots</em> cut into it for accomodating <em>thin airfoils,</em>
+              while the <em>thin airfoils</em> will have <em>thick slots</em> cut into
+              them for accomdating the <em>thick spar</em>.
+            </p>
+
+
+            <p>
+              <strong>And Another Thing</strong>
+              <em>All slots</em> whether for airfoil or spar, come form the
+              my Grashopper spar generator, which operates in inches. So the
+              path of least resistance is ...
+            </p>
+
+            <ul>
+              <li>Set the caliper for inches, measure cardoard.</li>
+              <li>Use my older inches-based guage generator.</li>
+              <li>Use the existing inches-based spar generator.</li>
+            </ul>
+
+            <p>
+              While the path to righteousness would entail ...
+            </p>
+
+            <ul>
+              <li>Set the caliper for inches, measure cardoard.</li>
+              <li>Use my newer metric guage generator.</li>
+              <li>Modify the spar generator to take metric inputs.</li>
+            </ul>
+
+            <p>
+              I have plenty of other things to modify. Gonna stay on the dark
+              side and set the caliper for inches.
+            </p>
+
+
+            <p>
+              <strong>So many thicknesses to choose from.</strong>
+              Turns out different parts of that monitor box are different
+              thicknesses. The biggest piece is 0.1570 inches to 0.1805, depending
+              on where you measure and whether you take a "deep bite" with the
+              calipers or only "nibble" with the tips. So given that my gauge
+              generator can make five slots.  I'm gonna set the middle
+              <strong>caliper slot</strong> to <strong>0.1600</strong>, and the
+              <strong>Slot size</strong> to <strong>0.0100</strong> that should
+              give me slots of
+              <strong>0.1400, 0.1500, 0.1600, 0.1700, and 0.1800.</strong>
+            </p>
+
+
+
+            <figure>
+              <img src ="img/hcde598-hw08-pic26-gaug1.png" width=800>
+              <figcaption>Here's hoping.</figcaption>
+            </figure>
+          </div>
+
+
+          <!-- Ooops -->
+          <div id="day-03-mistake">
+            <h3>Oops</h3>
+            <p>
+              The actual slot thickness is 0.043. I messed up my earlier OnShape
+              extrusions. That's why the airfoil looked so mutch thicker than its
+              "spar slots"
+            </p>
+          </div>
+
+          <div id="day-03-01:02am-planning">
+            <h3>Some Thougts for Tomorrow</h3>
+            <p>Had a few thoughts on the drive home.</p>
+            <ul>
+              <li>
+                <strong>Elevator spar should not have slots.</strong>
+                The arfoils need to slide so they can butt right up against the
+                horizontal stabilizer to accept a "pin hinge."
+              </li>
+              <li>
+                <strong>Plan for Wire Landing Gear Axle</strong>
+                Ideally the wire thickness would match the USPS cardbaord, so I
+                can re-use the 3d printed slot from assingment 3.
+              </li>
+              <li>
+                <strong>Maybe forzen lolipop landing gear.</strong>
+                Could take the T-sticks from Assingment 3 and replace the T
+                with a disk.  Boom! Easy but lame landing gear.
+              </li>
+              <li>
+                <strong>Maybe prop shaft</strong>
+                This would be 3d-printed, and look kind of like a giant
+                arrow-shaped push rivet.  Will probably require multiple prints
+                and tests, though.
+              </li>
+            </ul>
+          </div>
+
+
+        </div> <!-- day 3 -->
+
+
+
+        <!-- ***************  DAY FOUR  *************** -->
+        <div id="day-04">
+
+          <h2>DAY FOUR: Really Need to Build an Airframe</h2>
+          <div id="day-04-header">
+            <ul>
+              <li>Date: <strong>Saturday 6/1/2019</strong></li>
+              <li>Time and place:
+                <ul>
+                  <strong>
+                    <li>10:50am - 11:25am @ Home (Sammamish, WA)</li>
+                    <li>H:MMpm - 12:00am @ UW MILL</li>
+                  </strong>
                 </ul>
-              </strong>
-            </li>
-
-            <li>
-              Steps Planned:
-              <ol>
+              </li>
+              <li>Goals:
                 <strong>
-                  <li> CAD up Horizontal stabilizer, print & assemble with USPS cardboard </li>
-                  <li> Do a Fuseage or at least tail in scrap arcryllic. </li>
-                  <li> Measure, gauge, test such so cardboard fits arcryllic.</li>
-                  <li> Slot/Gauge studies in Bantam CNC</li>
+                  <ul>
+                    <li>Buy Stock Parts (wheels, prop, etc).</li>
+                    <li>Buy clear Arcrylic</li>
+                    <li>Build out the basic airframe</li>
+                  </ul>
                 </strong>
-              </ol>
-            </li>
+              </li>
+              <li>
+                Steps Planned:
+                <ol>
+                  <strong>
+                    <li> Consoidate shopping list and measuremnts</li>
+                    <li> Do the Shopping </li>
+                    <li> CAD & Fab the basic Wing </li>
+                    <li> CAD & Fab the fuselage</li>
+                    <li> On to other fab techniques (CNC or 3D print)</li>
+                  </strong>
+                </ol>
+              </li>
 
-            <li>
-              Steps Taken:
-              <ol>
+              <li>
+                Steps Taken:
+                <ol>
+                  <strong>
+                    <li> this one </li>
+                    <li> that one </li>
+                  </strong>
+                </ol>
+              </li>
+
+              <li>Roadblocks & Impacts:
                 <strong>
-                  <li> CAD up Horizontal stabilizer, print & assemble with USPS cardboard </li>
-                  <li> CAD up a gauge to prep for wing spars. </li>
+                  Running out of time.
                 </strong>
-              </ol>
-            </li>
+              </li>
+              <li>
+                Satisfaction (1-5):
+                <strong>
+                  2 (running out of time)
+                </strong>
+              </li>
+            </ul>
+          </div>
 
-            <li>Roadblocks & Impacts:
-              <strong>
-                Lost a day, so to heck with 3D fuselage and CNC/vacuum formed canopy.
-              </strong>
-            </li>
-            <li>
-              Satisfaction (1-5):
-              <strong>
-                2 (bummed about losing a day)
-              </strong>
-            </li>
-          </ul>
-        </div>
+          <!-- Sopping Spree -->
+          <div id="day-04-shopping prep">
+            <h3>10:50am @ Home: Shopping Spree</h3>
+            <p>
+              Getting ready to buy stock parts and Acrylic, before reaching the
+              MILL by 1pm. Copy/paste my parts  Measurements from prior days:
+            </p>
 
-        <!-- First Thing, Let's CAD That Stabilizer -->
-        <div id="day-03-7:19pm-stabilizer-cad">
-          <h3>7:19 PM First Thing, Let's CAD That Stabilizer</h3>
-          <p>
-            It's a simple little wing, all made with USPS cardboard.  Should
-            go quick, so let's get on with it. First-ofr, redo the spar because
-            (a) I lost my save from last time and (b) I need to re do it for an
-            even number of airfoils anyway.
-          </p>
+            <ul>
+              <li>
+                <strong>HobbyTown for Wheels & Prop</strong>
+                Lookng At Adobe Illustrator:
+                <ul>
+                  <li>Prop radius:<strong>75-80mm</strong></li>
+                  <li>Nose wheel:<strong>30mm</strong></li>
+                  <li>Main wheels:<strong>30mm</strong></li>
+                  <li>Spinner Diameter: <strong>23mm</strong></li>
+                  <li>Spinner Length: <strong>30mm</strong></li>
+                </ul>
+              </li>
+              <li>
+                <strong>Buy Clear Acrylic for fuselage.</strong>
+                <ul>
+                  <li>
+                    <strong>1/8 inch thick</strong> like
+                    <a href ="assignment4.html"> Assignment 4.</a>
+                  </li>
+                  <li>
+                    <strong>31 inches wide</strong>
+                     so it fits comfortably on the 32x20 inch laser cutter,
+                    And provides ample room 22.5 inch fuselage and even the 28.5 inch
+                    wing spar if desired.
+                  </li>
+                  <li>
+                    <strong>19 inhes high</strong>
+                    so it fits comfortably on the 32x20 inch laser cutter.
+                  </li>
+                </ul>
 
-          <figure>
-            <img src ="img/hcde598-hw08-pic18-stabilizer-spar-redo.png" width=800>
-            <figcaption>Final(?) Horizontal Satilizer Parts (Grashopper/Rhino)</figcaption>
-          </figure>
+              </li>
+            </ul>
 
+            <p>
+                All right, time to shop!
+            </p>
 
-          <p>
-            <strong>Can I do the Extrusion in OnShape?</strong>
-            Wonder if I can export the 2d curves as their own 3dm's for OnShape,
-            rather than extrude and cap in Rhino like last time.
-          </p>
-
-          <figure>
-            <img src ="img/hcde598-hw08-pic19-stabilizer-2d-in-onshape.png" width=800>
-            <figcaption>OMG It Worked!</figcaption>
-          </figure>
-
-          <p>
-            Actually, yes!  I'm gonna do it again though, this time moving it to
-            origin in Rhino first, and naming it stabilizer-horiz-airfoil so
-            my names will sort nicely when I add a spar, and when I deal with
-            vertical vs. horizontal stabilizers.
-          </p>
-
-          <figure>
-            <img src ="img/hcde598-hw08-pic20-stabilizer-2d-in-onshape-try2.png" width=800>
-            <figcaption>Perfection.</figcaption>
-          </figure>
-
-
-          <p>
-            So it looks like extruding in Rhino is easier after all. A 2D import
-            into OnShape leaves me with a plain curve that I can't turn into a sketch or
-            do anything useful with.  Extruded Rhino files come in as actual Parts
-            which can be dimensioned.  Dimensions seem to check out. I just need to
-            convert 0.138 inches
-            (<a href = "assignment3.html#machine-settings">"Notch Size" from Assignment 3</a>)
-            to 3.482 mm.
-          </p>
-
-          <figure>
-            <img src ="img/hcde598-hw08-pic21-stabilizer-2d-in-onshape-try3.png" width=800>
-            <figcaption>More perfecter.</figcaption>
-          </figure>
-
-          <p>
-            Okay, <em>now</em> move the spar over to origin in Rhino, extrude by
-            3.482 mm, and import into OnShape. Now let's see if I can cut
-            notches in OnShape instead of Rhino.
-          </p>
-
-          <p>
-            <strong>Or, Maybe Not.</strong> I can't find anything that will
-            "cut" one 3d shape from another.  Back to Rhino.  Use my spar
-            generator to bake an "airfiol slot." Line them up at varous ponints
-            along the stabilizer airfoil curve. No trims, no cuts, nothing fancy.
-            Just let the lasercutter do that part. Export to ai format,
-            1mm = 1mm.
-          </p>
-
-          <p>
-            Looks like the scaling held together.
-          </p>
-
-          <figure>
-            <img src ="img/hcde598-hw08-pic22-stabilizer-rhino-to-illustrator.png" width=800>
-            <figcaption>Maybe this will work.</figcaption>
-          </figure>
-
-          <p>
-            Copy, paste move a few times so I have multiple spars and airfoils.
-            Need to group the slots with the airfoil (feels lame, I should probaby
-            trim in Rhino like an adult).  Bunch everything up tight in one corner
-            to conserve cardboard. Just doing a test-fit at this point.
-          </p>
-
-          <figure>
-            <img src ="img/hcde598-hw08-pic23-stabilizer-rhino-to-illustrator.png" width=800>
-            <figcaption>If it's lame but it works, maybe it's not lame?</figcaption>
-          </figure>
-
-          <p>
-            Turned out okay.  That's reassuring.
-          </p>
-
-          <figure>
-            <img src ="img/hcde598-hw08-pic24-stabilizer-irl.png" width=800>
-            <figcaption>Looks like I still got it.</figcaption>
-          </figure>
-
-          <p>
-            I'm starting to re-think my chord length, though. These airfoils
-            don't fit cleantly on stndard FR1.
-          </p>
-
-          <figure>
-            <img src ="img/hcde598-hw08-pic25-stabilizer-on-FR1.png" width=800>
-            <figcaption>Maybe smaller?</figcaption>
-          </figure>
-
-          <p>
-            Sure, I could get <em>one</em> airfoil out of FR-1 if I lay it
-            diagonally, but I could get 2 or three if I just shorten it a
-            smidge. On the other hand, I have 20 FR1's with plenty more unused
-            on the "share shelf."  So I'll move on to other issues and consider
-            shortening the airfoils later.
-          </p>
-
-        </div>
-
-        <div id="day-03-10:34pm-wing">
-          <h3>10:34pm On to the Main Wing</h3>
-          <p>
-            First decision is whether to use science fair trifold or some new
-            cardboard I got form an ultrawide PC monitor. At frist I was temped
-            to stick with the trifold since I had used in my gauge studies from
-            <a href ="assingment2.htm.">Assingment 2</a>, but I didn't really record
-            what thickness actually worked (shame on me!).  Also, the PC monitor
-            box cardboard is so much stiffer, I can't really turn it down. It's
-            caliper and gauge-making time.
-          </p>
+          </div>
+        </div> <!-- day nn -->
 
 
-          <p>
-            <strong>Slot thicknesses and Unit Wierdness</strong>
-            Okay, let's think this through. I'm <em>trying</em> to go pure
-            milimeters, but I already kinda cheated with the horizontal stabilizer
-            since it the slot widths were already dialed in for USPS cardboard
-            and it was using inches. Now I'm about to make a wing <em>spar</em> that's
-            much thicker than the USPS cardboard, while the wing <em>airfoils</em>
-            are still USPS cardboard. So the <em>thick spar</em> will have
-            <em>thin slots</em> cut into it for accomodating <em>thin airfoils,</em>
-            while the <em>thin airfoils</em> will have <em>thick slots</em> cut into
-            them for accomdating the <em>thick spar</em>.
-          </p>
 
 
-          <p>
-            <strong>And Another Thing</strong>
-            <em>All slots</em> whether for airfoil or spar, come form the
-            my Grashopper spar generator, which operates in inches. So the
-            path of least resistance is ...
-          </p>
-
+        <!-- ***************  DAY NNN  *************** -->
+        <div id="day-nn">
+          <!--
+          <h2>DAY N: Thing That's Happening</h2>
+          <div id="day-nn-header">
           <ul>
-            <li>Set the caliper for inches, measure cardoard.</li>
-            <li>Use my older inches-based guage generator.</li>
-            <li>Use the existing inches-based spar generator.</li>
-          </ul>
-
-          <p>
-            While the path to righteousness would entail ...
-          </p>
-
+          <li>Date: <strong>day m/d/y</strong></li>
+          <li>Time and place:
           <ul>
-            <li>Set the caliper for inches, measure cardoard.</li>
-            <li>Use my newer metric guage generator.</li>
-            <li>Modify the spar generator to take metric inputs.</li>
-          </ul>
-
-          <p>
-            I have plenty of other things to modify. Gonna stay on the dark
-            side and set the caliper for inches.
-          </p>
-
-
-          <p>
-            <strong>So many thicknesses to choose from.</strong>
-            Turns out different parts of that monitor box are different
-            thicknesses. The biggest piece is 0.1570 inches to 0.1805, depending
-            on where you measure and whether you take a "deep bite" with the
-            calipers or only "nibble" with the tips. So given that my gauge
-            generator can make five slots.  I'm gonna set the middle
-            <strong>caliper slot</strong> to <strong>0.1600</strong>, and the
-            <strong>Slot size</strong> to <strong>0.0100</strong> that should
-            give me slots of
-            <strong>0.1400, 0.1500, 0.1600, 0.1700, and 0.1800.</strong>
-          </p>
-
-
-
-          <figure>
-            <img src ="img/hcde598-hw08-pic26-gaug1.png" width=800>
-            <figcaption>Here's hoping.</figcaption>
-          </figure>
-        </div>
-
-
-        <!-- Ooops -->
-        <div id="day-03-mistake">
-          <h3>Oops</h3>
-          <p>
-            The actual slot thickness is 0.043. I messed up my earlier OnShape
-            extrusions. That's why the airfoil looked so mutch thicker than its
-            "spar slots"
-          </p>
-        </div>
-
-        <div id="day-03-01:02am-planning">
-          <h3>Some Thougts for Tomorrow</h3>
-          <p>Had a few thoughts on the drive home.</p>
-          <ul>
-            <li>
-              <strong>Elevator spar should not have slots.</strong>
-              The arfoils need to slide so they can butt right up against the
-              horizontal stabilizer to accept a "pin hinge."
-            </li>
-            <li>
-              <strong>Plan for Wire Landing Gear Axle</strong>
-              Ideally the wire thickness would match the USPS cardbaord, so I
-              can re-use the 3d printed slot from assingment 3.
-            </li>
-            <li>
-              <strong>Maybe forzen lolipop landing gear.</strong>
-              Could take the T-sticks from Assingment 3 and replace the T
-              with a disk.  Boom! Easy but lame landing gear.
-            </li>
-            <li>
-              <strong>Maybe prop shaft</strong>
-              This would be 3d-printed, and look kind of like a giant
-              arrow-shaped push rivet.  Will probably require multiple prints
-              and tests, though.
-            </li>
-          </ul>
-        </div>
-
-
-      </div> <!-- day 3 -->
-
-
-
-      <!-- ***************  DAY NNN  *************** -->
-      <div id="day-nn">
-        <!--
-        <h2>DAY N: Thing That's Happening</h2>
-        <div id="day-nn-header">
-        <ul>
-        <li>Date: <strong>day m/d/y</strong></li>
-        <li>Time: <strong>HH:MMpm - HH:MMpm</strong></li>
-        <li>Location: <strong>place</strong></li>
-        <li>Goals:
-        <strong>
-        <ul>
-        <li>**Thursday I'll be Home, should do the 3D printign designs</li>
-        <li>that one</li>
+          <strong>
+          <li>H:MMpm - 12:00am @ UW MILL</li>
+          <li>H:MMam - H:MMam @ Home (Sammamish, WA)</li>
+        </strong>
       </ul>
-    </strong>
-  </li>
-  <li>
-  Steps Planned:
-  <ol>
-  <strong>
-  <li> this one </li>
-  <li> that one </li>
+    </li>
+    <li>Goals:
+    <strong>
+    <ul>
+    <li>this one</li>
+    <li>that one</li>
+  </ul>
+</strong>
+</li>
+<li>
+Steps Planned:
+<ol>
+<strong>
+<li> this one </li>
+<li> that one </li>
 </strong>
 </ol>
 </li>
