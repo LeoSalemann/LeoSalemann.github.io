@@ -848,7 +848,7 @@
       </div>
 
       <!-- Shopping Prep-->
-      <div id="day-04-shopping-prep">
+      <div id="day-04-10:50am-shopping-prep">
         <h3>10:50am @ Home: Shopping Prep</h3>
         <p>
           Getting ready to buy stock parts and Acrylic, before reaching the
@@ -896,7 +896,7 @@
       </div>
 
       <!-- Shopping @ HobbyTwown-->
-      <div id="day-04-shopping-hobbytown">
+      <div id="day-04-12:04pm-shopping-hobbytown">
         <h3>12:04pm-12:46pm @ HobbyTown Redmond: Shopping</h3>
         <p>
           Lots of variables to consider with wheels. Wheel diameter,
@@ -932,7 +932,7 @@
       </div>
 
       <!-- Shopping @ TAP Plastics-->
-      <div id="day-04-shopping-tap-plastics">
+      <div id="day-04-1:06pm-shopping-tap-plastics">
         <h3>1:06pm-1:19pm @ TAP Plastics Bellevue: Shopping</h3>
         <p>
           This should be straightforward, I know what I need and how big
@@ -1403,37 +1403,184 @@
           Pretty sure this will work for tricycle care too. I think 60 mm is the right length.
         </p>
 
-        <p><strong>
 
 
-
-        </div>
-      </div> <!-- day nn -->
-
+      </div>
+    </div> <!-- day 4 -->
 
 
+    <!-- ***************  DAY FIVE  *************** -->
+    <div id="day-05">
 
-
-      <!-- ***************  DAY NNN  *************** -->
-      <div id="day-nn">
-        <!--
-        <h2>DAY N: Thing That's Happening</h2>
-        <div id="day-nn-header">
+      <h2>DAY FIVE: 3D Pringting (I Hope)</h2>
+      <div id="day-05-header">
         <ul>
-        <li>Date: <strong>day m/d/y</strong></li>
-        <li>Time and place:
-        <ul>
-        <strong>
-        <li>H:MMpm - 12:00am @ UW MILL</li>
-        <li>H:MMam - H:MMam @ Home (Sammamish, WA)</li>
-      </strong>
-    </ul>
-  </li>
-  <li>Goals:
-  <strong>
+          <li>Date: <strong>Sunday 6/2/19</strong></li>
+          <li>Time and place:
+            <ul>
+              <strong>
+                <li>9:29am - 10:30?am @ Home (Sammamish, WA)</li>
+                <li>9:29am - 12:00am @ UW MILL</li>
+              </strong>
+            </ul>
+          </li>
+          <li>Goals:
+            <strong>
+              <ul>
+                <li>Touch-ups from yesterday.</li>
+                <li>Aircraft Iteraton Two</li>
+              </ul>
+            </strong>
+          </li>
+          <li>
+            Steps Planned:
+            <ol>
+              <strong>
+                <li>Landing Gear struts in Rhino</li>
+                <li>3D Printing with Dremel</li>
+                <li>Improved wing and stabilzer fitting
+                  (do this while waiting for prints.)
+                </li>
+                <li>
+                  Maybe Thicker cardboard, but no Acryllic until the vey end.
+                </li>
+
+              </li>
+            </strong>
+          </ol>
+        </li>
+
+        <li>
+          Steps Taken:
+          <ol>
+            <strong>
+              <li> this one </li>
+              <li> that one </li>
+            </strong>
+          </ol>
+        </li>
+
+        <li>Roadblocks & Impacts:
+          <strong>
+            Waiting for printers
+          </strong>
+        </li>
+        <li>
+          Satisfaction (1-5):
+          <strong>
+            3.5 (turning the corner)
+          </strong>
+        </li>
+      </ul>
+    </div>
+
+    <div id ="day-05-9:29am-cleanup">
+      <h3>9:29am Coffee & Cleanups</h3>
+      <p>
+        I'm awake, I'm alert, let's cad up the landing gear.  Needs
+        to be 60mm long, with a notch at both ends. Open a copy of
+        the assigment 3's "T-strut," in Rhino; delete the polysurfaces, keep the
+        curves. Use the Rectangle command to just build a new rectangle copying
+        the height of previous and setting length explictly to 60mm.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw08-pic51-new-strut-2d.png" width=800>
+        <figcaption>Reshaped strut.</figcaption>
+      </figure>
+
+      <p>
+        Extrude the new curve. Go back to
+        <a href "assingment3.html">Assingment 3</a> to find the
+        extrusion height from last time.  Crap, I didn't record it.  Guess I'll
+        just eyeball it (again). Exrude the "slot piece" but make it a bit taller
+        to make sure it cuts all the way through when I do a boolean difference.
+        Slide it down in Z a little for similar reasons. Copy/paste, and move
+        the second slot piece to the other end.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw08-pic52-new-strut-ready-to-diff.png" width=800>
+        <figcaption>Getting ready to diff.</figcaption>
+      </figure>
+
+      <p>
+        Do the diffs, ready for Dremel. Let's see if
+        <a href ="assignment3.html#rhino-to-dremel">Assignment 3</a>
+        can help me with that.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw08-pic53-new-strut-finished-rhino.png" width=800>
+        <figcaption>Got my strut.</figcaption>
+      </figure>
+
+      <p>
+        Okay, not too bad. Export to STL; default options. Pull into Dremel
+        DigiLab; check sizing. It's 60mm long on the first try?  How did that
+        happen?
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw08-pic54-new-strut-finished-dremel.png" width=800>
+        <figcaption>Ready for G-code</figcaption>
+      </figure>
+
+      <p>
+        Pull in a second one, generate g-code Layers look legit.  I think
+        I'm ready to print, and it's only 10:30am!
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw08-pic55-new-strut-gcode.png" width=800>
+        <figcaption>Got me some g-code</figcaption>
+      </figure>
+    </div>
+
+    <!--
+    <div id ="day-05-h:mm-next-section">
+
+    <figure>
+    <img src ="red-panda.jpg" width=400>
+    <figcaption>A figure of a panda!</figcaption>
+  </figure>
+
+  <h3>Another Thing That Happened Today</h3>
+  <p>
+  Another paragraph.
+</p>
+
+<figure>
+<img src ="red-panda.jpg" width=400>
+<figcaption>A figure of a panda!</figcaption>
+</figure>
+</div>
+-->
+
+</div> <!-- day 5 -->
+
+
+
+<!-- ***************  DAY NNN  *************** -->
+<div id="day-nn">
+  <!--
+  <h2>DAY N: Thing That's Happening</h2>
+  <div id="day-nn-header">
   <ul>
-  <li>this one</li>
-  <li>that one</li>
+  <li>Date: <strong>day m/d/y</strong></li>
+  <li>Time and place:
+  <ul>
+  <strong>
+  <li>H:MMpm - 12:00am @ UW MILL</li>
+  <li>H:MMam - H:MMam @ Home (Sammamish, WA)</li>
+</strong>
+</ul>
+</li>
+<li>Goals:
+<strong>
+<ul>
+<li>this one</li>
+<li>that one</li>
 </ul>
 </strong>
 </li>
