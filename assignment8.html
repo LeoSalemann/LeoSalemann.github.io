@@ -1449,8 +1449,8 @@
             <ul>
               <strong>
                 <li>9:29am - 10:30am @ Home (Sammamish, WA)</li>
-                <li>1:15pm - 12:00am @ UW MILL</li>
-              </strong>
+                <li>1:15pm - 7:57pm @ UW MILL</li>
+                <li>tbdpm - 12:00am @ UW MILL</li>              </strong>
             </ul>
           </li>
           <li>Goals:
@@ -1694,32 +1694,233 @@
 
             What if I alter things just a little bit, so there's a "hook?"
             <figure>
-              <img src ="img/hcde598-hw08-pic66-leading-edge-hook" width=500>
+              <img src ="img/hcde598-hw08-pic66-leading-edge-hook.png" width=500>
               <figcaption>Maybe?</figcaption>
             </figure>
 
             This one's easy enough imma just try it .... later. The queue five
-            people deep, but at least I'm number six.
+            people deep, but at least I'm number six. Gonna rest my head and
+            clean up some docs.
 
           </li>
         </ol>
       </p>
+    </div>
 
+    <!--4:20pm @ UW MILL: Pins, Hinges, and CNC -->
+    <div id ="day-05-4:18pm-hinges-and-cnc">
+      <h3> 4:20pm @ UW MILL: Pins, Hinges, and CNC </h3>
 
+      <p>
+        Ok. I have an idea for a simple elevator hing that will hopefully
+        work. Take the airfoil I have, and use a pair of "half circles to "
+        cut it.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw08-pic67-elevator-hinge-shape.png" width=400>
+        <figcaption>I think I can do this.</figcaption>
+      </figure>
+
+      <p>
+        Put a hole in the middle of the center for one of my McMaster-Carr rivets,
+        and I'm set. Every elevator airfoil gets replaced withthis pair. Add a
+        regular eleavator spar to the trailing edge (not leading!) To hold
+        things together. Prototype in cardboard; final in CNC (hopefully.)  Ironically,
+        I can probalby test on CNC <em>before</em> a slot opens up on the laser printer.
+        We'll see. Meanwhile, off to the McMaster-Carr grab bag and my Caliper.
+      </p>
+
+      <p>
+        Turns out I had a couple extra airfoils, so I could do some low-fi prototyping.
+        Both the click-lock(left) and arrow(right) shanks work and look reasonably good.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw08-pic68-elevator-hinge-prototypes.png" width=400>
+        <figcaption>Decisions, decisions .. </figcaption>
+      </figure>
+
+      <p>
+        All things considered, I'm favoring the arrow shank, since I believe it
+        will be more forgiving in terms of hole size. Bigger holes are easier to
+        measure accurately, and the click-lock shanks just look like they demand a
+        perfectly-sized hole to keep from wobbling and rattling, while the arrow
+        shank is meant to "squish down" if necessary. So what steps lay ahead?
+        <ul>
+          <li>Cut the airfoil into two pices using a pair of half-circles.</li>
+          <li>Figure out hole size from some combo of McMaster Carr specs, Caliper,
+            and CNC kerf data
+          </li>
+          <li>
+            Do some initial cuts. Probably on Bantam CNC, probalby a "hole study"
+            with holes of multiple diameters.
+          </li>
+        </ul>
+
+        I have a hunch this will be easier in OnShape, despite my struggles earlier
+        this week. Imma review my <a href = "assignment5.html">Assignment 3 Notes</a>
+        Ok, the key was to
+        <a href = "assignment5.html#howto-rhino-to-onshape">
+          import dxf instead of Rhino.
+        </a>
+        I got this (I think).
+      </p>
+
+      <p><strong>Rhino to DXF to OnShape</strong>
+        I tried trimming in Rhino, but that function always cuts somethign I want
+        it to keep. Turns out I dind't need it. I can import the dxf using the
+        <em>top menu option</em> not the bottom. Extrude but 1.5 mm (just as a test)
+        and I've got just what I was hoping for.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw08-pic69-horiz-stab-airfoil-in-onshape.png" width=400>
+        <figcaption>Finally grocked this ... for now.</figcaption>
+      </figure>
+
+      <p>
+        All right, let's see if we can cut this thing with a couple half-circles.
+        Start with a copy of the sketch, workign in 2D. Make some construction lines.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw08-pic70-horiz-stab-airfoil-construction-lines.png" width=400>
+        <figcaption>Constructing some Constuction Lines</figcaption>
+      </figure>
+
+      <p>
+        Next make those three-point arcs.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw08-pic71-horiz-stab-airfoil-arcs.png" width=400>
+        <figcaption>Getting there. </figcaption>
+      </figure>
+
+      <p>
+        Now a couple strategic extrusions, by 1.53 mm (USPS thickness). Huh, it worksd.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw08-pic72-horiz-stab-with-elevator.png" width=400>
+        <figcaption>OMG It worked! It Worked!</figcaption>
+      </figure>
+
+      <p>
+        Okay, settle down. Still need the hole.
+        <a href = "https://www.mcmaster.com/90218a223"> McMaster Carr</a>
+        says to use an 0.131 inch hole size which comes to 3.3274 mm. I'll use 3.33
+        because it's a pretty number. Back to OnShape, open the sketch, make a circle.
+        Annd ....
+      </p>
     </div>
 
 
-    <!--
-    <div id ="day-05-h:mm-next-section">
-    <h3> H:MMxm @ Location: Activity Name </h3>
+    <!-- 6:18pm @ UW MILL: Lasercut Fuselage -->
+    <div id ="day-05-6:18pm-lasercut-fuselage">
+      <h3>6:18pm @ UW MILL: Lasercut Fuselage </h3>
+
+      <p>
+        Ny name finally came up in the queue.  Ironic, since I was almost ready
+        to print elevator hinge parts. No matter, on with the fuselage.
+        Got about what I expected, althought the frontmost slot for the horizontal
+        stabilizer is awfully close to the leading edge of the tail.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw08-pic74-fuselage-try-06-irl.png" width=400>
+        <figcaption>Getting better.</figcaption>
+      </figure>
+
+      <p>
+        I could get away with the assembly in cardboard, but will need some
+        chamfering for this to work in arcrylic. While the plan performs much
+        better against the shake test, the fuselage still wobbles left and right.
+      </p>
+
+      <p><strong>So what's next for fuselage?</strong>
+        The tail is straightforward. All three slots need to be redone from
+        the original airfoil. The whole thing could scoot toward the rear a
+        bit more. Also need more tail material in front of the forward spar
+        slot.
+      </p>
+      <p>
+        The fuselage is a bit trickier. Really not sure how I'm gonna
+        pull it off in acryllic. A lot of cut and try and chamfers.
+        The cheesing idea is looking beter now.
+      </p>
+
+      <p>
+        Imma pivot back to the horizontal stablizer. I might just be able to
+        sneak in a quick cut.
+
+      </div>
+
+
+      <div id ="day-05-6:52pm-elevator-hinge">
+        <h3> 6:M52pm @ UW MILL: Elevator Hinge </h3>
+        <p>
+          Back to the hinge. Here's the pic I was just about to grab before
+          the laser cutter opened up.
+        </p>
+
+        <figure>
+          <img src ="img/hcde598-hw08-pic75-elevator-hinge-try01.png" width=400>
+          <figcaption>Have hole, need dxf</figcaption>
+        </figure>
+
+        <p>
+          Rextrude, extract extrustion faces, export to DXF. Pull that into
+          Illustrator for a quick cardboard test.  Looks like I can right-click
+          the OnShape Part, select Export to DXF, then pull into Illustrator.
+          In this case, <strong>Scale 1: unit = 1 Millimeters</strong> works.
+          Arrange multiple copies in Illusrator, using the artboard from all my
+          previous USPS cuts. Rotate them 90 degrees so the direction of the
+          corrugations works out better. Isolate them to their own layer.
+        </p>
+
+        <figure>
+          <img src ="img/hcde598-hw08-pic76-horiz-stab-elevator-ready-4-laser.png" width=400>
+          <figcaption>REady for the laser cutter</figcaption>
+        </figure>
+
+        <p><strong>Assembly Notes.</strong>
+          Pick a side and stick to it. See first pic (bad) vs. next pic (good).
+          Tricky to tell which sides up with the elevator.
+          Trailing edge needs work. Need to chop off more of the elevator.
+          Okay, dinner break.
+        </p>
+
+      </div>
+
+      <!--
+      <div id ="day-05-h:mm-next-section">
+      <h3> H:MMxm @ Location: Activity Name </h3>
+
+      <p>
+      Another paragraph.
+    </p>
+
     <figure>
     <img src ="red-panda.jpg" width=400>
     <figcaption>A figure of a panda!</figcaption>
   </figure>
+</div>
+-->
 
-  <h3>Another Thing That Happened Today</h3>
-  <p>
-  Another paragraph.
+
+<!--
+<div id ="day-05-h:mm-next-section">
+<h3> H:MMxm @ Location: Activity Name </h3>
+<figure>
+<img src ="red-panda.jpg" width=400>
+<figcaption>A figure of a panda!</figcaption>
+</figure>
+
+<h3>Another Thing That Happened Today</h3>
+<p>
+Another paragraph.
 </p>
 
 <figure>
@@ -1790,7 +1991,6 @@ X (description)
 </ul>
 </div>
 
-
 <div id ="day-05-h:mm-next-section">
 <h3> H:MMxm @ Location: Activity Name </h3>
 <figure>
@@ -1810,8 +2010,9 @@ Another paragraph.
 </div>
 
 </div>
+
+</div>
 -->
-</div> <!-- day nn -->
 
 </div> <!--widebody-->
 
