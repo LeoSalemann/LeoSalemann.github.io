@@ -2131,7 +2131,7 @@
     </div>
 
     <!-- 4:28pm @ UW MILL: CNC Debugging -->
-    <div id ="day-05-4:28pm-cnc-debug">
+    <div id ="day-06-4:28pm-cnc-debug">
       <h3> 4:28pm @ UW MILL: CNC Debugging  </h3>
 
       <p>
@@ -2151,8 +2151,6 @@
           <li>Holes:<strong>blank</strong></li>
         </ul>
       </p>
-
-
 
       <figure>
         <img src ="img/hcde598-hw08-pic91-bantam-import-try02.png" width=800>
@@ -2180,9 +2178,9 @@
 
         Delightful. Not a single measurement agrees. Ok. The point is
         <strong>1.092mm</strong> in OnShape became <strong>1.14mm</strong>
-        Once milled in Bantam -- a delta of <strong>0.048mm.</srong>
+        Once milled in Bantam -- a delta of <strong>0.048mm.</strong>
         But <em>really</em> I want a <strong>1.62</strong> on the finished
-        piece -- a delta of <strong>0.528.<strong>
+        piece -- a delta of <strong>0.528.</strong>
       </p>
 
       <p>
@@ -2246,6 +2244,92 @@
 
     </div>
 
+    <!-- 4:28pm @ UW MILL: CNC Debugging -->
+    <div id ="day-06-7:22pm-cnc-debug">
+      <h3> 7:22pm @ UW MILL: More CNC Debugging  </h3>
+      <p>
+        I have a couple ideas. Gonna make one hole "stupid-big" and remove
+        the other one with a pair of arks. Here's the wierd thing. When I'm in
+        Bantam and I switch from 1/32 to 1/64 end mill, the "engraved hole"
+        diameter shrinks.  I expected it to turn into a ring. I'm thinking the
+        hole is being treated as a "dot" and not a "donught"
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw08-pic95-bantam-stupid-big-hole-test.png" width=800>
+        <figcaption>Really? Still no holes?</figcaption>
+      </figure>
+
+      <p>
+        Stupid-big hole test failed; let's try arcs.  Dangit, no improvement.
+      </p>
+
+      <p><strong>Try Fusison 360</strong>
+        Found a
+        <a href ="https://support.bantamtools.com/hc/en-us/articles/115003187966-Fusion-360-Aluminum-Rings">
+          Bantam Artticle
+        </a>
+        on using Fusion 360. Seems like
+        the examples are little out of date. I got a hole, though not sure if
+        It will go all the way thru.
+        Exporting as STEP form KiCAD, had to export as STEP form OnShape for the elevtor.
+        Under Manufacture use 2D /contour.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw08-pic96-bantam-try-02.png" width=800>
+        <figcaption>Sigh</figcaption>
+      </figure>
+
+      <p><strong>It's 9pm, and I got Nothing.</strong>
+        Endless tweaking with Fusion360 and the regular KiCAD->Bantam
+        tool chain hasn't helped my hole problems. I should pivot to
+        the  fuselage.  Maybe get some help from Joshua tomorrow for CNC.
+        Scroll back up in my notes, review my fuselage options. Given what
+        I've learned with OnShape, I think I can bring in the fuselage and
+        airfoils, and try some "cheesing."  Imma start in Rhino though, and
+        make a copy of the fuselage with "smoothed out" airfoil integrations.
+      </p>
+
+
+      <figure>
+        <img src ="img/hcde598-hw08-pic97-smoothed-fuselage-rhino.png" width=800>
+        <figcaption>There, all smooth.</figcaption>
+      </figure>
+
+      <p>
+        All right. Export as dxf, create sketches in OnShape then
+        <em>import from dxf direct to sketch.</em>... and nothing!  After burning
+        another 30 minutes of my life, I remekbers to
+        <strong>
+          Put Rhino into metric units, export dxf/CAM Metric, Import into
+          frickn' OnShape specifying frickn' millimeters.
+        </strong>
+      </p>
+
+      <p>
+        Also, got to scale1D all the slots that lay on the fuselage.
+      </p>
+
+
+      <figure>
+        <img src ="img/hcde598-hw08-pic98-fuselage-extended-slots-rhino.png" width=800>
+        <figcaption>Like this.</figcaption>
+      </figure>
+
+
+      <figure>
+        <img src ="img/hcde598-hw08-pic99-fuselage-onshape-cheesed.png" width=800>
+        <figcaption>Say cheese</figcaption>
+      </figure>
+
+      <figure>
+        <img src ="img/hcde598-hw08-pic99a-fuselage-onshape-extruded.png" width=800>
+        <figcaption>Extruded</figcaption>
+      </figure>
+
+
+    </div>
   </div>
 
 </div>
