@@ -2068,43 +2068,188 @@
     </div>
 
 
-    <!--
-    <div id ="day-05-h:mm-next-section">
-    <h3> H:MMxm @ Location: Activity Name </h3>
+  </div> <!-- day 5 -->
 
-    <p>
-    Another paragraph.
-  </p>
 
-  <figure>
-  <img src ="red-panda.jpg" width=400>
-  <figcaption>A figure of a panda!</figcaption>
-</figure>
+
+
+  <!-- ***************  DAY SIX  *************** -->
+  <div id="day-06">
+
+    <h2>DAY SIX: Finish the CNC</h2>
+    <div id="day-06-header">
+      <ul>
+        <li>Date: <strong>Monday 6/3/19</strong></li>
+        <li>Time and place:
+          <ul>
+            <strong>
+              <li>4:26pm-6:45pm @ UW MILL</li>
+            </strong>
+          </ul>
+        </li>
+        <li>Goals:
+          <strong>
+            <ul>
+              <li>Finish up CNC Parts</li>
+            </ul>
+          </strong>
+        </li>
+        <li>
+          Steps Planned:
+          <ol>
+            <strong>
+              <li> Debug the Hole Problem</li>
+              <li> Deal with Kerfs and Offsets</li>
+              <li> Get One Horizontal Stabilzer/Elevator to work </li>
+              <li> CNC the rest of them </li>
+            </strong>
+          </ol>
+        </li>
+
+        <li>
+          Steps Taken:
+          <ol>
+            <strong>
+              <li> this one </li>
+              <li> that one </li>
+            </strong>
+          </ol>
+        </li>
+
+        <li>Roadblocks & Impacts:
+          <strong>
+            The usual time constraints, but I'm not Blocked
+          </strong>
+        </li>
+        <li>
+          Satisfaction (1-5):
+          <strong>
+            3 (Feels iffy, might improve by the end of this ession.)
+          </strong>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 4:28pm @ UW MILL: CNC Debugging -->
+    <div id ="day-05-4:28pm-cnc-debug">
+      <h3> 4:28pm @ UW MILL: CNC Debugging  </h3>
+
+      <p>
+        Okay, so my two major problems from last night are:
+        <ol>
+          <li>Failure to recognize holes.</li>
+          <li>Slots too thin.</li>
+        </ol>
+
+        Let's start with holes.  The show up ok in KiCAD, so it must be a problem
+        in the KiCAD to bantam steps.  Read the class slides more carefully and
+        try again. Open the Gerber file iwthing Bantam Tools
+        <ul>
+          <li>Top:<strong>leave as-is</strong></li>
+          <li>Bottom:<strong>blank</strong></li>
+          <li>Outline:<strong>Edge Cuts gerber file</strong></li>
+          <li>Holes:<strong>blank</strong></li>
+        </ul>
+      </p>
+
+
+
+      <figure>
+        <img src ="img/hcde598-hw08-pic91-bantam-import-try02.png" width=800>
+        <figcaption>This <em>should</em> work.</figcaption>
+      </figure>
+
+      <p>Aha! The holes are so small that they show up as traces but not holes!</p>
+
+      <figure>
+        <img src ="img/hcde598-hw08-pic92-edges-in-bantam-try02.png" width=800>
+        <figcaption>So <em>that's</em> what's worong.</figcaption>
+      </figure>
+
+      <p>
+        Okay, I have a pretty strong hunch that the OnShape edge-offsetting that
+        I have to do for the slots will take care of hole sizes. It's caliper
+        time.
+
+        <ul>
+          <li>Caliper Measurement, FR1:<strong>1.14mm</strong></li>
+          <li>Caliper Measurement, Cardboard:<strong>1.62</strong></li>
+          <li>OnShape Dimension:<strong>1.092mm (hmmmm)</strong></li>
+          <li>Rhino Dimension:<strong>0.04in = 1.016</strong></li>
+        </ul>
+
+        Delightful. Not a single measurement agrees. Ok. The point is
+        <strong>1.092mm</strong> in OnShape became <strong>1.14mm</strong>
+        Once milled in Bantam -- a delta of <strong>0.048mm.</srong>
+        But <em>really</em> I want a <strong>1.62</strong> on the finished
+        piece -- a delta of <strong>0.528.<strong>
+      </p>
+
+      <p>
+        So in OnShape, Imma extend outer edges <em>inward></em> by
+        <strong>0.528mm</strong> to get wider gaps, and extend the rivet holes
+        <em>outward</em> by the same amount.
+      </p>
+
+      <p>
+        And once again I managed to document a crapload  of steps and comentary
+        in <a href ="assignment5.hml">Assignment 5</a>, yet negelected to record
+        the actual extension step. Back to menu-hunting again.  Ok, for the record,
+        the function in quesiton is <em>offset surface.</em> In practice I used
+        half of <strong>0.528mm</strong>  since <em>both</em> sides of the notch
+        will be offset. Turns out negative offsets are not tolerated, but you can
+        use the <em>Opposite offset direction arrow</em> to accomplish the same thing.
+      </p>
+
+
+      <figure>
+        <img src ="img/hcde598-hw08-pic93-onshape-offset-surface.png" width=800>
+        <figcaption>Hope this works (how many times have I been saying that this quarter?)</figcaption>
+      </figure>
+
+      <p>
+        Now that I've grocked that part, Imma add arcs to the bottom of each slot
+        to appease Banatm even more.  Pretty easy, just conver the line at the
+        "bottom" of the slot to a construction line, then add a midpoint, then
+        add a 3-point arc. With a bit of finnesse, it "snaps" to an arc whose
+        radius matches the distance from the midpoint to the slot edge.  With
+        that done, re-do the <em>Offset Surface</em> and I'm ready for my
+        next Bantam session.
+      </p>
+
+      <p>
+        Brief moment of frsutration when <em>Offset Surface</em> claimed it
+        couldn't do anything after I added the arcs, but it resolved itself
+        once I droped the delta form the 5mm defual to the 0.264‬mm I actually
+        want.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw08-pic94-horiz-stab-fillet-and-offset.png" width=800>
+        <figcaption>This looks promising.</figcaption>
+      </figure>
+
+      <p>
+        Better, but still no holes.
+      </p>
+
+      <figure>
+        <img src ="img/hcde598-hw08-pic95-bantam-try-02.png" width=800>
+        <figcaption>What the ...</figcaption>
+      </figure>
+
+      <p>
+        Tried the SVG option. no luck. Having a hard time believing the holes
+        are too small -- they're bigger than the slots. To heck with it, diner
+        time.
+      </p>
+
+    </div>
+
+  </div>
+
 </div>
--->
 
-
-<!--
-<div id ="day-05-h:mm-next-section">
-<h3> H:MMxm @ Location: Activity Name </h3>
-<figure>
-<img src ="red-panda.jpg" width=400>
-<figcaption>A figure of a panda!</figcaption>
-</figure>
-
-<h3>Another Thing That Happened Today</h3>
-<p>
-Another paragraph.
-</p>
-
-<figure>
-<img src ="red-panda.jpg" width=400>
-<figcaption>A figure of a panda!</figcaption>
-</figure>
-</div>
--->
-
-</div> <!-- day 5 -->
 
 
 
